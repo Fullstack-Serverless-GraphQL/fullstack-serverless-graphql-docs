@@ -11,7 +11,12 @@ const IndexPage = () => (
     <p className="text-xl font-display">
       This is going to the home of Fullstack Serverless GraphQL, Where you will
       learn how to build{" "}
-      <a className="text-blue" href="https://lunar-tour-vue.netlify.com">
+      <a
+        className="text-blue"
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://lunar-tour-vue.netlify.com"
+      >
         Lunar Tour
       </a>
     </p>
