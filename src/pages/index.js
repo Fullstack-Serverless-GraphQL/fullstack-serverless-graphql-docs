@@ -9,8 +9,8 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" />
     <p className="text-xl font-display">
-      This is going to the home of Fullstack Serverless GraphQL, Where you will
-      learn how to build{" "}
+      This is going to be the home of Fullstack Serverless GraphQL, Where you
+      will learn how to build{" "}
       <a
         className="text-blue"
         target="_blank"
