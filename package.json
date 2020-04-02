@@ -19,6 +19,7 @@
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
+    "gatsby-plugin-postcss": "^2.2.1",
     "prettier": "^1.19.1",
     "tailwindcss": "^1.2.0"
   },
