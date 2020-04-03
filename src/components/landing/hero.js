@@ -5,12 +5,14 @@ import RedBlockButton from "../buttons/RedBlockButton"
 import HeroImage from "../../images/hero_image.svg"
 const Hero = () => (
   <>
-    <div className="flex lg:flex-row s:flex-col">
-      <div>
-        <HeadingOne>Build a fullstack serverless GraphQL App!</HeadingOne>
-        <img src={HeroImage} alt="hero image" className="lg:hidden" />
+    <div className="flex lg:flex-row s:flex-col text-left">
+      <div className="p-10 mr-10">
+        <HeadingOne className="mb-10 ">
+          Build a fullstack serverless GraphQL App!
+        </HeadingOne>
+        <img src={HeroImage} alt="hero image" className="lg:hidden mb-10 " />
 
-        <BodyOne>
+        <BodyOne className="mb-10">
           The way APIs are built and the tools that are used to consume them
           have have changed drastically over the years. This free resource is
           your chance to learn how to build a GraphQL API in a serverless
