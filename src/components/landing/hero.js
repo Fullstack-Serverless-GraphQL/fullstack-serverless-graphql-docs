@@ -1,6 +1,7 @@
 import React from "react"
 import HeadingOne from "../typography/HeadingOne"
 import BodyOne from "../typography/BodyOne"
+import RedBlockButton from "../buttons/RedBlockButton"
 
 const Hero = () => (
   <>
@@ -15,6 +16,7 @@ const Hero = () => (
           a design system using Apollo. Everything you learn here will not be a
           waste of time, it is 100% reproducible for production use cases.{" "}
         </BodyOne>
+        <RedBlockButton>Learn now!</RedBlockButton>
       </div>
     </div>
   </>
