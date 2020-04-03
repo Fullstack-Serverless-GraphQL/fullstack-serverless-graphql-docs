@@ -8,6 +8,8 @@ const Hero = () => (
     <div className="flex lg:flex-row s:flex-col">
       <div>
         <HeadingOne>Build a fullstack serverless GraphQL App!</HeadingOne>
+        <img src={HeroImage} alt="hero image" className="lg:hidden" />
+
         <BodyOne>
           The way APIs are built and the tools that are used to consume them
           have have changed drastically over the years. This free resource is
@@ -19,7 +21,7 @@ const Hero = () => (
         <RedBlockButton>Learn now!</RedBlockButton>
       </div>
       <div>
-        <img src={HeroImage} alt="hero image" />
+        <img src={HeroImage} alt="hero image" className="s:hidden lg:block" />
       </div>
     </div>
   </>
