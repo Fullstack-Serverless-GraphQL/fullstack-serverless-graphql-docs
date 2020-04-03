@@ -6,18 +6,17 @@ This repo is the docs site for the Fullstack Serverless GraphQL course written i
 
 1.  **Clone the repo.**
 
-    Use the Gatsby CLI to create a new site, specifying the default starter.
 
     ```shell
     git clone https://github.com/Fullstack-Serverless-GraphQL/fullstack-serverless-graphql-docs.git
     ```
 
-2)  **Start developing.**
+2.  **Start developing.**
 
     Navigate into your new site’s directory and start it up.
 
     ```shell
-    cd my-default-starter/
+    cd Fullstack-Serverless-GraphQL/
     gatsby develop
     ```
 
@@ -27,7 +26,7 @@ This repo is the docs site for the Fullstack Serverless GraphQL course written i
      yarn install
     ```
 
-1)  **Open the source code and start editing!**
+1.  **Open the source code and start editing!**
 
     Your site is now running at `http://localhost:8000`!
 
