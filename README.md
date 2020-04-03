@@ -51,6 +51,16 @@ A quick look at the top-level files and directories you'll see in a Gatsby proje
     ├── package.json
     └── README.md
 
+## Contributing
+
+We welcome contributions to Fullstack Serverless GraphQL!
+
+- 📥 Pull requests and 🌟 Stars are always welcome.
+
 ## 💫 Deploy
 
 [![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://github.com/Fullstack-Serverless-GraphQL/fullstack-serverless-graphql-docs.git)
+
+## License
+
+[MIT](https://github.com/Fullstack-Serverless-GraphQL/fullstack-serverless-graphql-docs/blob/master/LICENSE)
