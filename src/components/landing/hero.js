@@ -2,7 +2,7 @@ import React from "react"
 import HeadingOne from "../typography/HeadingOne"
 import BodyOne from "../typography/BodyOne"
 import RedBlockButton from "../buttons/RedBlockButton"
-
+import HeroImage from "../../images/hero_image.svg"
 const Hero = () => (
   <>
     <div className="flex lg:flex-row s:flex-col">
@@ -17,6 +17,9 @@ const Hero = () => (
           waste of time, it is 100% reproducible for production use cases.{" "}
         </BodyOne>
         <RedBlockButton>Learn now!</RedBlockButton>
+      </div>
+      <div>
+        <img src={HeroImage} alt="hero image" />
       </div>
     </div>
   </>
