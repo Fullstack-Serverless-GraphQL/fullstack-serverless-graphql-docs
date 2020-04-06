@@ -1,12 +1,17 @@
 import PropTypes from "prop-types"
 import React from "react"
+import HeadingThree from "../typography/HeadingThree"
+import BodyOne from "../typography/BodyOne"
 
-const StackCard = ({ children, className }) => (
-  <button
-    className={`${className} cursor-pointer bg-red-lightest text-red-darkest focus:outline-none font-display rounded-px px-16 py-2 hover:bg-transparent hover:border hover:border-red-darkest`}
-  >
-    {children}
-  </button>
+const StackCard = ({ Title, className, url }) => (
+  <div className={`${className} cursor-pointer `}>
+    <img src={url} alt="card logo" />
+    <HeadingThree>{Title}</HeadingThree>
+    <div className="flex flex-row">
+      <img src="../../images.launch.svg" />
+      <BodyOne>Docs</BodyOne>
+    </div>
+  </div>
 )
 
 StackCard.propTypes = {
