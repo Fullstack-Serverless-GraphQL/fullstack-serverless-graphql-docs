@@ -1,6 +1,7 @@
+import VueLogo from "./images/vue.svg"
 const techStack = [
   {
-    logo: "./images/vue.svg",
+    logo: VueLogo,
     technology: "Vue",
     url: "https://vuejs.org/",
   },

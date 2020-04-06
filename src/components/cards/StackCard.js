@@ -2,7 +2,7 @@ import PropTypes from "prop-types"
 import React from "react"
 import HeadingThree from "../typography/HeadingThree"
 import BodyOne from "../typography/BodyOne"
-
+import NewTab from "../../images/launch.svg"
 const StackCard = ({ Title, className, url, linkURL }) => (
   <div className={`${className} cursor-pointer `}>
     <img src={url} alt="card logo" />
@@ -14,7 +14,7 @@ const StackCard = ({ Title, className, url, linkURL }) => (
         rel="noopener noreferrer"
         href={linkURL}
       >
-        <img src="../../images.launch.svg" />
+        <img src={NewTab} />
         <BodyOne>Docs</BodyOne>
       </a>
     </div>
