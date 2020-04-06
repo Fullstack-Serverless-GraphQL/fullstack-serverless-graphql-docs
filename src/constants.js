@@ -7,6 +7,8 @@ import LambdaLogo from "./images/aws-lambda.svg"
 import PostmarkLogo from "./images/postmark.jpeg"
 import StripLogo from "./images/stripe.svg"
 import TailwindLogo from "./images/tailwind.png"
+import ServerlessLogo from "./images/serverless.png"
+
 const techStack = [
   {
     logo: VueLogo,
@@ -30,5 +32,41 @@ const techStack = [
   },
 ]
 
-const backendTechStack = [{}]
-export default { techStack }
+const backendTechStack = [
+  {
+    logo: ServerlessLogo,
+    technology: "Serverless",
+    url: "https://serverless.com/",
+  },
+  {
+    logo: ApolloLogo,
+    technology: "Apollo Server",
+    url: "https://www.apollographql.com/docs/apollo-server/",
+  },
+  {
+    logo: Cognitologo,
+    technology: "AWS Cognito",
+    url: "https://aws.amazon.com/cognito/",
+  },
+  {
+    logo: LambdaLogo,
+    technology: "AWS Lambda",
+    url: "https://aws.amazon.com/lambda",
+  },
+  {
+    logo: DynamoLogo,
+    technology: "AWS DynamoDB",
+    url: "https://aws.amazon.com/dynamodb/",
+  },
+  {
+    logo: StripLogo,
+    technology: "Stripe",
+    url: "https://stripe.com/",
+  },
+  {
+    logo: PostmarkLogo,
+    technology: "Postmark",
+    url: "https://postmarkapp.com/",
+  },
+]
+export default { techStack, backendTechStack }
