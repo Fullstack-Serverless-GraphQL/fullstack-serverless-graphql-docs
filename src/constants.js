@@ -22,7 +22,7 @@ const techStack = [
   },
   {
     logo: TailwindLogo,
-    technology: "Vue",
+    technology: "Tailwind CSS",
     url: "https://tailwindcss.com/",
   },
   {

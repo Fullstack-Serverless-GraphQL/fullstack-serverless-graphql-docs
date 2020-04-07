@@ -14,6 +14,13 @@ const TechStack = () => (
           <StackCard url={t.logo} linkURL={t.url} Title={t.technology} />
         ))}
       </div>
+
+      <HeadingThree>Back end</HeadingThree>
+      <div className="flex flex-row">
+        {constants.backendTechStack.map(t => (
+          <StackCard url={t.logo} linkURL={t.url} Title={t.technology} />
+        ))}
+      </div>
     </div>
   </>
 )
