@@ -7,16 +7,20 @@ import constants from "../../constants"
 const TechStack = () => (
   <>
     <div>
-      <HeadingTwo>Tech stack</HeadingTwo>
-      <HeadingThree>Front end</HeadingThree>
-      <div className="flex flex-row">
+      <HeadingTwo className="text-center"> Tech stack</HeadingTwo>
+      <HeadingThree className="text-blue text-center mb-5">
+        Front end
+      </HeadingThree>
+      <div className="grid grid-cols-3 gap-5">
         {constants.techStack.map(t => (
           <StackCard url={t.logo} linkURL={t.url} Title={t.technology} />
         ))}
       </div>
 
-      <HeadingThree>Back end</HeadingThree>
-      <div className="flex flex-row">
+      <HeadingThree className="text-blue text-center mb-5">
+        Back end
+      </HeadingThree>
+      <div className="grid grid-cols-3 gap-5">
         {constants.backendTechStack.map(t => (
           <StackCard url={t.logo} linkURL={t.url} Title={t.technology} />
         ))}
