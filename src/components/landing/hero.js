@@ -2,6 +2,7 @@ import React from "react"
 import HeadingOne from "../typography/HeadingOne"
 import BodyOne from "../typography/BodyOne"
 import RedBlockButton from "../buttons/RedBlockButton"
+import RedOutlineButton from "../buttons/RedOutlineButton"
 import HeroImage from "../../images/hero_image.svg"
 const Hero = () => (
   <>
@@ -21,6 +22,7 @@ const Hero = () => (
           waste of time, it is 100% reproducible for production use cases.{" "}
         </BodyOne>
         <RedBlockButton>Learn now!</RedBlockButton>
+        <RedOutlineButton className="ml-3">View Demo</RedOutlineButton>
       </div>
       <div>
         <img src={HeroImage} alt="hero image" className="s:hidden lg:block" />
