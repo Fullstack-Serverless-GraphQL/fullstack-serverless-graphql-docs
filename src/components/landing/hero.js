@@ -2,7 +2,10 @@ import React from "react"
 import HeadingOne from "../typography/HeadingOne"
 import BodyOne from "../typography/BodyOne"
 import RedBlockButton from "../buttons/RedBlockButton"
+import RedOutlineButton from "../buttons/RedOutlineButton"
 import HeroImage from "../../images/hero_image.svg"
+import NewTab from "../../images/launch.svg"
+
 const Hero = () => (
   <>
     <div className="flex lg:flex-row s:flex-col text-left">
@@ -20,7 +23,18 @@ const Hero = () => (
           a design system using Apollo. Everything you learn here will not be a
           waste of time, it is 100% reproducible for production use cases.{" "}
         </BodyOne>
-        <RedBlockButton>Learn now!</RedBlockButton>
+        <RedBlockButton className="">Learn now!</RedBlockButton>
+
+        <RedOutlineButton className="s:mt-5 lg:ml-5">
+          <a
+            className="flex flex-row"
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://lunar-tour-vue.netlify.com/"
+          >
+            View Demo
+          </a>
+        </RedOutlineButton>
       </div>
       <div>
         <img src={HeroImage} alt="hero image" className="s:hidden lg:block" />
