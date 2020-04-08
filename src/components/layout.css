@@ -3,6 +3,14 @@
 .markdown h1 {
   @apply font-display text-green;
 }
+
+.markdown code {
+  background-color: #272822;
+  color: #f8f8f2;
+  border-radius: 0.3em;
+  padding: 4px 5px 6px;
+  white-space: nowrap;
+}
 @tailwind components;
 
 @tailwind utilities;
