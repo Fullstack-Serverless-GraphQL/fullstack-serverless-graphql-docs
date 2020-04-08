@@ -1,5 +1,8 @@
 @tailwind base;
 
+.markdown h1 {
+  @apply font-display text-green;
+}
 @tailwind components;
 
 @tailwind utilities;
@@ -9,4 +12,5 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 @import url("https://fonts.googleapis.com/css?family=Saira&display=swap");

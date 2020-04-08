@@ -12,10 +12,7 @@ export default function Template({ data }) {
       <div className="blog-post">
         <HeadingOne>{frontmatter.title}</HeadingOne>
         <HeadingThree>{frontmatter.date}</HeadingThree>
-        <div
-          className="blog-post-content"
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
+        <div className="markdown" dangerouslySetInnerHTML={{ __html: html }} />
       </div>
     </Layout>
   )
