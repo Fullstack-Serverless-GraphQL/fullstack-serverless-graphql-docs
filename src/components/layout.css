@@ -1,7 +1,20 @@
 @tailwind base;
+.markdown h4,
+h5,
+h6 {
+  @apply font-display;
+}
 
 .markdown h1 {
-  @apply font-display;
+  @apply font-display text-3xl;
+}
+
+.markdown h2 {
+  @apply font-display text-2xl;
+}
+
+.markdown h3 {
+  @apply font-display text-xl;
 }
 
 .markdown p {
