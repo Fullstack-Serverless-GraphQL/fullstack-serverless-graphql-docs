@@ -1,5 +1,4 @@
 import React from "react"
-import BodyOne from "../typography/BodyOne"
 import HeadingTwo from "../typography/HeadingTwo"
 import HeadingThree from "../typography/HeadingThree"
 import StackCard from "../cards/StackCard"

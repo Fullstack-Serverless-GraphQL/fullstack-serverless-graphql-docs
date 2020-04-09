@@ -16,7 +16,7 @@ const StackCard = ({ Title, className, url, linkURL }) => (
         rel="noopener noreferrer"
         href={linkURL}
       >
-        <img src={NewTab} className="mb-3" />
+        <img src={NewTab} className="mb-3" alt="new_tab_icon" />
         <BodyOne className="mb-3">Docs</BodyOne>
       </a>
     </div>

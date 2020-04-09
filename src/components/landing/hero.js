@@ -4,7 +4,6 @@ import BodyOne from "../typography/BodyOne"
 import RedBlockButton from "../buttons/RedBlockButton"
 import RedOutlineButton from "../buttons/RedOutlineButton"
 import HeroImage from "../../images/hero_image.svg"
-import NewTab from "../../images/launch.svg"
 
 const Hero = () => (
   <>
@@ -13,7 +12,7 @@ const Hero = () => (
         <HeadingOne className="mb-10 ">
           Build a fullstack serverless GraphQL App!
         </HeadingOne>
-        <img src={HeroImage} alt="hero image" className="lg:hidden mb-10 " />
+        <img src={HeroImage} alt="hero " className="lg:hidden mb-10 " />
 
         <BodyOne className="mb-10">
           The way APIs are built and the tools that are used to consume them
@@ -37,7 +36,7 @@ const Hero = () => (
         </RedOutlineButton>
       </div>
       <div>
-        <img src={HeroImage} alt="hero image" className="s:hidden lg:block" />
+        <img src={HeroImage} alt="hero" className="s:hidden lg:block" />
       </div>
     </div>
   </>
