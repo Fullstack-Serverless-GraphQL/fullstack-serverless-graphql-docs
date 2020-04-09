@@ -12,6 +12,7 @@ export default function Template({ data }) {
       <div className="blog-post">
         <HeadingOne>{frontmatter.title}</HeadingOne>
         <HeadingThree>{frontmatter.date}</HeadingThree>
+        <hr className="bg-grey" />
         <div className="markdown" dangerouslySetInnerHTML={{ __html: html }} />
       </div>
     </Layout>
