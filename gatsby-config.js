@@ -1,7 +1,7 @@
 module.exports = {
   siteMetadata: {
     title: `Fullstack Serverless GraphQL`,
-    description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
+    description: `Fullstack Serverless GraphQL`,
     author: `@gatsbyjs`,
   },
   plugins: [
@@ -13,6 +13,17 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-transformer-remark`,
+      options: {
+        plugins: [
+          {
+            resolve: `gatsby-remark-prismjs`,
+            options: {},
+          },
+        ],
       },
     },
     `gatsby-transformer-sharp`,
@@ -29,11 +40,11 @@ module.exports = {
         icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-transformer-remark`,
+
     {
       resolve: `gatsby-source-filesystem`,
       options: {
-        name: `content`,
+        name: `content && code`,
         path: `${__dirname}/src/content/`,
       },
     },

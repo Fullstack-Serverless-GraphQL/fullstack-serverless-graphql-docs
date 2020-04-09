@@ -1,13 +1,13 @@
 import VueLogo from "./images/vue.svg"
 import ApolloLogo from "./images/apollo.svg"
-import AntLogo from "./images/ant.jpg"
+import AntLogo from "./images/ant.svg"
 import Cognitologo from "./images/aws-cognito.svg"
-import DynamoLogo from "./images/aws-lambda.svg"
+import DynamoLogo from "./images/aws-dynamodb.svg"
 import LambdaLogo from "./images/aws-lambda.svg"
 import PostmarkLogo from "./images/postmark.jpeg"
 import StripLogo from "./images/stripe.svg"
-import TailwindLogo from "./images/tailwind.png"
-import ServerlessLogo from "./images/serverless.png"
+import TailwindLogo from "./images/tailwind.svg"
+import ServerlessLogo from "./images/serverless.svg"
 
 const techStack = [
   {

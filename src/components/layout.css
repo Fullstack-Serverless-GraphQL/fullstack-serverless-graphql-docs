@@ -1,5 +1,38 @@
 @tailwind base;
+.markdown h4,
+h5,
+h6 {
+  @apply font-display;
+}
 
+.markdown h1 {
+  @apply font-display text-3xl;
+}
+
+.markdown h2 {
+  @apply font-display text-2xl;
+}
+
+.markdown h3 {
+  @apply font-display text-xl;
+}
+
+.markdown p {
+  @apply font-display text-sm;
+}
+
+.markdown img {
+  @apply w-2/5;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* .markdown code {
+  background-color: #272822;
+  color: #f8f8f2;
+  border-radius: 0.3em;
+  padding: 4px 5px 6px;
+  white-space: nowrap;
+} */
 @tailwind components;
 
 @tailwind utilities;
@@ -9,4 +42,5 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
 @import url("https://fonts.googleapis.com/css?family=Saira&display=swap");
