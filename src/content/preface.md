@@ -14,7 +14,7 @@ $ yarn start
 
 ```
 
-```javascript
+```javaScript
 const [isLoading, setIsLoading] = useState(false)
 
 setIsLoading(!isLoading)
