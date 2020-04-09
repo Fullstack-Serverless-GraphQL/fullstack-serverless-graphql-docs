@@ -20,6 +20,12 @@ h6 {
 .markdown p {
   @apply font-display text-sm;
 }
+
+.markdown img {
+  @apply w-2/5;
+  margin-left: auto;
+  margin-right: auto;
+}
 /* .markdown code {
   background-color: #272822;
   color: #f8f8f2;

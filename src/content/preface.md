@@ -14,6 +14,7 @@ $ yarn start
 
 ```
 
+![alt](/uploads/test.jpg)
 index.js
 
 ```javaScript
