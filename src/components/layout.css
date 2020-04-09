@@ -1,9 +1,12 @@
 @tailwind base;
 
 .markdown h1 {
-  @apply font-display text-green;
+  @apply font-display;
 }
 
+.markdown p {
+  @apply font-display text-sm;
+}
 .markdown code {
   background-color: #272822;
   color: #f8f8f2;
