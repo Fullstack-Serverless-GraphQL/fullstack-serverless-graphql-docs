@@ -6,7 +6,7 @@ import DynamoLogo from "./images/aws-lambda.svg"
 import LambdaLogo from "./images/aws-lambda.svg"
 import PostmarkLogo from "./images/postmark.jpeg"
 import StripLogo from "./images/stripe.svg"
-import TailwindLogo from "./images/tailwind.png"
+import TailwindLogo from "./images/tailwind.svg"
 import ServerlessLogo from "./images/serverless.png"
 
 const techStack = [
