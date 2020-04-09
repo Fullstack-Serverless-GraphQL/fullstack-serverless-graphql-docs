@@ -13,3 +13,9 @@ coverImg: >-
 $ yarn start
 
 ```
+
+```javascript
+const [isLoading, setIsLoading] = useState(false)
+
+setIsLoading(!isLoading)
+```
