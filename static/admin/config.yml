@@ -1,7 +1,9 @@
 backend:
   name: git-gateway
+  branch: master
+  repo: https://github.com/Fullstack-Serverless-GraphQL/fullstack-serverless-graphql-docs
 
-publish_mode: editorial_workflow
+# publish_mode: editorial_workflow
 
 public_folder: "/uploads"
 media_folder: "static/uploads"
