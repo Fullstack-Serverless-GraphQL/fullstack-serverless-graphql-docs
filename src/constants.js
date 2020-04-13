@@ -8,6 +8,7 @@ import PostmarkLogo from "./images/postmark.jpeg"
 import StripLogo from "./images/stripe.svg"
 import TailwindLogo from "./images/tailwind.svg"
 import ServerlessLogo from "./images/serverless.svg"
+import SeedLogo from "./images/seed.png"
 
 const techStack = [
   {
@@ -67,6 +68,11 @@ const backendTechStack = [
     logo: PostmarkLogo,
     technology: "Postmark",
     url: "https://postmarkapp.com/",
+  },
+  {
+    logo: SeedLogo,
+    technology: "Seed",
+    url: "http://seed.run/",
   },
 ]
 export default { techStack, backendTechStack }
