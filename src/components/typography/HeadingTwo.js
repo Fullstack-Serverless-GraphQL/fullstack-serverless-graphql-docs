@@ -2,9 +2,9 @@ import React from "react"
 import PropTypes from "prop-types"
 
 const HeadingTwo = ({ children, className }) => (
-  <h1 className={`${className} font-display text-2xl text-black`}>
+  <h2 className={`${className} font-display text-4xl text-black`}>
     {children}
-  </h1>
+  </h2>
 )
 
 HeadingTwo.propTypes = {

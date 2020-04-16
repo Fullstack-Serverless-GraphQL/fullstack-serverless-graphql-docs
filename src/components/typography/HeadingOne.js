@@ -2,7 +2,7 @@ import React from "react"
 import PropTypes from "prop-types"
 
 const HeadingOne = ({ children, className }) => (
-  <h1 className={`${className} font-display text-3xl text-black`}>
+  <h1 className={`${className} font-display text-5xl text-black`}>
     {children}
   </h1>
 )
