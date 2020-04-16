@@ -1,7 +1,5 @@
 backend:
   name: git-gateway
-  branch: master
-  repo: https://github.com/Fullstack-Serverless-GraphQL/fullstack-serverless-graphql-docs.git
 
 # publish_mode: editorial_workflow
 
