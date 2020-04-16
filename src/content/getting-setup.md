@@ -14,3 +14,4 @@ chapter: none
 - A github/gitlab account
 - basic knowledge of git
 - basic knowledge of HTML/CSS and JavaScript
+- test
