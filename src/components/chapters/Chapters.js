@@ -1,19 +1,25 @@
 import React from "react"
 import { StaticQuery, graphql, Link } from "gatsby"
-
+import HeadingTwo from "../typography/HeadingThree"
 const Chapters = ({
   data: {
     allMarkdownRemark: { edges },
   },
 }) => (
   <>
-    {edges.map(edge => (
-      <div key={edge.node.id}>
-        <Link to={edge.node.frontmatter.path}>
-          {edge.node.frontmatter.title}
-        </Link>
-      </div>
-    ))}
+    <div className="mt-10">
+      <HeadingTwo className="text-center">Chapters</HeadingTwo>
+      {/* Start of chapter one */}
+      {edges.map(edge => (
+        <div key={edge.node.id}>
+          <Link to={edge.node.frontmatter.path}>
+            {edge.node.frontmatter.title}
+          </Link>
+        </div>
+      ))}
+
+      {/* end of chapter one */}
+    </div>
   </>
 )
 
