@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { StaticQuery, graphql, Link } from "gatsby"
 
 const Chapters = ({
   data: {
@@ -17,19 +17,22 @@ const Chapters = ({
   </>
 )
 
-export const pageQuery = graphql`
-  query {
-    allMarkdownRemark {
-      edges {
-        node {
-          frontmatter {
-            path
-            title
+export default props => (
+  <StaticQuery
+    query={graphql`
+      query {
+        allMarkdownRemark {
+          edges {
+            node {
+              frontmatter {
+                path
+                title
+              }
+            }
           }
         }
       }
-    }
-  }
-`
-
-export default Chapters
+    `}
+    render={data => <Chapters data={data} {...props} />}
+  />
+)
