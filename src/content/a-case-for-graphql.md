@@ -11,7 +11,7 @@ GraphQL is a query langauge for your API that allows to specifiy exactly in what
 data to be queried or mutated on your API. It has nothing to do with your database schema too nor forces you to use
 a graph database.
 
-## What problem does it solve??
+## What problem does it solve???
 
 It prevents you from devevloping mutliple endpoints to collect data. Lets say I had an API that
 does operations on `Stocks, Companies & Currencies`. You have make the following endpoints in the backend:
