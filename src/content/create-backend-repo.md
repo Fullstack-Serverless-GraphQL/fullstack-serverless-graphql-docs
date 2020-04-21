@@ -6,7 +6,6 @@ date: 2020-04-21T00:00:00.000Z
 part: setting up backend
 chapter: creating repo
 ---
-
 In this part we will initialise the backend repo and get everything setup
 
 \## Create a repo on Github
@@ -27,7 +26,7 @@ $ serverless install --url https://github.com/pimp-my-book/serverless-graphql-no
 
 now we need to send the code up to GitHub:
 
-go into the directory of the repo:
+**go into the directory of the repo:**
 
 ```bash
 $ cd lunar-tour-api
@@ -61,7 +60,6 @@ Push all your changes:
 
 ```bash
 git push -u origin master
-
 ```
 
 Awesome, yoour repo should be full of code now on GitHub!
