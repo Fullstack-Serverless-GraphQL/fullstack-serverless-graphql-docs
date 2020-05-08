@@ -89,9 +89,7 @@ custom:
   BookingsDB: ${self:custom.stage}-bookings
 ```
 
-As we well as create them as environment variables:
-
-
+As we well as create them as environment variables and add IAM role statements for this Lambda:
 
 ```
 provider:
@@ -103,7 +101,28 @@ provider:
   environment:
     BookingsDB: ${self:custom.BookingsDB}
     ListingsDB: ${self:custom.ListingsDB}
+  
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - dynamodb:DescribeTable
+        - dynamodb:Query
+        - dynamodb:Scan
+        - dynamodb:GetItem
+        - dynamodb:PutItem
+        - dynamodb:UpdateItem
+        - dynamodb:DeleteItem
+        - dynamodb:GetRecords
+        - dynamodb:GetShardIterator
+        - dynamodb:DescribeStream
+        - dynamodb:ListStream
+
+      Resource:
+        - "Fn::GetAtt": [ListingsDB, Arn]
+        - "Fn::GetAtt": [BookingsDB, Arn]
 ```
+
+Finally under the 
 
 
 
