@@ -76,8 +76,13 @@ const backendTechStack = [
   },
 ]
 
-const filterBy = (array, path) => {
+const filterByPart = (array, path) => {
   const result = array.filter(i => i.node.frontmatter.part === path)
   return result
 }
-export default { techStack, backendTechStack, filterBy }
+
+const filterByChapter = (array, path) => {
+  const result = array.filter(i => i.node.frontmatter.chapter === path)
+  return result
+}
+export default { techStack, backendTechStack, filterByPart, filterByChapter }

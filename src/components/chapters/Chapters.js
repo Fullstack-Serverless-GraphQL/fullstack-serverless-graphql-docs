@@ -3,18 +3,19 @@ import { StaticQuery, graphql, Link } from "gatsby"
 import HeadingThree from "../typography/HeadingThree"
 import HeadingTwo from "../typography/HeadingTwo"
 import BodyOne from "../typography/BodyOne"
-
+import constants from "../../constants"
 const Chapters = ({
   data: {
     allMarkdownRemark: { edges },
   },
 }) => {
   console.log("eee", edges)
-  const epilouges = edges.filter(i => i.node.frontmatter.part === "Epilouge")
-  const backendPosts = edges.filter(
-    i => i.node.frontmatter.part === "setting up backend"
-  )
+  const epilouges = constants.filterBy(edges, "Epilouge")
+  const backendPosts = constants.filterBy(edges, "setting up backend")
 
+  // const librariesPosts = edges.filter(
+  //   i=
+  // )
   return (
     <>
       <div className="mt-10">
