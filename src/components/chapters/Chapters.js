@@ -9,6 +9,7 @@ const Chapters = ({
     allMarkdownRemark: { edges },
   },
 }) => {
+  console.log("eee", edges)
   const epilouges = edges.filter(i => i.node.frontmatter.part === "Epilouge")
   const backendPosts = edges.filter(
     i => i.node.frontmatter.part === "setting up backend"
