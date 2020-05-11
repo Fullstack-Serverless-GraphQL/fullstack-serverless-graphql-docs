@@ -9,13 +9,9 @@ const Chapters = ({
     allMarkdownRemark: { edges },
   },
 }) => {
-  console.log("eee", edges)
-  const epilouges = constants.filterBy(edges, "Epilouge")
-  const backendPosts = constants.filterBy(edges, "setting up backend")
-
-  // const librariesPosts = edges.filter(
-  //   i=
-  // )
+  const epilouges = constants.filterByPart(edges, "Epilouge")
+  const backendPosts = constants.filterByPart(edges, "setting up backend")
+  const librariesPosts = constants.filterByChapter(edges, "Adding libraries")
   return (
     <>
       <div className="mt-10">
@@ -52,6 +48,21 @@ const Chapters = ({
           </div>
 
           {/* end of chapter two */}
+
+          {/* start of chapter three */}
+          <div className="mt-5">
+            <HeadingThree className="">Adding libraries</HeadingThree>
+
+            {librariesPosts.map(edge => (
+              <BodyOne className="text-yellow m-3" key={edge.node.id}>
+                <Link to={edge.node.frontmatter.path}>
+                  {edge.node.frontmatter.title}
+                </Link>
+              </BodyOne>
+            ))}
+          </div>
+
+          {/* end of chapter three */}
         </div>
       </div>
     </>

@@ -77,12 +77,12 @@ const backendTechStack = [
 ]
 
 const filterByPart = (array, path) => {
-  const result = array.filter(i => i.node.frontmatter.part === path)
+  const result = array.filter(i => i.node.frontmatter.part.trim() === path)
   return result
 }
 
 const filterByChapter = (array, path) => {
-  const result = array.filter(i => i.node.frontmatter.chapter === path)
+  const result = array.filter(i => i.node.frontmatter.chapter.trim() === path)
   return result
 }
 export default { techStack, backendTechStack, filterByPart, filterByChapter }
