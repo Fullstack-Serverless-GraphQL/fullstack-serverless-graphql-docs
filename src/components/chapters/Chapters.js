@@ -1,6 +1,7 @@
 import React from "react"
 import { StaticQuery, graphql, Link } from "gatsby"
-import HeadingTwo from "../typography/HeadingThree"
+import HeadingThree from "../typography/HeadingThree"
+import HeadingTwo from "../typography/HeadingTwo"
 import BodyOne from "../typography/BodyOne"
 
 const Chapters = ({
@@ -12,6 +13,7 @@ const Chapters = ({
   const backendPosts = edges.filter(
     i => i.node.frontmatter.part === "setting up backend"
   )
+
   return (
     <>
       <div className="mt-10">
@@ -20,7 +22,7 @@ const Chapters = ({
         <div className="grid grid-cols-2">
           <div className="mt-5">
             {/* start of chapter one */}
-            <HeadingTwo className="">Epilouge</HeadingTwo>
+            <HeadingThree className="">Epilouge</HeadingThree>
 
             {/* Start of chapter one */}
             {epilouges.map(edge => (
@@ -36,7 +38,7 @@ const Chapters = ({
 
           {/* start of chapter two */}
           <div className="mt-5">
-            <HeadingTwo className="">Setting Up infrastructure</HeadingTwo>
+            <HeadingThree className="">Setting Up infrastructure</HeadingThree>
 
             {backendPosts.map(edge => (
               <BodyOne className="text-yellow m-3" key={edge.node.id}>
