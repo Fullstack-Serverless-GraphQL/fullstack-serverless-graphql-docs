@@ -75,4 +75,9 @@ const backendTechStack = [
     url: "http://seed.run/",
   },
 ]
-export default { techStack, backendTechStack }
+
+const filterBy = (array, path) => {
+  const result = array.filter(i => i.node.frontmatter.part === path)
+  return result
+}
+export default { techStack, backendTechStack, filterBy }
