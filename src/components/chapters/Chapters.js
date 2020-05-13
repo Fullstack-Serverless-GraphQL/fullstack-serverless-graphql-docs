@@ -12,6 +12,7 @@ const Chapters = ({
   const epilouges = constants.filterByPart(edges, "Epilouge")
   const backendPosts = constants.filterByPart(edges, "setting up backend")
   const librariesPosts = constants.filterByChapter(edges, "Adding libraries")
+  const allListingsPost = constants.filterByChapter(edges, "All listings query")
   return (
     <>
       <div className="mt-10">
