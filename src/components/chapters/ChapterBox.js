@@ -2,6 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import HeadingThree from "../typography/HeadingThree"
 import BodyOne from "../typography/BodyOne"
+import PropTypes from "prop-types"
 
 const ChapterBox = ({ text, edges }) => {
   return (
@@ -21,4 +22,8 @@ const ChapterBox = ({ text, edges }) => {
   )
 }
 
+ChapterBox.propTypes = {
+  text: PropTypes.string,
+  edges: PropTypes.array,
+}
 export default ChapterBox

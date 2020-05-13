@@ -1,8 +1,6 @@
 import React from "react"
 import { StaticQuery, graphql, Link } from "gatsby"
-import HeadingThree from "../typography/HeadingThree"
 import HeadingTwo from "../typography/HeadingTwo"
-import BodyOne from "../typography/BodyOne"
 import constants from "../../constants"
 import ChapterBox from "./ChapterBox"
 const Chapters = ({
