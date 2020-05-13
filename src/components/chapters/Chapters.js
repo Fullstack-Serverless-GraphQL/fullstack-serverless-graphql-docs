@@ -20,54 +20,14 @@ const Chapters = ({
         <HeadingTwo className="text-center">Chapters</HeadingTwo>
         {/* chAPTERS GRID */}
         <div className="grid grid-cols-2">
-          <div className="mt-5">
-            {/* start of chapter one */}
-            <HeadingThree className="">Epilouge</HeadingThree>
-
-            {/* Start of chapter one */}
-            {epilouges.map(edge => (
-              <BodyOne className="text-yellow m-3" key={edge.node.id}>
-                <Link to={edge.node.frontmatter.path}>
-                  {edge.node.frontmatter.title}
-                </Link>
-              </BodyOne>
-            ))}
-
-            {/* end of chapter one */}
-          </div>
-
-          {/* start of chapter two */}
-          <div className="mt-5">
-            <HeadingThree className="">Setting Up infrastructure</HeadingThree>
-
-            {backendPosts.map(edge => (
-              <BodyOne className="text-yellow m-3" key={edge.node.id}>
-                <Link to={edge.node.frontmatter.path}>
-                  {edge.node.frontmatter.title}
-                </Link>
-              </BodyOne>
-            ))}
-          </div>
-
-          {/* end of chapter two */}
-
-          {/* start of chapter three */}
-          <div className="mt-5">
-            <HeadingThree className="">Adding libraries</HeadingThree>
-
-            {librariesPosts.map(edge => (
-              <BodyOne className="text-yellow m-3" key={edge.node.id}>
-                <Link to={edge.node.frontmatter.path}>
-                  {edge.node.frontmatter.title}
-                </Link>
-              </BodyOne>
-            ))}
-          </div>
-
-          {/* end of chapter three */}
+          <ChapterBox edges={epilouges} text="Epilouge" />
+          <ChapterBox edges={backendPosts} text="Setting Up infrastructure" />
+          <ChapterBox edges={librariesPosts} text="Adding libraries" />
+          <ChapterBox
+            edges={allListingsPost}
+            text="Create All listings query"
+          />
         </div>
-
-        <ChapterBox edges={allListingsPost} text="Create All listings query" />
       </div>
     </>
   )
