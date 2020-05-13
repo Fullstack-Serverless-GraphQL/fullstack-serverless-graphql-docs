@@ -4,6 +4,7 @@ import HeadingThree from "../typography/HeadingThree"
 import HeadingTwo from "../typography/HeadingTwo"
 import BodyOne from "../typography/BodyOne"
 import constants from "../../constants"
+import ChapterBox from "./ChapterBox"
 const Chapters = ({
   data: {
     allMarkdownRemark: { edges },
@@ -65,6 +66,8 @@ const Chapters = ({
 
           {/* end of chapter three */}
         </div>
+
+        <ChapterBox edges={allListingsPost} text="Create All listings query" />
       </div>
     </>
   )

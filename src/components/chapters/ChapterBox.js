@@ -1,4 +1,7 @@
 import React from "react"
+import { Link } from "gatsby"
+import HeadingThree from "../typography/HeadingThree"
+import BodyOne from "../typography/BodyOne"
 
 const ChapterBox = ({ text, edges }) => {
   return (
