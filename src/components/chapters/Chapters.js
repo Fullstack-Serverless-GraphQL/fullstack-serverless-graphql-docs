@@ -12,19 +12,42 @@ const Chapters = ({
   const backendPosts = constants.filterByPart(edges, "setting up backend")
   const librariesPosts = constants.filterByChapter(edges, "Adding libraries")
   const allListingsPost = constants.filterByChapter(edges, "All listings query")
+
+  const allChapters = [
+    {
+      chapterEdge: epilouges,
+      chapterTitle: "Epilouge",
+    },
+    {
+      chapterEdge: backendPosts,
+      chapterTitle: "Setting Up infrastructure",
+    },
+    {
+      chapterEdge: librariesPosts,
+      chapterTitle: "Adding libraries",
+    },
+    {
+      chapterEdge: allListingsPost,
+      chapterTitle: "Create All listings query",
+    },
+  ]
   return (
     <>
       <div className="mt-10">
         <HeadingTwo className="text-center">Chapters</HeadingTwo>
         {/* chAPTERS GRID */}
         <div className="grid grid-cols-2">
-          <ChapterBox edges={epilouges} text="Epilouge" />
+          {/* <ChapterBox edges={epilouges} text="Epilouge" />
           <ChapterBox edges={backendPosts} text="Setting Up infrastructure" />
           <ChapterBox edges={librariesPosts} text="Adding libraries" />
           <ChapterBox
             edges={allListingsPost}
             text="Create All listings query"
-          />
+          /> */}
+
+          {allChapters.map(i => (
+            <ChapterBox edges={i.chapterEdge} text={i.chapterTitle} />
+          ))}
         </div>
       </div>
     </>
