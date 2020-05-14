@@ -12,6 +12,10 @@ const Chapters = ({
   const backendPosts = constants.filterByPart(edges, "setting up backend")
   const librariesPosts = constants.filterByChapter(edges, "Adding libraries")
   const allListingsPost = constants.filterByChapter(edges, "All listings query")
+  const allGetAListingPosts = constants.filterByChapter(
+    edges,
+    "Get A Listing Query"
+  )
 
   const allChapters = [
     {
@@ -29,6 +33,10 @@ const Chapters = ({
     {
       chapterEdge: allListingsPost,
       chapterTitle: "Create All listings query",
+    },
+    {
+      chapterTitle: "Get A Listing Query",
+      chapterEdge: allGetAListingPosts,
     },
   ]
   return (
