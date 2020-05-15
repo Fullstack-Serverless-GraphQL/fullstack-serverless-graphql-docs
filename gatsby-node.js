@@ -39,6 +39,7 @@ exports.createPages = async ({ actions, graphql }) => {
     createPage({
       path: node.node.frontmatter.path,
       component: path.resolve(`src/templates/post.js`),
+      previous: previous,
       context: {
         path: node.node.frontmatter.path,
         previous,
