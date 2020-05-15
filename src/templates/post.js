@@ -1,5 +1,5 @@
 import React from "react"
-import { graphql } from "gatsby"
+import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import HeadingOne from "../components/typography/HeadingOne"
 import HeadingThree from "../components/typography/HeadingThree"
@@ -7,7 +7,7 @@ import HeadingThree from "../components/typography/HeadingThree"
 export default function Template({ data, pageContext }) {
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
-
+  const { previous, next } = pageContext
   console.log("ddd", pageContext)
   return (
     <Layout>
@@ -16,6 +16,25 @@ export default function Template({ data, pageContext }) {
         <HeadingThree>{frontmatter.date}</HeadingThree>
         <hr className="bg-grey" />
         <div className="markdown" dangerouslySetInnerHTML={{ __html: html }} />
+      </div>
+
+      <div className="mt-10 ">
+        <ul className="flex flex-row">
+          <li className="mr-4">
+            {previous && (
+              <Link to={previous.node.frontmatter.path}>
+                Prev {previous.node.frontmatter.title}
+              </Link>
+            )}
+          </li>
+          <li>
+            {next && (
+              <Link to={next.node.frontmatter.path}>
+                Next {next.node.frontmatter.title}
+              </Link>
+            )}
+          </li>
+        </ul>
       </div>
     </Layout>
   )
