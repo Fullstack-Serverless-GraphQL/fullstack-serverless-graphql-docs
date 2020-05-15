@@ -4,9 +4,11 @@ import Layout from "../components/layout"
 import HeadingOne from "../components/typography/HeadingOne"
 import HeadingThree from "../components/typography/HeadingThree"
 
-export default function Template({ data }) {
+export default function Template({ data, pageContext }) {
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
+
+  console.log("ddd", pageContext)
   return (
     <Layout>
       <div className="blog-post">
