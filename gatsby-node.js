@@ -27,21 +27,20 @@ exports.createPages = async ({ actions, graphql }) => {
     console.error(result.errors)
   }
 
-  console.log("www", result.data.allMarkdownRemark.edges)
-  result.data.allMarkdownRemark.edges.forEach(({ node, index }) => {
-    const previous =
-      index === result.data.allMarkdownRemark.edges.length - 1
-        ? null
-        : result.data.allMarkdownRemark.edges[index + 1]
+  const results = result.data.allMarkdownRemark.edges
 
-    const next =
-      index === 0 ? null : result.data.allMarkdownRemark.edges[index - 1]
+  // console.log("rrr", results)
+  result.data.allMarkdownRemark.edges.forEach((node, index) => {
+    const previous = index === results.length - 1 ? null : results[index + 1]
+
+    const next = index === 0 ? null : results[index - 1]
+    console.log("nnn", previous, next)
 
     createPage({
-      path: node.frontmatter.path,
+      path: node.node.frontmatter.path,
       component: path.resolve(`src/templates/post.js`),
-      pageContext: {
-        path: node.frontmatter.path,
+      context: {
+        path: node.node.frontmatter.path,
         previous,
         next,
       },
