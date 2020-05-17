@@ -16,7 +16,11 @@ const Chapters = ({
     edges,
     "Get A Listing Query"
   )
-
+  const allMakeAMutationPosts = constants.filterByChapter(
+    edges,
+    "Make a booking mutation"
+  )
+  console.log("eee", edges, allMakeAMutationPosts)
   const allChapters = [
     {
       chapterEdge: epilouges,
@@ -37,6 +41,10 @@ const Chapters = ({
     {
       chapterTitle: "Get A Listing Query",
       chapterEdge: allGetAListingPosts,
+    },
+    {
+      chapterEdge: allMakeAMutationPosts,
+      chapterTitle: "Make a booking mutation",
     },
   ]
   return (
