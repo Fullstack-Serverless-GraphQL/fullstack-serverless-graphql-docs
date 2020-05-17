@@ -20,7 +20,13 @@ const Chapters = ({
     edges,
     "Make a booking mutation"
   )
-  console.log("eee", edges, allMakeAMutationPosts)
+
+  const allUnitTestPosts = constants.filterByChapter(edges, "Unit testing")
+
+  const allDeployBackendPosts = constants.filterByChapter(
+    edges,
+    "Deploy Backend "
+  )
   const allChapters = [
     {
       chapterEdge: epilouges,
