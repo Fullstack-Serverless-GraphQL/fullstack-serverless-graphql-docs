@@ -25,7 +25,7 @@ const Chapters = ({
 
   const allDeployBackendPosts = constants.filterByChapter(
     edges,
-    "Deploy Backend "
+    "Deploy Backend"
   )
   const allChapters = [
     {
@@ -51,6 +51,14 @@ const Chapters = ({
     {
       chapterEdge: allMakeAMutationPosts,
       chapterTitle: "Make a booking mutation",
+    },
+    {
+      chapterEdge: allUnitTestPosts,
+      chapterTitle: "Unit testing",
+    },
+    {
+      chapterEdge: allDeployBackendPosts,
+      chapterTitle: "Deploy Backend",
     },
   ]
   return (
