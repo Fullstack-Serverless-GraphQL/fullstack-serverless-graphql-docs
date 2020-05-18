@@ -62,6 +62,9 @@ const Chapters = ({
       chapterEdge: allDeployBackendPosts,
       chapterTitle: "Deploy Backend",
     },
+  ]
+
+  const frontendPosts = [
     {
       chapterEdge: allCLIPosts,
       chapterTitle: "Vue cli",
@@ -76,6 +79,8 @@ const Chapters = ({
       <div className="mt-10">
         <HeadingTwo className="text-center">Chapters</HeadingTwo>
         {/* chAPTERS GRID */}
+        <HeadingTwo className="text-center">Backend</HeadingTwo>
+
         <div className="grid grid-cols-2">
           {/* <ChapterBox edges={epilouges} text="Epilouge" />
           <ChapterBox edges={backendPosts} text="Setting Up infrastructure" />
@@ -86,6 +91,13 @@ const Chapters = ({
           /> */}
 
           {allChapters.map(i => (
+            <ChapterBox edges={i.chapterEdge} text={i.chapterTitle} />
+          ))}
+        </div>
+        <HeadingTwo className="text-center">Frontend</HeadingTwo>
+
+        <div className="grid grid-cols-2">
+          {frontendPosts.map(i => (
             <ChapterBox edges={i.chapterEdge} text={i.chapterTitle} />
           ))}
         </div>
