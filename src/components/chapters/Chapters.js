@@ -27,6 +27,8 @@ const Chapters = ({
     edges,
     "Deploy Backend"
   )
+  const allCLIPosts = constants.filterByChapter(edges, "Vue cli")
+  const allTailwindPosts = constants.filterByChapter(edges, "Tailwind")
   const allChapters = [
     {
       chapterEdge: epilouges,
@@ -59,6 +61,14 @@ const Chapters = ({
     {
       chapterEdge: allDeployBackendPosts,
       chapterTitle: "Deploy Backend",
+    },
+    {
+      chapterEdge: allCLIPosts,
+      chapterTitle: "Vue cli",
+    },
+    {
+      chapterEdge: allTailwindPosts,
+      chapterTitle: "Tailwind",
     },
   ]
   return (
