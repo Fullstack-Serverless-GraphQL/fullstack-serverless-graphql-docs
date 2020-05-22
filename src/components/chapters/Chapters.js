@@ -34,6 +34,8 @@ const Chapters = ({
     edges,
     "Building reusable components"
   )
+  const allLandpagePosts = constants.filterByChapter(edges, "Landing Page")
+
   const allChapters = [
     {
       chapterEdge: epilouges,
@@ -81,6 +83,10 @@ const Chapters = ({
     {
       chapterEdge: allResuablePosts,
       chapterTitle: "Building reusable components",
+    },
+    {
+      chapterEdge: allLandpagePosts,
+      chapterTitle: "Landing Page",
     },
   ]
   return (
