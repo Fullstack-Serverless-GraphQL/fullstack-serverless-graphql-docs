@@ -34,7 +34,6 @@ exports.createPages = async ({ actions, graphql }) => {
     const previous = index === results.length - 1 ? null : results[index + 1]
 
     const next = index === 0 ? null : results[index - 1]
-    console.log("nnn", previous, next)
 
     createPage({
       path: node.node.frontmatter.path,
