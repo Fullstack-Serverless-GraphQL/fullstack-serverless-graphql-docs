@@ -4,7 +4,7 @@ title: A Case For Graphql
 tag: Epilouge
 date: 2020-04-13T00:00:00.000Z
 part: Epilouge
-chapter: none
+chapter: '0'
 ---
 GraphQL is a query language for your API that allows you to specify exactly in what shape and form you want your data to be queried or mutated on your API. GraphQL has nothing to do with your database schema nor does it forces you to use a graph database.
 
