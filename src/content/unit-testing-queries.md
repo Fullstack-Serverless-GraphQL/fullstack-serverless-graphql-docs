@@ -8,9 +8,7 @@ chapter: Unit testing
 ---
 In this part I'm going to show you how to write Unit tests for your functions. In theory We should've done this first, however, I wanted the GraphQL bits to go down first before we nailing down the unit tests.
 
-
-
-in the tests folder create a file called getAllListings.test.js and the the following: 
+in the tests folder create a file called getAllListings.test.js and add the following: 
 
 ```javascript
 import { getAllListings, getAListing } from "../src/resolvers/query";
@@ -27,13 +25,9 @@ describe("All Listings", () => {
 }
 ```
 
- 
-
 🎯 Jest allows us to first describe the test, then we can call the test function with whatever we want to test.
 
 🎯 In our case we are first making sure it brings back the listings. We call the getAllListings Query and make sure the response has a listingId and it is greater than 1
-
-
 
 Next we can test the getAListing function:
 
@@ -48,8 +42,6 @@ Next we can test the getAListing function:
 ```
 
 🎯 We are making sure that the listing that comes back matches the listingId we supplied to the query.
-
-
 
 Now if you run the following the test should pass:
 
