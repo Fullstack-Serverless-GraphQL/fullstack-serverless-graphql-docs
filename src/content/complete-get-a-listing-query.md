@@ -24,7 +24,7 @@ Now lets do what we did in the previous query and lets start in the Query.js fil
 
 🍕 args is short for the arguments we take in from query. 
 
-Next we can start with sending these params to Dynamo and return the selected listing:
+Next we can start sending these params to Dynamo and return the selected listing:
 
 ```javascript
 try {
