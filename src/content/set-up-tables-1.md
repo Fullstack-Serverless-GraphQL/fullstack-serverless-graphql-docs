@@ -6,9 +6,9 @@ date: 2020-04-21T16:45:08.244Z
 part: setting up backend
 chapter: Setting Up infrastructure
 ---
-In this section we are going to create our DynamoDB tables. DynamoDB is a NoSQL key-value store serverless native database. Sounds like a mouthful, in a nutshell it does not force your data to adhere to any data model and you do not have to provision any server instances for it to run. 
+In this chapter we are going to create our DynamoDB tables. DynamoDB is a NoSQL key-value store serverless native database. Sounds like a mouthful, in a nutshell it does not force your data to adhere to any data model schema and you do not have to provide any server instances for it to run.
 
-The way we will be provisioning our tables will enable us to create tables for any of our environment stages. 
+The way we will be provisioning our tables will enable us to create tables for any of our environment stages.
 
 Create a folder called \`resources\` and create a file called \`listing-db.yml\`. Paste the following inside:
 
@@ -38,7 +38,7 @@ Resources:
 
 ### What is happening?
 
-🎩 We are creating table with a Primary Key called \`listingId\` and a Sort Key called \`listingName\` both of them are strings.
+🎩 We are creating a table with a Primary Key called \`listingId\` and a Sort Key called \`listingName\` both of them are strings.
 
 🎩  Specify what the Read/Write Units should be. \
 \
@@ -69,7 +69,7 @@ Resources:
         WriteCapacityUnits: ${self:custom.tableThroughput}
 ```
 
-We are doing the same thing here only difference is that we made the Sort Key the \`listingId\`. 
+We are doing the same thing here, only difference is that we made the Sort Key the \`listingId\`. 
 
 Now we need to reference it in our \`serverless.yml\`:
 
@@ -79,7 +79,7 @@ resources:
   - ${file(resources/bookingDB.yml)}
 ```
 
-In the samee file we need to create those tables in the custom section of the file:
+In the same file we need to create those tables in the custom section of the file:
 
 ```
 custom:
@@ -89,9 +89,7 @@ custom:
   BookingsDB: ${self:custom.stage}-bookings
 ```
 
-As we well as create them as environment variables:
-
-
+As we well as create them as environment variables and add IAM role statements for this Lambda:
 
 ```
 provider:
@@ -103,8 +101,27 @@ provider:
   environment:
     BookingsDB: ${self:custom.BookingsDB}
     ListingsDB: ${self:custom.ListingsDB}
+  
+  iamRoleStatements:
+    - Effect: Allow
+      Action:
+        - dynamodb:DescribeTable
+        - dynamodb:Query
+        - dynamodb:Scan
+        - dynamodb:GetItem
+        - dynamodb:PutItem
+        - dynamodb:UpdateItem
+        - dynamodb:DeleteItem
+        - dynamodb:GetRecords
+        - dynamodb:GetShardIterator
+        - dynamodb:DescribeStream
+        - dynamodb:ListStream
+
+      Resource:
+        - "Fn::GetAtt": [ListingsDB, Arn]
+        - "Fn::GetAtt": [BookingsDB, Arn]
 ```
 
-
+ 
 
 Now we have created our infrastructure for the tables as code. 🗽
