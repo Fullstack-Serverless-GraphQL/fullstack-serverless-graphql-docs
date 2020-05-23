@@ -6,9 +6,9 @@ date: 2020-05-14T17:42:07.163Z
 part: Building backend
 chapter: Get A Listing Query
 ---
-In this chapter we will Attempt to get a single a listing from Dynamo when given an listingID.
+In this chapter we will attempt to get a single a listing from Dynamo when given a listingID.
 
-To do this lets edit our schema and add the following query:
+To do this let's edit our schema and add the following query:
 
 ```
     getAListing(listingId: String!): Listing!
@@ -31,8 +31,6 @@ export const getAListing = async (args,context) =>{
 }
 ```
 
-
-
 Then finally import it into the index for the resolvers: 
 
 ```javascript
@@ -43,9 +41,6 @@ export const resolvers = {
     getAListing: (root, args, context) => getAListing(args, context)
   }
 };
-
 ```
-
-
 
 Next out will flesh out the function.
