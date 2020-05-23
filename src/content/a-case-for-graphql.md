@@ -6,15 +6,11 @@ date: 2020-04-13T00:00:00.000Z
 part: Epilouge
 chapter: none
 ---
+GraphQL is a query language for your API that allows you to specify exactly in what shape and form you want your data to be queried or mutated on your API. GraphQL has nothing to do with your database schema nor does it forces you to use a graph database.
 
-GraphQL is a query langauge for your API that allows to specifiy exactly in what shape and form you want your
-data to be queried or mutated on your API. It has nothing to do with your database schema too nor forces you to use
-a graph database.
+## What problem does GraphQL solve ?
 
-## What problem does it solve???
-
-It prevents you from devevloping mutliple endpoints to collect data. Lets say I had an API that
-does operations on `Stocks, Companies & Currencies`. You have make the following endpoints in the backend:
+GraphQL prevents you from developing multiple endpoints to collect data. Let us say you had an API that does operations on Stocks, Companies & Currencies. You would have had to make the following endpoints in the backend:
 
 get all stocks
 
@@ -34,7 +30,7 @@ get a company
 /companies/{company_id}
 ```
 
-I think you get the pattern. whereas with Graphql our endpoint could be : `/graphql`
+I think you get the pattern. whereas with GraphQL our endpoint could be : `/graphql`
 
 with the following schema:
 
@@ -55,7 +51,7 @@ type Query {
 }
 ```
 
-now to query the data you can simply do this:
+now to query the data using GraphQL you can simply do this:
 
 ```graphql
 {
@@ -71,14 +67,10 @@ now to query the data you can simply do this:
 
 Which will get all the companies associated with that stock for you.
 
-## How can it make me a better developer?
+## What are the advantages of using GraphQL?
 
-GraphQL has a better developer experince due to the fact that because I Made the schema on the backend, a frontend
-developer can easilsy see the schema and understand how they need to structure their tasks on the frontend. A graphQL API
-is self documenting.
+GraphQL has a better developer experience because once you create the schema on the back-end, a front-end developer can easily see the schema and understand how they need to structure their tasks on the front-end to access specific data. A GraphQL API is self-documenting.
 
-Serverside graphQL libraries come with Playground or GraphQil for you to test your API, so no more fiddling with Postman.
+Server-side graphQL libraries come with Playground or GraphQil for you to test your API, so no more fiddling with Postman.
 
-GraphQL also comes with subscriptions which is basically realconnections to the server for use cases like messaging, notifications etc. All without using other libraries for this use case.
-
-However, GraphQL does not shine in all scenarios, so it is important that you know of it's limitations for specifc use cases.
+GraphQL also comes with subscriptions which are real connections to the server for use cases like messaging, notifications etc. All without using other libraries for this use case.
