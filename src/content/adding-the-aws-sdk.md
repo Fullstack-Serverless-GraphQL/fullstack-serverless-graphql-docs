@@ -32,8 +32,8 @@ export function call(action, params) {
 
 The following is happening:
 
-🎯 the call function has two parameters : action and params. Action will specifiy what type of DynamoDB operation is taking place, while params will be the data or expressions we are sending to Dynamo like whether to tell it to find something by a specific attribute etc.
+🎯 the call function has two parameters: action and params. Action will specifiy what type of DynamoDB operation is taking place, while params will be the data or expressions we are sending to Dynamo like whether to tell it to find something by a specific attribute etc.
 
-🎯 Then we are return a promise with the action and params attached to our new instance of DynamoDB.
+🎯 Then we return a promise with the action and params attached to our new instance of DynamoDB.
 
 Next we will go ahead and populate Dynamo with our listings!
