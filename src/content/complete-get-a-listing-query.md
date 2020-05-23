@@ -8,8 +8,6 @@ chapter: Get A Listing Query
 ---
 Now lets do what we did in the previous query and lets start in the Query.js file and add the following:
 
-
-
 ```javascript
   const params = {
     TableName: process.env.ListingsDB || "dev-listings",
@@ -20,15 +18,11 @@ Now lets do what we did in the previous query and lets start in the Query.js fil
   };
 ```
 
+🍕In this params object we are using a FilterExpression to get the specific listing from the table, which is the listingId in our case. 
 
-
-🍕In this params object we using a FilterExpression to get the specific listing from the table, which is the listingId in our case. 
-
-🍕The ExpressionAttributesValues object is where we need assign a value to the property we decleared in the FilterExpression. 
+🍕The ExpressionAttributesValues object is where we need assign a value to the property we declared in the FilterExpression. 
 
 🍕 args is short for the arguments we take in from query. 
-
-
 
 Next we can start with sending these params to Dynamo and return the selected listing:
 
@@ -74,9 +68,7 @@ try {
   }
 ```
 
-
-
-🍕In our try-catch we do a scan again to to retrevie the listing
+🍕In our try-catch we do a scan again to to retrieve the listing
 
 🍕 Then we check if the scan returned a listing that exists. If so we return the data associated to that listing.
 
@@ -84,14 +76,8 @@ try {
 
 🍕Lastly we return a message and code if there is an error.
 
-
-
 Next up we can run this query in Playground:
 
-
-
 \[Add playgorund query screen shoot]
-
-
 
 Now that we have the query working we can start on the mutation.
