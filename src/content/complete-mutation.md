@@ -6,21 +6,15 @@ date: 2020-05-17T18:55:32.335Z
 part: Building backend
 chapter: Make a booking mutation
 ---
-Here we are going to complete the mutation. Fist off lets install some packages:
-
-
+Now we are going to complete the mutation. First off let's install some packages:
 
 ```
 $ yarn add uuid stripe
 ```
 
-
-
-⌛ uuid is to generate random UUID's for the bookingId. Since Dynamo is a NoSQL datastore it does not autogenerate IDs like a SQL datastore.
+⌛ uuid is used to generate random UUID's for the bookingId. Since Dynamo is a NoSQL datastore it does not auto-generate IDs like a SQL datastore.
 
 ⌛ stripe will allow us to interact with the stripe API.
-
-
 
 Next lets go into our makeABooking mutation and add the following: 
 
@@ -53,13 +47,9 @@ export const makeABooking = async (args, context) => {
 
 ⌛ First off we are adding our necessary libs to the file 
 
-⌛ then we are creating a fnction called getPrices that will go into the listings table and get the listing that matches thee listingId for the listing the customer wants to make a booking for. 
+⌛ then we are creating a function called getPrices that will go into the listings table and get the listing that matches thee listingId for the listing the customer wants to make a booking for. 
 
-
-
-Next up lets calculate the price of the booking:
-
-
+Next up let's calculate the price of the booking:
 
 ```javascript
   //set the listing to a variables so we can resuse it
@@ -87,15 +77,13 @@ Next up lets calculate the price of the booking:
   });
 ```
 
-⌛ First we call the function to get the price of the listing
+⌛ First, we call the function to get the price of the listing
 
-⌛ then we get the total by getting the price of the listing and the multipling it by the amount of travelers on the trip. 
+⌛ then we get the total by getting the price of the listing and then multipling it by the amount of travelers on the trip. 
 
 ⌛ next we create an instance of the stripe library
 
 ⌛ then we create a charge to the customers card. 
-
-
 
 Next up we can create the params to send to DynamoDB:
 
@@ -118,11 +106,9 @@ Next up we can create the params to send to DynamoDB:
   };
 ```
 
+⌛ As before we are simply creating a params object that has the necessary TableName, and the fields that match the Booking Type in the schema. We have added a createdTimestamp and paymentDetails fields for internal use that will not be exposed to the API.
 
-
-⌛ As before we are simply creating a a params object that has the necessary TableName, and the fields that match the Booking Type in the schema. We have added a createdTimestamp and paymentDetails fields for internal use that will not be exposed to the API.
-
-Next lets send the params to Dynamo:
+Next let's send the params to Dynamo:
 
 ```javascript
  try {
@@ -157,14 +143,8 @@ Next lets send the params to Dynamo:
 
 ⌛ In the customers section we are simply mapping over the customers supplied. 
 
-
-
-Next lets test the function:
-
-
+Next let's test the function:
 
 \[Add the playground screenshot]
 
-
-
-Now our mutation is working. Next up we can write unit test for functions.
+Now our mutation is working. Now we can write unit test for functions.
