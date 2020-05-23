@@ -4,7 +4,7 @@ title: Getting setup
 tag: Epilouge
 date: 2020-04-13T00:00:00.000Z
 part: Epilouge
-chapter: none
+chapter: '0'
 ---
 # What you need
 
@@ -16,7 +16,7 @@ chapter: none
 
 ## Setting Up an AWS account
 
-If this is your first intro to AWS, I'd suggest that you follow the instructions laid out by[ Serverless Stack](https://serverless-stack.com/chapters/create-an-aws-account.html). **Make sure you have an IAM user and the AWS CLI configured as per the instructions.** 
+If this is your first introduction to AWS, I would suggest that you follow the instructions laid out by[ Serverless Stack](https://serverless-stack.com/chapters/create-an-aws-account.html). **Make sure you have an IAM user and the AWS CLI configured as per the instructions.** 
 
 ## Git provider
 
