@@ -8,18 +8,13 @@ chapter: All listings query
 ---
 In this part we get the data from Dynamo And return it.
 
-
-
-Back in our query.js file we can import the dynamoDB wrapper at the top of the file:
+Back in our query.js file, we can import the dynamoDB wrapper at the top of the file:
 
 ```
 import * as dynamoDBLib from "../../libs/dynamodb-lib";
-
 ```
 
  Next up we can create the parameters for our DynamoDB operation:
-
-
 
 ```
 const params = {
@@ -27,13 +22,9 @@ const params = {
   };
 ```
 
-Just a simple object that has the tablename. reason why we have the or operator is for when we test, Jest cannot pickup the .env file.
-
-
+Just a simple object that has the tablename. The reason why we have the or operator is for when we test, Jest cannot pick up the .env file.
 
 Next we have a try catch block that will help us fetch the data and return it:
-
-
 
 ```
   try {
@@ -78,21 +69,18 @@ Next we have a try catch block that will help us fetch the data and return it:
 
  🔋First we return a promise  and execute a scan on Dynamo and pass through our params object.
 
-🔋We have an if - else block to check if the is no listings, if they are return all the listings
+🔋We have an if-else block to check if the is no listings, if they are, return all the listings
 
 🔋Because we are returning an array we need to map over each element in the array and returning each field in the object.
 
 🔋In the case of the ListingType & ListingActivies these are nested arrays within the listing object itself, which we look over to return each element in the array. 
 
-🔋 In the case of the guide all we are doing is return back the properites in the guide object.
+🔋 In the case of the guide all we are doing is returning back the properties in the guide object.
 
 🔋 Lastly we return an error message and code in the case anything fails.
 
-
-
 Next lets now go to Playground and test the query by executing the following query:
 
-
-[ADD PLAYGROUND IMAGE]
+\[ADD PLAYGROUND IMAGE]
 
 Now the function returns our data as we have shaped it.
