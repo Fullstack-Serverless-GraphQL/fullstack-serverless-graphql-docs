@@ -6,7 +6,7 @@ date: 2020-05-17T18:21:12.181Z
 part: Building backend
 chapter: Make a booking mutation
 ---
-In this chapter we will be building our mutation which will allow users to be able to actually book for listings. First lets create the necessary types for our mutations.
+In this chapter we will be building our mutation which will allow users to be able to book for listings. First lets create the necessary Types for our mutations.
 
 Open up your schema.js file and paste the following: 
 
@@ -48,11 +48,7 @@ Open up your schema.js file and paste the following:
 
 🌍 lastly, we have an input called InputCustomer. An input in GraphQL is a Type that is used for mutations to pass in large objects. This will make it easier to call our mutation. 
 
-
-
 Next up lets create a mutation type in our schema: 
-
-
 
 ```
   type Mutation {
@@ -68,8 +64,6 @@ Next up lets create a mutation type in our schema:
   
 ```
 
-🌍 We are saying the our makeABooking mutation should take a listingId,size, bookingDate and customerEmail arguments. Then customers is also an argument but we are assigning it as an array of the InputCustomer. This means we can add multiple entires of the customer to our mutation.
+🌍 We are saying that our makeABooking mutation should take a listingId,size, bookingDate and customerEmail arguments. Then customers is also an argument but we are assigning it as an array of the InputCustomer. This means we can add multiple entires of the customer to our mutation.
 
-
-
-The beauty of GraphQL is that it comes with nifty features that REST does not. Best of all any other developer would be able to know how to call this Mutation easily by looking at it in the schema pane in Playground.
+The beauty of GraphQL is that it comes with nifty features that REST does not. Best of all any other developers will be able to know how to call this Mutation easily by looking at it in the schema pane in Playground.
