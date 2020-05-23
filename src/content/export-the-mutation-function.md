@@ -6,11 +6,9 @@ date: 2020-05-17T18:39:53.692Z
 part: Building backend
 chapter: Make a booking mutation
 ---
-In this post we just setup our mutation by exporting it. 
+In this chapter we just set up our mutation by exporting it. 
 
 In the mutation.js file add the following function:
-
-
 
 ```javascript
 export const makeABooking = async (args, context) => {
@@ -19,11 +17,7 @@ return null
 }
 ```
 
-
-
 Then head over the the index of the resolvers and import it:
-
-
 
 ```javascript
 import { makeABooking } from "./mutation"
@@ -33,10 +27,7 @@ export const resolvers = {
     makeABooking: (root, args, context) => makeABooking(args, context)
   }
 };
-
 ```
-
-
 
 Your resolvers index should look like this:
 
@@ -52,9 +43,6 @@ export const resolvers = {
     makeABooking: (root, args, context) => makeABooking(args, context)
   }
 };
-
 ```
-
-
 
 Next up we setup a Stripe Account
