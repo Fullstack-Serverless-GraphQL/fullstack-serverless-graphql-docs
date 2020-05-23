@@ -24,4 +24,4 @@ and add the first row.
 
 Then click save.
 
-Repeat this process till you have minimum of 3 listings. You can always add more listings at a later stage.
+Repeat this process till you have a minimum of 3 listings. You can always add more listings at a later stage.
