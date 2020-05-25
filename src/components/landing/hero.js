@@ -36,7 +36,11 @@ const Hero = () => (
         </RedOutlineButton>
       </div>
       <div>
-        <img src={HeroImage} alt="hero" className="s:hidden lg:block" />
+        <img
+          src={HeroImage}
+          alt="hero"
+          className="s:hidden lg:block mt-20 w-full"
+        />
       </div>
     </div>
   </>
