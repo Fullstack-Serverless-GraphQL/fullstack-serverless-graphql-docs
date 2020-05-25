@@ -36,6 +36,7 @@ const Chapters = ({
   )
   const allLandpagePosts = constants.filterByChapter(edges, "Landing Page")
   const allListingPosts = constants.filterByChapter(edges, "View Listing")
+  const allBookingsPosts = constants.filterByChapter(edges, "Make A Booking")
 
   const allChapters = [
     {
@@ -92,6 +93,10 @@ const Chapters = ({
     {
       chapterEdge: allListingPosts,
       chapterTitle: "13. View Listing",
+    },
+    {
+      chapterEdge: allBookingsPosts,
+      chapterTitle: "14. Make A Booking",
     },
   ]
   return (
