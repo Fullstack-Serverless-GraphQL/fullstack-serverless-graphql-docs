@@ -35,58 +35,63 @@ const Chapters = ({
     "Building reusable components"
   )
   const allLandpagePosts = constants.filterByChapter(edges, "Landing Page")
+  const allListingPosts = constants.filterByChapter(edges, "View Listing")
 
   const allChapters = [
     {
       chapterEdge: epilouges,
-      chapterTitle: "Epilouge",
+      chapterTitle: "1. Epilouge",
     },
     {
       chapterEdge: backendPosts,
-      chapterTitle: "Setting Up infrastructure",
+      chapterTitle: "2. Setting Up infrastructure",
     },
     {
       chapterEdge: librariesPosts,
-      chapterTitle: "Adding libraries",
+      chapterTitle: "3. Adding libraries",
     },
     {
       chapterEdge: allListingsPost,
-      chapterTitle: "Create All listings query",
+      chapterTitle: "4. Create All listings query",
     },
     {
-      chapterTitle: "Get A Listing Query",
+      chapterTitle: "5. Get A Listing Query",
       chapterEdge: allGetAListingPosts,
     },
     {
       chapterEdge: allMakeAMutationPosts,
-      chapterTitle: "Make a booking mutation",
+      chapterTitle: "6. Make a booking mutation",
     },
     {
       chapterEdge: allUnitTestPosts,
-      chapterTitle: "Unit testing",
+      chapterTitle: "7. Unit testing",
     },
     {
       chapterEdge: allDeployBackendPosts,
-      chapterTitle: "Deploy Backend",
+      chapterTitle: "8. Deploy Backend",
     },
   ]
 
   const frontendPosts = [
     {
       chapterEdge: allCLIPosts,
-      chapterTitle: "Vue cli",
+      chapterTitle: "9. Vue cli",
     },
     {
       chapterEdge: allTailwindPosts,
-      chapterTitle: "Tailwind",
+      chapterTitle: "10. Tailwind",
     },
     {
       chapterEdge: allResuablePosts,
-      chapterTitle: "Building reusable components",
+      chapterTitle: "11. Building reusable components",
     },
     {
       chapterEdge: allLandpagePosts,
-      chapterTitle: "Landing Page",
+      chapterTitle: "12. Landing Page",
+    },
+    {
+      chapterEdge: allListingPosts,
+      chapterTitle: "13. View Listing",
     },
   ]
   return (
