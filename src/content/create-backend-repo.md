@@ -8,15 +8,15 @@ chapter: creating repo
 ---
 In this chapter, we will initialise the back-end repo and get everything setup
 
-\## Create a repo on Github
+## Create a repo on Github
 
 head over to Github and click on create a repo
 
-\[add image]
+![](/uploads/1.png)
 
 then create an empty repo and call it lunar-tour-api, and leave the other fields blank.
 
-\[add image]
+![](/uploads/2.png)
 
 Now we need to clone the servless-graphQL starter, so open your terminal and type in the following:
 
