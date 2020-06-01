@@ -14,7 +14,7 @@ Create a folder called \`resources\` and create a file called \`listing-db.yml\`
 
 ```YAML
 Resources:
- ListingsDB:
+  ListingsDB:
     Type: AWS::DynamoDB::Table
     Properties:
       TableName: ${self:custom.ListingsDB}
@@ -24,7 +24,6 @@ Resources:
         - AttributeName: listingName
           AttributeType: S
 
-        
       KeySchema:
         - AttributeName: listingId
           KeyType: HASH
@@ -34,6 +33,7 @@ Resources:
       ProvisionedThroughput:
         ReadCapacityUnits: ${self:custom.tableThroughput}
         WriteCapacityUnits: ${self:custom.tableThroughput}
+
 ```
 
 ### What is happening?
@@ -87,6 +87,10 @@ custom:
   region: ${opt:region, self:provider.region}
   ListingsDB: ${self:custom.stage}-listings
   BookingsDB: ${self:custom.stage}-bookings
+  tableThroughputs:
+    prod: 1
+    default: 1
+  tableThroughput: ${self:custom.tableThroughputs.${self:custom.stage}, self:custom.tableThroughputs.default}
 ```
 
 As we well as create them as environment variables and add IAM role statements for this Lambda:
@@ -122,6 +126,4 @@ provider:
         - "Fn::GetAtt": [BookingsDB, Arn]
 ```
 
- 
-
-Now we have created our infrastructure for the tables as code. 🗽
+Now we have created our infrastructure for the tables as code. 🗽 Commit this code to master for the tables to be created.
