@@ -10,7 +10,11 @@ In this part we will set up Seed, which is our Continous Integration & deploymen
 
 First, sign up for an account: \[add account sign up]
 
+![](/uploads/1-seed.png)
+
 Then click add an App
+
+![](/uploads/2-seed.png)
 
 Now connect to your favorite git provider
 
@@ -18,10 +22,20 @@ It should pick up our service manually.
 
 Then you need to add your AWS credentials:
 
+![](/uploads/3-seed.png)
+
 Once that is done click add new app
 
 Now we need to deploy, so click the arrow in the dev part if the pipeline and click deploy
 
-After a few minutes you should be able to see the new endpoints and tables we created.
+![](/uploads/4-seed.png)
+
+After a few minutes you should be able to see the new endpoints and tables we created. first click on the drop down:
+
+![](/uploads/5-seed.png)
+
+then click view resources:
+
+![](/uploads/6-seed.png)
 
 We will get back to how we can move stuff to prod later.
