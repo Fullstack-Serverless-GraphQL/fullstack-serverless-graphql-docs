@@ -13,7 +13,27 @@ The way we will be provisioning our tables will enable us to create tables for a
 Create a folder called \`resources\` and create a file called \`listing-db.yml\`. Paste the following inside:
 
 ```YAML
-book
+Resources:
+  ListingsDB:
+    Type: AWS::DynamoDB::Table
+    Properties:
+      TableName: ${self:custom.ListingsDB}
+      AttributeDefinitions:
+        - AttributeName: listingId
+          AttributeType: S
+        - AttributeName: listingName
+          AttributeType: S
+
+      KeySchema:
+        - AttributeName: listingId
+          KeyType: HASH
+        - AttributeName: listingName
+          KeyType: RANGE
+      # Set the capacity based on the stage
+      ProvisionedThroughput:
+        ReadCapacityUnits: ${self:custom.tableThroughput}
+        WriteCapacityUnits: ${self:custom.tableThroughput}
+
 ```
 
 ### What is happening?
@@ -67,6 +87,10 @@ custom:
   region: ${opt:region, self:provider.region}
   ListingsDB: ${self:custom.stage}-listings
   BookingsDB: ${self:custom.stage}-bookings
+  tableThroughputs:
+    prod: 1
+    default: 1
+  tableThroughput: ${self:custom.tableThroughputs.${self:custom.stage}, self:custom.tableThroughputs.default}
 ```
 
 As we well as create them as environment variables and add IAM role statements for this Lambda:
