@@ -13,27 +13,7 @@ The way we will be provisioning our tables will enable us to create tables for a
 Create a folder called \`resources\` and create a file called \`listing-db.yml\`. Paste the following inside:
 
 ```YAML
-Resources:
- ListingsDB:
-    Type: AWS::DynamoDB::Table
-    Properties:
-      TableName: ${self:custom.ListingsDB}
-      AttributeDefinitions:
-        - AttributeName: listingId
-          AttributeType: S
-        - AttributeName: listingName
-          AttributeType: S
-
-        
-      KeySchema:
-        - AttributeName: listingId
-          KeyType: HASH
-        - AttributeName: listingName
-          KeyType: RANGE
-      # Set the capacity based on the stage
-      ProvisionedThroughput:
-        ReadCapacityUnits: ${self:custom.tableThroughput}
-        WriteCapacityUnits: ${self:custom.tableThroughput}
+book
 ```
 
 ### What is happening?
@@ -122,6 +102,4 @@ provider:
         - "Fn::GetAtt": [BookingsDB, Arn]
 ```
 
- 
-
-Now we have created our infrastructure for the tables as code. 🗽
+Now we have created our infrastructure for the tables as code. 🗽 Commit this code to master for the tables to be created.
