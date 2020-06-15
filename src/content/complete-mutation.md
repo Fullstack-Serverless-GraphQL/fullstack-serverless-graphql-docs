@@ -21,7 +21,7 @@ Next lets go into our makeABooking mutation and add the following:
 ```
 import { v1 as uuidv1 } from "uuid";
 import stripePackage from "stripe";
-import * as dynamoDBLib from "../../libs/dynamodb-lib";
+import dynamodb from "../../libs/dynamodb-lib";
 
 export const makeABooking = async (args, context) => {
   //Get the listing that the user selected
@@ -35,7 +35,7 @@ export const makeABooking = async (args, context) => {
       },
     };
     try {
-      const listings = await dynamoDBLib.call("query", params);
+      const listings = await dynamodb.query(params);
       return listings;
     } catch (e) {
       return e;
@@ -54,21 +54,21 @@ Next up let's calculate the price of the booking:
 ```javascript
   //set the listing to a variables so we can resuse it
   const listingObject = await getPrices();
-  
+
   //caLCULATE THE amount to be charged to the
   //customers card
-  
-  const bookingCharge = parseInt(listingObject.Items[0].price) * args.size;
+
+  const bookingCharge =
+    parseInt(listingObject.Items[0].price) * args.customers.length;
   //get the name of the listing
-  
+
   const listingName = listingObject.listingName;
   //create an instance of the stripe lib
-  
-  console.log(process.env.stripeSecretKey);
+
   const stripe = stripePackage(process.env.stripeSecretKey);
-  
+
   //charge the users card
-  
+
   const stripeResult = await stripe.charges.create({
     source: "tok_visa",
     amount: bookingCharge,
@@ -95,7 +95,7 @@ Next up we can create the params to send to DynamoDB:
       bookingId: uuidv1(),
       listingId: args.listingId,
       bookingDate: args.bookingDate,
-      size: args.size,
+      size: args.customers.length > 0 ? args.customers.length : 0,
       bookingTotal: bookingCharge,
       customerEmail: args.customerEmail,
       customers: args.customers,
@@ -113,9 +113,8 @@ Next let's send the params to Dynamo:
 ```javascript
  try {
     //insert the booking into the table
-    await dynamoDBLib.call("put", params);
+    await dynamodb.put(params);
 
-   
     return {
       bookingId: params.Item.bookingId,
       listingId: params.Item.listingId,
@@ -125,7 +124,7 @@ Next let's send the params to Dynamo:
       customerEmail: params.Item.customerEmail,
       customers: params.Item.customers.map((c) => ({
         name: c.name,
-        Surname: c.Surname,
+        surname: c.surname,
         country: c.country,
         passportNumber: c.passportNumber,
         physioScore: c.physioScore,
