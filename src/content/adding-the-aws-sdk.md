@@ -18,16 +18,19 @@ Then go ahead and create a \`libs/\` directory in the root of the folder and cre
 
 Lets now work on a wrapper around the \`AWS-SDK\` for Dynamo and add the following to \`dynamodb-lib.js\`: 
 
-```
+```javascript
 import AWS from "aws-sdk";
 
-AWS.config.update({ region: 'us-east-1' })
+const client = new AWS.DynamoDB.DocumentClient();
 
-export function call(action, params) {
-    const dynamoDb = new AWS.DynamoDB.DocumentClient();
+export default {
+  get: (params) => client.get(params).promise(),
+  put: (params) => client.put(params).promise(),
+  query: (params) => client.query(params).promise(),
+  update: (params) => client.update(params).promise(),
+  delete: (params) => client.delete(params).promise(),
+};
 
-    return dynamoDb[action](params).promise();
-}
 ```
 
 The following is happening:
