@@ -31,6 +31,6 @@ hello
 
 It should return the following:
 
-\[Add hello world data return here]
+![](/uploads/hello-world-.png)
 
 Now that is working! Let's continue to set up the other libraries we need.
