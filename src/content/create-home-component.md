@@ -8,6 +8,18 @@ chapter: Landing Page
 ---
 In this part we will create the following landing page based on this mockup \[add link to mockup]
 
+Before we start make sure you have your backend running on Localhost:4000. 
+
+```
+$ cd lunar-tour-api
+```
+
+then start the server:
+
+```
+$ sls offline
+```
+
 First create a Home.vue component in the Views directory. Then go into the router.js and add the following route. 
 
 ```javascript
@@ -21,7 +33,6 @@ Also import the file at the top of the page:
 
 ```javascript
 import Home from "./pages/Home";
-
 ```
 
 Next up open the Home.vue component and copy the following:
@@ -82,7 +93,6 @@ export default {
   grid-template-columns: repeat(3, 1fr);
 } */
 </style>
-
 ```
 
 What is happening here ?
@@ -116,7 +126,30 @@ query GetAllListings {
     price
   }
 }
+```
+
+Make sure your App.vue looks like this:
+
+```javascript
+<template>
+  <div id="app">
+    <Nav />
+    <router-view />
+  </div>
+</template>
+<script>
+import Nav from "./components/navs/Nav.vue";
+
+export default {
+  name: "App",
+  components: {
+    Nav,
+  },
+};
+</script>
 
 ```
+
+
 
 So if we go to the landing page in the browser we should see all the listings load.
