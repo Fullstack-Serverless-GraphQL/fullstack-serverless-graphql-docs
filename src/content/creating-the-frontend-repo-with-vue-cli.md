@@ -8,22 +8,15 @@ chapter: Vue cli
 ---
 In this section we will start building out the frontend of the Lunar Tour app. First we will need to create the repo on Github.
 
-
-
 First go to Github and create new repo:
 
-\[Add screen where you create repo]
-
-
+![](/uploads/github_step.png)
 
 Now that we have it created. We need to install the Vue CLI. It will allow us to scaffold the project. In your terminal run the following:
 
 ```
 $ yarn global add @vue/cli
-
 ```
-
-
 
 Once it is installed run the following:
 
@@ -31,23 +24,21 @@ Once it is installed run the following:
 $ vue create lunar-tour-frontend
 ```
 
-
-
 Select the default option:
 
-\[screenshot]
-
-
+![](/uploads/step_1.png)
 
 Select the Babel, Router & Linter options.
 
-\[screenshot]
+![](/uploads/step_2.png)
+
+Select Y for the history:
+
+![](/uploads/step_3.png)
 
 Sit back and let the CLI do the work:
 
-\[Screenshot]
-
-
+![](/uploads/step_5.png)
 
 Now change into the directory and start the app:
 
@@ -57,20 +48,16 @@ $ yarn serve
 
 If you go to localhost:8080 your app should be visible.
 
-
-
 Now we need to commit this to our repo. Initialize the local directory as a Git repository:
 
 ```
 $ git init
-
 ```
 
 Add the files in your new local repository. This stages them for the first commit:
 
 ```
 $ git add .
-
 ```
 
 Commit the files that you've staged in your local repository:
@@ -89,15 +76,10 @@ $ git remote -v
 # Verifies the new remote URL
 ```
 
-
-
-[Push the changes](https://help.github.com/en/articles/pushing-commits-to-a-remote-repository)in your local repository to GitHub:
+[Push the changes](https://help.github.com/en/articles/pushing-commits-to-a-remote-repository) in your local repository to GitHub:
 
 ```
 $ git push -u origin master
-
 ```
-
-
 
 Now all our code is synced with Github.
