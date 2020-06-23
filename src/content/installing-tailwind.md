@@ -46,8 +46,6 @@ import "./assets/css/tailwind.css";
 
 Create tailwind.config.js file and[ copy the contents of this link](https://raw.githubusercontent.com/AmoDinho/lunar-tour-v2/master/lunar-tour-client/tailwind.config.js) into the file. 
 
-
-
 Now lets test that it is working by adding styles into a component:
 
 ```
@@ -83,11 +81,8 @@ Now lets test that it is working by adding styles into a component:
   color: #42b983;
 }
 </style>
-
 ```
 
 Now the app is picking up our styles.
 
-
-
-\[add image of conf]
+![](/uploads/tailwind_conf.png)
