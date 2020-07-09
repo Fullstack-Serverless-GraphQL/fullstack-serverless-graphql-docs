@@ -5,27 +5,26 @@ tag: frontend
 date: 2020-05-25T16:01:51.200Z
 part: Build frontend
 chapter: View Listing
+postnumber: 32
+framework: vue
 ---
-In this section we will start with building the component to allow our users to be able to view every individual listing. 
+
+In this section we will start with building the component to allow our users to be able to view every individual listing.
 
 Fist head over to the router.js file and add the new route:
 
-
-
 ```javascript
-import Listing from "./pages/Listing";
+import Listing from "./pages/Listing"
 
 const routes = [
- {
+  {
     path: "/listing/:id",
-    component: Listing
-  }
+    component: Listing,
+  },
 ]
 ```
 
 The ":id" in the URL will tell the router to put id of the listing in the URL whenever it is navigated to. This will also allow us to send the id of that specific Listing to API for us to fetch.
-
-
 
 Next up create a Listing.vue file in the pages folder and add the following:
 
@@ -271,8 +270,6 @@ export default {
 
 ```
 
-
-
 🌶️ Similar to the landing page wee have an Apollo Query Component that will allow us to fetch the data for the listing and gives variables for the data, error and loading states.
 
 🌶️ In our template slot we first check for the Loading state to be true. then render a loading state.
@@ -280,8 +277,6 @@ export default {
 🌶️ Same thing for the error state
 
 🌶️ Then in the data part we are rending all the data associated with the Listing.
-
-
 
 Next up lets go ahead and add a schema document in the graphql folder called getAListing.gql:
 
@@ -311,7 +306,5 @@ query GetAListing($listingId: String!) {
 }
 
 ```
-
-
 
 So if you click on anyother listings you should be good to go.
