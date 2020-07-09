@@ -1,11 +1,13 @@
 ---
 path: /complete-mutation
 title: Complete Mutation
-tag: 'backend '
+tag: "backend "
 date: 2020-05-17T18:55:32.335Z
 part: Building backend
 chapter: Make a booking mutation
+postnumber: 17
 ---
+
 Now we are going to complete the mutation. First off let's install some packages:
 
 ```
@@ -16,7 +18,7 @@ $ yarn add uuid stripe
 
 ⌛ stripe will allow us to interact with the stripe API.
 
-Next lets go into our makeABooking mutation and add the following: 
+Next lets go into our makeABooking mutation and add the following:
 
 ```
 import { v1 as uuidv1 } from "uuid";
@@ -41,69 +43,69 @@ export const makeABooking = async (args, context) => {
       return e;
     }
   };
-  
+
   }
 ```
 
-⌛ First off we are adding our necessary libs to the file 
+⌛ First off we are adding our necessary libs to the file
 
-⌛ then we are creating a function called getPrices that will go into the listings table and get the listing that matches thee listingId for the listing the customer wants to make a booking for. 
+⌛ then we are creating a function called getPrices that will go into the listings table and get the listing that matches thee listingId for the listing the customer wants to make a booking for.
 
 Next up let's calculate the price of the booking:
 
 ```javascript
-  //set the listing to a variables so we can resuse it
-  const listingObject = await getPrices();
-  
-  //caLCULATE THE amount to be charged to the
-  //customers card
-  
-  const bookingCharge = parseInt(listingObject.Items[0].price) * args.size;
-  //get the name of the listing
-  
-  const listingName = listingObject.listingName;
-  //create an instance of the stripe lib
-  
-  console.log(process.env.stripeSecretKey);
-  const stripe = stripePackage(process.env.stripeSecretKey);
-  
-  //charge the users card
-  
-  const stripeResult = await stripe.charges.create({
-    source: "tok_visa",
-    amount: bookingCharge,
-    description: `Charge for booking of listing ${args.listingId}`,
-    currency: "usd",
-  });
+//set the listing to a variables so we can resuse it
+const listingObject = await getPrices()
+
+//caLCULATE THE amount to be charged to the
+//customers card
+
+const bookingCharge = parseInt(listingObject.Items[0].price) * args.size
+//get the name of the listing
+
+const listingName = listingObject.listingName
+//create an instance of the stripe lib
+
+console.log(process.env.stripeSecretKey)
+const stripe = stripePackage(process.env.stripeSecretKey)
+
+//charge the users card
+
+const stripeResult = await stripe.charges.create({
+  source: "tok_visa",
+  amount: bookingCharge,
+  description: `Charge for booking of listing ${args.listingId}`,
+  currency: "usd",
+})
 ```
 
 ⌛ First, we call the function to get the price of the listing
 
-⌛ then we get the total by getting the price of the listing and then multipling it by the amount of travelers on the trip. 
+⌛ then we get the total by getting the price of the listing and then multipling it by the amount of travelers on the trip.
 
 ⌛ next we create an instance of the stripe library
 
-⌛ then we create a charge to the customers card. 
+⌛ then we create a charge to the customers card.
 
 Next up we can create the params to send to DynamoDB:
 
 ```javascript
-  //create the booking in the table
-  const params = {
-    TableName: process.env.BookingsDB,
-    Item: {
-      bookingId: uuidv1(),
-      listingId: args.listingId,
-      bookingDate: args.bookingDate,
-      size: args.size,
-      bookingTotal: bookingCharge,
-      customerEmail: args.customerEmail,
-      customers: args.customers,
-      createdTimestamp: Date.now(),
-      chargeReciept: stripeResult.receipt_url,
-      paymentDetails: stripeResult.payment_method_details,
-    },
-  };
+//create the booking in the table
+const params = {
+  TableName: process.env.BookingsDB,
+  Item: {
+    bookingId: uuidv1(),
+    listingId: args.listingId,
+    bookingDate: args.bookingDate,
+    size: args.size,
+    bookingTotal: bookingCharge,
+    customerEmail: args.customerEmail,
+    customers: args.customers,
+    createdTimestamp: Date.now(),
+    chargeReciept: stripeResult.receipt_url,
+    paymentDetails: stripeResult.payment_method_details,
+  },
+}
 ```
 
 ⌛ As before we are simply creating a params object that has the necessary TableName, and the fields that match the Booking Type in the schema. We have added a createdTimestamp and paymentDetails fields for internal use that will not be exposed to the API.
@@ -111,37 +113,36 @@ Next up we can create the params to send to DynamoDB:
 Next let's send the params to Dynamo:
 
 ```javascript
- try {
-    //insert the booking into the table
-    await dynamoDBLib.call("put", params);
+try {
+  //insert the booking into the table
+  await dynamoDBLib.call("put", params)
 
-   
-    return {
-      bookingId: params.Item.bookingId,
-      listingId: params.Item.listingId,
-      bookingDate: params.Item.bookingDate,
-      size: params.Item.size,
-      bookingTotal: params.Item.bookingTotal,
-      customerEmail: params.Item.customerEmail,
-      customers: params.Item.customers.map((c) => ({
-        name: c.name,
-        Surname: c.Surname,
-        country: c.country,
-        passportNumber: c.passportNumber,
-        physioScore: c.physioScore,
-      })),
-      chargeReciept: params.Item.chargeReciept,
-    };
-  } catch (e) {
-    return e;
+  return {
+    bookingId: params.Item.bookingId,
+    listingId: params.Item.listingId,
+    bookingDate: params.Item.bookingDate,
+    size: params.Item.size,
+    bookingTotal: params.Item.bookingTotal,
+    customerEmail: params.Item.customerEmail,
+    customers: params.Item.customers.map(c => ({
+      name: c.name,
+      Surname: c.Surname,
+      country: c.country,
+      passportNumber: c.passportNumber,
+      physioScore: c.physioScore,
+    })),
+    chargeReciept: params.Item.chargeReciept,
   }
+} catch (e) {
+  return e
+}
 ```
 
 ⌛ We are simply doing a put action to Dynamo to insert the mutation into the table.
 
 ⌛ Then we are returning the Booking object back to the API.
 
-⌛ In the customers section we are simply mapping over the customers supplied. 
+⌛ In the customers section we are simply mapping over the customers supplied.
 
 Next let's test the function:
 
