@@ -14,7 +14,6 @@ Back in our query.js file we can import the dynamoDB wrapper at the top of the f
 
 ```
 import * as dynamoDBLib from "../../libs/dynamodb-lib";
-
 ```
 
 Next up we can create the parameters for our DynamoDB operation:
@@ -72,13 +71,13 @@ Next we have a try catch block that will help us fetch the data and return it:
 
 🔋First we return a promise and execute a scan on Dynamo and pass through our params object.
 
-🔋We have an if - else block to check if the is no listings, if they are return all the listings
+🔋We have an if-else block to check if the is no listings, if they are, return all the listings
 
 🔋Because we are returning an array we need to map over each element in the array and returning each field in the object.
 
 🔋In the case of the ListingType & ListingActivies these are nested arrays within the listing object itself, which we look over to return each element in the array.
 
-🔋 In the case of the guide all we are doing is return back the properites in the guide object.
+🔋 In the case of the guide all we are doing is returning back the properties in the guide object.
 
 🔋 Lastly we return an error message and code in the case anything fails.
 

@@ -1,6 +1,6 @@
 ---
 path: /setup-apollo-vue
-title: Setup Apollo Vue
+title: Setup Vue Apollo
 tag: frontend
 date: 2020-05-22T16:26:13.725Z
 part: Build frontend
@@ -19,23 +19,29 @@ $ vue ui
 
 This will open the Vue CLI UI:
 
-\[add image of ui]
+![](/uploads/step_one_cli.png)
 
 This allows us to add packages and plugins to our Vue app.
 
 So next go to the plugins tab:
 
+![](/uploads/step_two_cli.png)
+
 Then click on add plugin:
 
-\[add image here]
+![](/uploads/step_three_cli.png)
 
 search for vue-cli-plugin-apollo and select it
 
-\[add image here]
+![](/uploads/step_four_cli.png)
 
-then click install and sit back.
+then click install and sit back. You will get a prompt to scaffold other stuff, ignore it and continue:
 
-\[add image here]
+![](/uploads/step_five_cli.png)
+
+Then simply click continue:
+
+![](/uploads/step_six_cli.png)
 
 This will setup the Apollo library in your project.
 

@@ -84,7 +84,6 @@ export default {
   grid-template-columns: repeat(3, 1fr);
 } */
 </style>
-
 ```
 
 What is happening here ?
@@ -118,6 +117,27 @@ query GetAllListings {
     price
   }
 }
+```
+
+Make sure your App.vue looks like this:
+
+```javascript
+<template>
+  <div id="app">
+    <Nav />
+    <router-view />
+  </div>
+</template>
+<script>
+import Nav from "./components/navs/Nav.vue";
+
+export default {
+  name: "App",
+  components: {
+    Nav,
+  },
+};
+</script>
 
 ```
 
