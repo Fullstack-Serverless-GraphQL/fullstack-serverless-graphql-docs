@@ -5,10 +5,11 @@ tag: frontend
 date: 2020-05-18T18:58:18.910Z
 part: Setup frontend
 chapter: Building reusable components
+postnumber: 26
+framework: vue
 ---
+
 In this chapter we will build out our components that we will be using through out the application. First lets go ahead and create a Secondary button.
-
-
 
 In the components folder create a folder called buttons. Then create a RedOutlineButton.vue component and add the following:
 
@@ -16,9 +17,9 @@ In the components folder create a folder called buttons. Then create a RedOutlin
 <template>
   <button
     @click="handleClick"
-    class="cursor-pointer bg-white border 
-    border-red-light text-red-darkest focus:outline-none 
-    font-display rounded-px px-16 py-2 hover:bg-transparent 
+    class="cursor-pointer bg-white border
+    border-red-light text-red-darkest focus:outline-none
+    font-display rounded-px px-16 py-2 hover:bg-transparent
     hover:border hover:border-red-darkest"
   >
     <div v-if="isLoading">

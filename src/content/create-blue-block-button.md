@@ -5,10 +5,11 @@ tag: frontend
 date: 2020-05-21T17:56:23.597Z
 part: Setup frontend
 chapter: Building reusable components
+postnumber: 27
+framework: vue
 ---
+
 In this chapter we will build out our components that we will be using through out the application. First lets go ahead and create a Secondary button Blue.
-
-
 
 In the components folder create a folder called buttons. Then create a BlueBlockButton.vue component and add the following:
 

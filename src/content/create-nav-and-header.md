@@ -5,7 +5,10 @@ tag: frontend
 date: 2020-05-21T18:36:34.895Z
 part: Setup frontend
 chapter: Building reusable components
+postnumber: 23
+framework: vue
 ---
+
 In this post we will create a Navigation bar and a Header component for our landing page.
 
 Go head and create a navs folder and create a Nav.vue file with the following:
@@ -36,8 +39,6 @@ export default {
 ```
 
 🌞 We have an HTML Nav bar that is is responsive and allows the user to redirect to the Home page of the site.
-
-
 
 Next up create a headers folder and create a file called LandingHeader.vue with the following contents:
 
@@ -78,9 +79,7 @@ export default {
 
 ```
 
-
-
-🌞In this div have a v-if statement that accepts text to be displayed 
+🌞In this div have a v-if statement that accepts text to be displayed
 
 🌞 There is also a computed style prop that accepts an image url that will display a picture in the background based on the image URL.
 

@@ -5,10 +5,11 @@ tag: frontend
 date: 2020-05-21T18:58:35.008Z
 part: Setup frontend
 chapter: Building reusable components
+postnumber: 29
+framework: vue
 ---
+
 In this post we will make a tour card that will allow us to display all our listings.
-
-
 
 Create a cards directory and create TourCard.vue file:
 
@@ -75,7 +76,5 @@ export default {
 </script>
 
 ```
-
-
 
 This file needs to be reworked

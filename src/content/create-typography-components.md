@@ -5,8 +5,9 @@ tag: frontend
 date: 2020-05-21T18:09:47.284Z
 part: Setup frontend
 chapter: Building reusable components
+postnumber: 24
+framework: vue
 ---
-
 
 In this post we will create two typography components that we will use throughout the App for all of our Typography.
 
@@ -29,13 +30,9 @@ export default {
 
 ```
 
-
-
-🛩️ We are creating a paragraph  component with a slot inside it that will allow us to add additional content inside it.
+🛩️ We are creating a paragraph component with a slot inside it that will allow us to add additional content inside it.
 
 🛩️ Then we given it some styles.
-
-
 
 Next up create a BodyOne.vue file and add the following:
 

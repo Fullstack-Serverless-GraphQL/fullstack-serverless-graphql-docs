@@ -5,10 +5,11 @@ tag: frontend
 date: 2020-05-21T17:49:41.084Z
 part: Setup frontend
 chapter: Building reusable components
+postnumber: 25
+framework: vue
 ---
+
 In this chapter we will build out our components that we will be using through out the application. First lets go ahead and create a Primary button.
-
-
 
 In the components folder create a folder called buttons. Then create a RedBlockButton.vue component and add the following:
 

@@ -5,24 +5,25 @@ tag: frontend
 date: 2020-05-21T18:50:13.817Z
 part: Setup frontend
 chapter: Building reusable components
+postnumber: 22
+framework: vue
 ---
+
 In this post we will create an Input component to handle all our inputs.
 
 Create an input directory and create an input.vue file with the following:
-
-
 
 ```
 <template>
   <input
     class="
-   bg-white 
-    rounded-px 
+   bg-white
+    rounded-px
     py-3
-    px-16 
+    px-16
     border
-    border-grey-light 
-    focus:outline-none 
+    border-grey-light
+    focus:outline-none
     focus:bg-white"
     type="text"
     :placeholder="placeholder"
