@@ -5,7 +5,9 @@ tag: backend
 date: 2020-05-11T18:19:27.334Z
 part: Building backend
 chapter: Adding libraries
+postnumber: 9
 ---
+
 In this post we will manually add listings to DynamoDB. Usually we could create a mutation to add listings for someone. But for the sake of this course I've created all the listings for you.
 
 Open then here and copy the entire file.

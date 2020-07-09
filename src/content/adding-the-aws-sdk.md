@@ -5,7 +5,9 @@ tag: backend
 date: 2020-05-11T18:08:17.066Z
 part: Building backend
 chapter: Adding libraries
+postNumber: 7
 ---
+
 Here we will set up the AWS SDK to be able to interact with DynamoDDB.
 
 First do the following in your terminal:
@@ -14,9 +16,9 @@ First do the following in your terminal:
 $ yarn add aws-sdk
 ```
 
-Then go ahead and create a \`libs/\` directory in the root of the folder and create a file called \`dynamodb-lib.js\`. 
+Then go ahead and create a \`libs/\` directory in the root of the folder and create a file called \`dynamodb-lib.js\`.
 
-Lets now work on a wrapper around the \`AWS-SDK\` for Dynamo and add the following to \`dynamodb-lib.js\`: 
+Lets now work on a wrapper around the \`AWS-SDK\` for Dynamo and add the following to \`dynamodb-lib.js\`:
 
 ```
 import AWS from "aws-sdk";
