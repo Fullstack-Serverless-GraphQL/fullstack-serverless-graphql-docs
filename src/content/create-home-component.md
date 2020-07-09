@@ -5,10 +5,13 @@ tag: frontend
 date: 2020-05-22T17:00:59.770Z
 part: Build frontend
 chapter: Landing Page
+postnumber: 31
+framework: vue
 ---
+
 In this part we will create the following landing page based on this mockup \[add link to mockup]
 
-First create a Home.vue component in the Views directory. Then go into the router.js and add the following route. 
+First create a Home.vue component in the Views directory. Then go into the router.js and add the following route.
 
 ```javascript
 {
@@ -20,8 +23,7 @@ First create a Home.vue component in the Views directory. Then go into the route
 Also import the file at the top of the page:
 
 ```javascript
-import Home from "./pages/Home";
-
+import Home from "./pages/Home"
 ```
 
 Next up open the Home.vue component and copy the following:
@@ -95,15 +97,15 @@ What is happening here ?
 
 🍣In our V-If we check that if the loading variable is true and we show a loading component
 
-🍣Next we check if the error variable is true and tell the user that an error occurred. You can customize this with anything you want. 
+🍣Next we check if the error variable is true and tell the user that an error occurred. You can customize this with anything you want.
 
 🍣Else if the data is present render all the data. we have a v-for that we loop over from the data.getAllListings query. Then we give it the key of the listingId.
 
-🍣We have a router-link wrapped around the TourCard to redirect the user to the view  of the listing.
+🍣We have a router-link wrapped around the TourCard to redirect the user to the view of the listing.
 
 🍣Then we pass the data of the listing into the props of the Tour Card.
 
-Next we need to create the query schema document. create a folder called graphql and create  a filed called getAllListings.gql and paste the following:
+Next we need to create the query schema document. create a folder called graphql and create a filed called getAllListings.gql and paste the following:
 
 ```
 query GetAllListings {
