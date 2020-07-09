@@ -1,16 +1,18 @@
 ---
 path: /deploy-backend-code
 title: Deploy Backend Code
-tag: 'backend '
+tag: "backend "
 date: 2020-05-17T19:55:21.315Z
 part: Building backend
-chapter: 'Deploy Backend '
+chapter: "Deploy Backend "
+postnumber: 20
 ---
+
 In this chapter we will deploy our backend.
 
 So make sure you commit all your code. I use Visual Studio code, so I do the following:
 
-Write a commit message: 
+Write a commit message:
 
 ![](/uploads/screenshot-2020-05-17-at-21.57.43.png)
 
@@ -22,7 +24,7 @@ Next go into the Seed Console. You should see the build being triggered and in p
 
 ![](/uploads/screenshot-2020-05-17-at-22.00.19.png)
 
-When you open up the build logs you should see your Endpoint: 
+When you open up the build logs you should see your Endpoint:
 
 ![](/uploads/screenshot-2020-05-17-at-22.01.44.png)
 
