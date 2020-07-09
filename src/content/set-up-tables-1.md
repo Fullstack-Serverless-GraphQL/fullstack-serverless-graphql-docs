@@ -5,7 +5,9 @@ tag: backend
 date: 2020-04-21T16:45:08.244Z
 part: setting up backend
 chapter: Setting Up infrastructure
+postNumber: 5
 ---
+
 In this chapter we are going to create our DynamoDB tables. DynamoDB is a NoSQL key-value store serverless native database. Sounds like a mouthful, in a nutshell it does not force your data to adhere to any data model schema and you do not have to provide any server instances for it to run.
 
 The way we will be provisioning our tables will enable us to create tables for any of our environment stages.
@@ -24,7 +26,7 @@ Resources:
         - AttributeName: listingName
           AttributeType: S
 
-        
+
       KeySchema:
         - AttributeName: listingId
           KeyType: HASH
@@ -40,7 +42,7 @@ Resources:
 
 🎩 We are creating a table with a Primary Key called \`listingId\` and a Sort Key called \`listingName\` both of them are strings.
 
-🎩  Specify what the Read/Write Units should be. \
+🎩 Specify what the Read/Write Units should be. \
 \
 \
 In the same directory lets create the table that will store our bookings called \`booking-db.yml\`:
@@ -56,8 +58,8 @@ Resources:
           AttributeType: S
         - AttributeName: listingId
           AttributeType: S
-  
-        
+
+
       KeySchema:
         - AttributeName: bookingId
           KeyType: HASH
@@ -69,7 +71,7 @@ Resources:
         WriteCapacityUnits: ${self:custom.tableThroughput}
 ```
 
-We are doing the same thing here, only difference is that we made the Sort Key the \`listingId\`. 
+We are doing the same thing here, only difference is that we made the Sort Key the \`listingId\`.
 
 Now we need to reference it in our \`serverless.yml\`:
 
@@ -101,7 +103,7 @@ provider:
   environment:
     BookingsDB: ${self:custom.BookingsDB}
     ListingsDB: ${self:custom.ListingsDB}
-  
+
   iamRoleStatements:
     - Effect: Allow
       Action:
@@ -121,7 +123,5 @@ provider:
         - "Fn::GetAtt": [ListingsDB, Arn]
         - "Fn::GetAtt": [BookingsDB, Arn]
 ```
-
- 
 
 Now we have created our infrastructure for the tables as code. 🗽
