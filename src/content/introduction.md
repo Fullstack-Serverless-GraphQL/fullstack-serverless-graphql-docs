@@ -4,8 +4,10 @@ title: Introduction
 tag: Epilouge
 date: 2020-03-24T00:00:00.000Z
 part: Epilouge
-chapter: '0'
+chapter: "0"
+postNumber: 1
 ---
+
 Welcome to Fullstack Serverless GraphQL! This resource is meant to be the most up to date way of building a production-ready serverless GraphQL project.
 
 This is meant for everyone of all skill levels. It follows the Top-Down approach to learning, which is very similar to Fast.ai courses if you have taken them. You are not expected to go learn AWS fundamentals or the basics of REST APIs/JavaScript etc, instead you will learn by doing and explaining what you've done afterward. This way you focus on what things DO instead of what they ARE.
