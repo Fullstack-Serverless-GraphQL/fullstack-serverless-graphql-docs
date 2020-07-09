@@ -5,8 +5,11 @@ tag: frontend
 date: 2020-05-25T18:28:58.214Z
 part: frontend
 chapter: Make A Booking
+postnumber: 34
+framework: vue
 ---
-In this part we will create the booking component. 
+
+In this part we will create the booking component.
 
 First head over and create a booking directory and create an Index.vue file with the following:
 
@@ -20,7 +23,7 @@ First head over and create a booking directory and create an Index.vue file with
               <HeadingOne>
                 Booking for Listing Name
               </HeadingOne>
-             
+
               <div class="flex lg:flex-row mt-5 s:flex-col">
                 <RedBlockButton
                   @click="next(2)"
@@ -41,7 +44,7 @@ First head over and create a booking directory and create an Index.vue file with
               <HeadingOne>
                 Who are you travelling with?Who are you travelling with?
               </HeadingOne>
-             
+
               <div class="flex lg:flex-row mt-5 s:flex-col">
                 <RedBlockButton
                   @click="next(3)"
@@ -65,7 +68,7 @@ First head over and create a booking directory and create an Index.vue file with
                 Your trip total
               </HeadingOne>
 
-             
+
               <div class="flex flex-row mt-20">
                 <RedBlockButton
                   @click="
@@ -91,7 +94,7 @@ First head over and create a booking directory and create an Index.vue file with
               <HeadingOne>
                 Thanks for booking with us
               </HeadingOne>
-              
+
               <div class="flex flex-row ml-32 mt-20">
                 <RedBlockButton
                   @click="$router.push('/')"
@@ -124,7 +127,7 @@ export default {
   data() {
     return {
       activeKey: "1",
-   
+
     };
   },
   methods: {
@@ -132,7 +135,7 @@ export default {
       this.activeKey = k.toString();
     }
   }
-   
+
 };
 </script>
 <style>
@@ -153,8 +156,6 @@ export default {
 
 🐢 The third tab will enable us to charge the user for their trip
 
-🐢 The fourth tab is the confirmation one that will fire once they ahve successfully paid for the trip.  
-
-
+🐢 The fourth tab is the confirmation one that will fire once they ahve successfully paid for the trip.
 
 Next up we will start building out the forms.
