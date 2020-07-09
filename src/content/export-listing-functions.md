@@ -5,7 +5,9 @@ tag: backend
 date: 2020-05-13T18:16:54.234Z
 part: Building backend
 chapter: All listings query
+postnumber: 11
 ---
+
 Here we are just going to set up the function and export it so that Apollo Server can pick up the query.
 
 First lets go into our query.js file and create the following function:
@@ -30,6 +32,6 @@ export const resolvers = {
  }
 ```
 
- We are creating a resolvers object that has a query property that returns our getAllListings function.
+We are creating a resolvers object that has a query property that returns our getAllListings function.
 
 Next we can start writing the code to return data!

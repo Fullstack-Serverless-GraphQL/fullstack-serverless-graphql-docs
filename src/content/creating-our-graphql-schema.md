@@ -5,7 +5,9 @@ tag: backend
 date: 2020-05-13T17:49:01.060Z
 part: Building backend
 chapter: All listings query
+postnumber: 10
 ---
+
 Now we finally get to the core of this course! We will start building our first query that will allow us to grab all the lunar destinations from DynamoDB.
 
 So let's go into our `schema.js` file and add the necessary types to get a query running:
@@ -39,7 +41,7 @@ type Listing {
      guide: Guide
      price: String
      numberOfDays: Int
-  
+
   }
 ```
 
@@ -47,7 +49,7 @@ What are we doing here:
 
 🔋We are creating three separate types (`ListingType`, `ListingActivities` & `Guide`) to be able to see these types in our `Listing` type.
 
-🔋We are creating a `Listing` type that has the various attributes we need for this data type. 
+🔋We are creating a `Listing` type that has the various attributes we need for this data type.
 
 Next up we will set up the query type :
 
