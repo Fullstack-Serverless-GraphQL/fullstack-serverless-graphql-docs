@@ -1,16 +1,16 @@
 ---
 path: /unit-testing-mutations
 title: Unit Testing Mutations
-tag: 'backend '
+tag: "backend "
 date: 2020-05-17T19:50:01.039Z
 part: Building backend
 chapter: Unit testing
+postnumber: 19
 ---
+
 In this setion we will unit test our mutation.
 
 In the tests folder, create a makeABooking.test.js file and add the following:
-
-
 
 ```javascript
 import { makeABooking } from "../src/resolvers/mutation";
@@ -45,15 +45,13 @@ describe("Make a booking", () => {
 
     console.log(response);
   });
-  
+
   }
 ```
 
-💣 We are creating mutation in the args with the necessary data. 
+💣 We are creating mutation in the args with the necessary data.
 
-💣  Next we are making sure we get back a bookingId that the charge matches what we expect it to be.
-
-
+💣 Next we are making sure we get back a bookingId that the charge matches what we expect it to be.
 
 Then go to your terminal and run the test:
 
@@ -61,6 +59,4 @@ Then go to your terminal and run the test:
 $ yarn test makeABooking.test.js
 ```
 
-
-
- Now all our tests are passing!
+Now all our tests are passing!

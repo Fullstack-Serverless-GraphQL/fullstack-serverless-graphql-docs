@@ -5,10 +5,12 @@ tag: backend
 date: 2020-05-17T19:38:56.861Z
 part: Building backend
 chapter: Unit testing
+postnumber: 18
 ---
+
 In this part I'm going to show you how to write Unit tests for your functions. In theory We should've done this first, however, I wanted the GraphQL bits to go down first before we nailing down the unit tests.
 
-in the tests folder create a file called getAllListings.test.js and add the following: 
+in the tests folder create a file called getAllListings.test.js and add the following:
 
 ```javascript
 import { getAllListings, getAListing } from "../src/resolvers/query";
@@ -32,13 +34,13 @@ describe("All Listings", () => {
 Next we can test the getAListing function:
 
 ```javascript
- test("brings a listing", async () => {
-    const args = { listingId: "a114dded-ddef-4052-a106-bb18b94e6b51" };
-    const context = "context";
+test("brings a listing", async () => {
+  const args = { listingId: "a114dded-ddef-4052-a106-bb18b94e6b51" }
+  const context = "context"
 
-    const response = await getAListing(args, context);
-    expect(response.listingId).toEqual(args.listingId);
-  });
+  const response = await getAListing(args, context)
+  expect(response.listingId).toEqual(args.listingId)
+})
 ```
 
 🎯 We are making sure that the listing that comes back matches the listingId we supplied to the query.
@@ -49,4 +51,4 @@ Now if you run the following the test should pass:
 $ yarn test getAllListings.test.js
 ```
 
-Next  lets test our mutations!
+Next lets test our mutations!
