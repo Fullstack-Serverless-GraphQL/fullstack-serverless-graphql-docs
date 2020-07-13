@@ -77,12 +77,20 @@ const backendTechStack = [
 ]
 
 const filterByPart = (array, path) => {
-  const result = array.filter(i => i.node.frontmatter.part.trim() === path)
+  const result = array
+    .filter(i => i.node.frontmatter.part.trim() === path)
+    .sort(
+      (a, b) => a.node.frontmatter.postNumber - b.node.frontmatter.postNumber
+    )
   return result
 }
 
 const filterByChapter = (array, path) => {
-  const result = array.filter(i => i.node.frontmatter.chapter.trim() === path)
+  const result = array
+    .filter(i => i.node.frontmatter.chapter.trim() === path)
+    .sort(
+      (a, b) => a.node.frontmatter.postNumber - b.node.frontmatter.postNumber
+    )
   return result
 }
 export default { techStack, backendTechStack, filterByPart, filterByChapter }
