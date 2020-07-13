@@ -80,7 +80,7 @@ const filterByPart = (array, path) => {
   const result = array
     .filter(i => i.node.frontmatter.part.trim() === path)
     .sort(
-      (a, b) => a.node.frontmatter.postNumber - b.node.frontmatter.postNumber
+      (a, b) => a.node.frontmatter.postnumber - b.node.frontmatter.postnumber
     )
   return result
 }
@@ -89,7 +89,7 @@ const filterByChapter = (array, path) => {
   const result = array
     .filter(i => i.node.frontmatter.chapter.trim() === path)
     .sort(
-      (a, b) => a.node.frontmatter.postNumber - b.node.frontmatter.postNumber
+      (a, b) => a.node.frontmatter.postnumber - b.node.frontmatter.postnumber
     )
   return result
 }

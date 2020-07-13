@@ -5,7 +5,7 @@ tag: Epilouge
 date: 2020-03-24T00:00:00.000Z
 part: Epilouge
 chapter: "0"
-postNumber: 0
+postnumber: 0
 ---
 
 Welcome to Fullstack Serverless GraphQL! This resource is meant to be the most up to date way of building a production-ready serverless GraphQL project.

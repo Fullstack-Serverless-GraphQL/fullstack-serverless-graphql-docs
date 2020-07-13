@@ -16,7 +16,7 @@ exports.createPages = async ({ actions, graphql }) => {
           node {
             frontmatter {
               path
-              postNumber
+              postnumber
             }
           }
         }
@@ -32,15 +32,11 @@ exports.createPages = async ({ actions, graphql }) => {
 
   // console.log("rrr", results)
   result.data.allMarkdownRemark.edges.forEach((node, index) => {
+    console.log("fff,", node, index)
     const previous = index === results.length - 1 ? null : results[index + 1]
 
-    previous.sort(
-      (a, b) => a.node.frontmatter.postNumber - b.node.frontmatter.postNumber
-    )
     const next = index === 0 ? null : results[index - 1]
-    next.sort(
-      (a, b) => a.node.frontmatter.postNumber - b.node.frontmatter.postNumber
-    )
+
     createPage({
       path: node.node.frontmatter.path,
       component: path.resolve(`src/templates/post.js`),

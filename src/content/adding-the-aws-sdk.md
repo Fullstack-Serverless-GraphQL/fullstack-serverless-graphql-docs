@@ -5,7 +5,7 @@ tag: backend
 date: 2020-05-11T18:08:17.066Z
 part: Building backend
 chapter: Adding libraries
-postNumber: 7
+postnumber: 7
 ---
 
 Here we will set up the AWS SDK to be able to interact with DynamoDDB.
@@ -21,18 +21,17 @@ Then go ahead and create a \`libs/\` directory in the root of the folder and cre
 Lets now work on a wrapper around the \`AWS-SDK\` for Dynamo and add the following to \`dynamodb-lib.js\`:
 
 ```javascript
-import AWS from "aws-sdk";
+import AWS from "aws-sdk"
 
-const client = new AWS.DynamoDB.DocumentClient();
+const client = new AWS.DynamoDB.DocumentClient()
 
 export default {
-  get: (params) => client.get(params).promise(),
-  put: (params) => client.put(params).promise(),
-  query: (params) => client.query(params).promise(),
-  update: (params) => client.update(params).promise(),
-  delete: (params) => client.delete(params).promise(),
-};
-
+  get: params => client.get(params).promise(),
+  put: params => client.put(params).promise(),
+  query: params => client.query(params).promise(),
+  update: params => client.update(params).promise(),
+  delete: params => client.delete(params).promise(),
+}
 ```
 
 The following is happening:

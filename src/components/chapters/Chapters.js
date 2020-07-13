@@ -143,7 +143,7 @@ export default props => (
                 title
                 part
                 chapter
-                postNumber
+                postnumber
               }
             }
           }

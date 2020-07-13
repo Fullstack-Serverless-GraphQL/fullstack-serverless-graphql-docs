@@ -5,7 +5,7 @@ tag: backend
 date: 2020-04-21T16:45:08.244Z
 part: setting up backend
 chapter: Setting Up infrastructure
-postNumber: 5
+postnumber: 5
 ---
 
 In this chapter we are going to create our DynamoDB tables. DynamoDB is a NoSQL key-value store serverless native database. Sounds like a mouthful, in a nutshell it does not force your data to adhere to any data model schema and you do not have to provide any server instances for it to run.

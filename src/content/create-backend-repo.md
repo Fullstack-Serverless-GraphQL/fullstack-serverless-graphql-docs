@@ -5,7 +5,7 @@ tag: backend
 date: 2020-04-21T00:00:00.000Z
 part: setting up backend
 chapter: creating repo
-postNumber: 3
+postnumber: 3
 ---
 
 In this chapter, we will initialise the back-end repo and get everything setup
