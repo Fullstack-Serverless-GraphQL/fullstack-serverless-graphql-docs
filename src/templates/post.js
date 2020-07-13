@@ -20,17 +20,17 @@ export default function Template({ data, pageContext }) {
 
       <div className="mt-10 ">
         <ul className="flex flex-row">
-          <li className="mr-4">
-            {previous && (
-              <Link to={previous.node.frontmatter.path}>
-                Prev {previous.node.frontmatter.title}
-              </Link>
-            )}
-          </li>
           <li>
             {next && (
               <Link to={next.node.frontmatter.path}>
-                Next {next.node.frontmatter.title}
+                Prev {next.node.frontmatter.title}
+              </Link>
+            )}
+          </li>
+          <li className="mr-4">
+            {previous && (
+              <Link to={previous.node.frontmatter.path}>
+                Next {previous.node.frontmatter.title}
               </Link>
             )}
           </li>
