@@ -8,7 +8,6 @@ const Chapters = ({
     allMarkdownRemark: { edges },
   },
 }) => {
-  console.log("eee", edges)
   const epilouges = constants.filterByPart(edges, "Epilouge")
   const backendPosts = constants.filterByPart(edges, "setting up backend")
   const librariesPosts = constants.filterByChapter(edges, "Adding libraries")
