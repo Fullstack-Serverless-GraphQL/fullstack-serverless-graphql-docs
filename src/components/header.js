@@ -15,10 +15,10 @@ const Header = ({ siteTitle }) => (
           {siteTitle}
         </Link>
       </h1>
-      <span>
-        <img src={Github} alt="github icon" />
-      </span>
     </div>
+    <span>
+      <img src={Github} alt="github icon" />
+    </span>
   </header>
 )
 
