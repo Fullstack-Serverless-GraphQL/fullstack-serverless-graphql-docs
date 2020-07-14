@@ -102,11 +102,11 @@ const SideChapterBox = ({
   return (
     <>
       <div className="mt-10">
-        <HeadingTwo className="text-center">Chapters</HeadingTwo>
+        <HeadingTwo className="text-left">Chapters</HeadingTwo>
         {/* chAPTERS GRID */}
-        <HeadingTwo className="text-center">Backend</HeadingTwo>
+        <HeadingTwo className="text-left">Backend</HeadingTwo>
 
-        <div className="grid grid-cols-2">
+        <div className="flex flex-col">
           {/* <ChapterBox edges={epilouges} text="Epilouge" />
           <ChapterBox edges={backendPosts} text="Setting Up infrastructure" />
           <ChapterBox edges={librariesPosts} text="Adding libraries" />
@@ -119,9 +119,9 @@ const SideChapterBox = ({
             <ChapterBox edges={i.chapterEdge} text={i.chapterTitle} />
           ))}
         </div>
-        <HeadingTwo className="text-center">Frontend</HeadingTwo>
+        <HeadingTwo className="text-left">Frontend</HeadingTwo>
 
-        <div className="grid grid-cols-2">
+        <div className="flex flex-col">
           {frontendPosts.map(i => (
             <ChapterBox edges={i.chapterEdge} text={i.chapterTitle} />
           ))}
@@ -150,6 +150,6 @@ export default props => (
         }
       }
     `}
-    render={data => <Chapters data={data} {...props} />}
+    render={data => <SideChapterBox data={data} {...props} />}
   />
 )
