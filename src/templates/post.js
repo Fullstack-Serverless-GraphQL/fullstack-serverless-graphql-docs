@@ -4,6 +4,8 @@ import Layout from "../components/layout"
 import HeadingOne from "../components/typography/HeadingOne"
 import HeadingThree from "../components/typography/HeadingThree"
 import ArrowLeft from "../assets/arrow-left.svg"
+import ArrowRight from "../assets/arrow-right.svg"
+
 export default function Template({ data, pageContext }) {
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
@@ -18,21 +20,23 @@ export default function Template({ data, pageContext }) {
         <div className="markdown" dangerouslySetInnerHTML={{ __html: html }} />
       </div>
 
-      <div className="mt-10 ">
-        <ul className="flex flex-row">
+      <div className="mt-10">
+        <ul className="flex justify-between">
           <li>
             {next && (
               <Link to={next.node.frontmatter.path}>
                 <span className="flex flex-row">
-                  <img src={ArrowLeft} alt="arrow left" /> Prev
+                  <img src={ArrowLeft} alt="arrow left" /> Previous
                 </span>
               </Link>
             )}
           </li>
-          <li className="mr-4">
+          <li className="ml-20">
             {previous && (
               <Link to={previous.node.frontmatter.path}>
-                Next {previous.node.frontmatter.title}
+                <span className="flex flex-row">
+                  Next <img src={ArrowRight} alt="arrow left" />
+                </span>
               </Link>
             )}
           </li>
