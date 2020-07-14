@@ -22,9 +22,10 @@ h6 {
 }
 
 .markdown img {
-  @apply w-2/5;
+  @apply w-full;
   margin-left: auto;
   margin-right: auto;
+  @apply p-3;
 }
 /* .markdown code {
   background-color: #272822;
