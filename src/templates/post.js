@@ -3,7 +3,7 @@ import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import HeadingOne from "../components/typography/HeadingOne"
 import HeadingThree from "../components/typography/HeadingThree"
-
+import ArrowLeft from "../assets/arrow-left.svg"
 export default function Template({ data, pageContext }) {
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
@@ -23,7 +23,9 @@ export default function Template({ data, pageContext }) {
           <li>
             {next && (
               <Link to={next.node.frontmatter.path}>
-                Prev {next.node.frontmatter.title}
+                <span className="flex flex-row">
+                  <img src={ArrowLeft} alt="arrow left" /> Prev
+                </span>
               </Link>
             )}
           </li>
