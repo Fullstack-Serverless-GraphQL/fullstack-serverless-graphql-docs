@@ -13,7 +13,7 @@ export default function Template({ data, pageContext }) {
   console.log("ddd", pageContext)
   return (
     <Layout>
-      <div className="flex flex-row sm:flex-col">
+      <div className="flex flex-row ">
         <div className="blog-post">
           <HeadingOne>{frontmatter.title}</HeadingOne>
           <HeadingThree>{frontmatter.date}</HeadingThree>

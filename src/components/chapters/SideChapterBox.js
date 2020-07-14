@@ -101,7 +101,7 @@ const SideChapterBox = ({
   ]
   return (
     <>
-      <div className="mt-10">
+      <div className="mt-10 ml-5 p-3">
         <HeadingTwo className="text-left">Chapters</HeadingTwo>
         {/* chAPTERS GRID */}
         <HeadingTwo className="text-left">Backend</HeadingTwo>
