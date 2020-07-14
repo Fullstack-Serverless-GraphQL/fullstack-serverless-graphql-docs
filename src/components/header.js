@@ -17,7 +17,14 @@ const Header = ({ siteTitle }) => (
       </h1>
     </div>
     <span>
-      <img src={Github} alt="github icon" />
+      <a
+        className="flex flex-row"
+        target="_blank"
+        rel="noopener noreferrer"
+        href="https://github.com/Fullstack-Serverless-GraphQL/fullstack-serverless-graphql-docs"
+      >
+        <img src={Github} alt="github icon" />
+      </a>
     </span>
   </header>
 )

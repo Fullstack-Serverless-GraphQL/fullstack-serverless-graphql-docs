@@ -1,5 +1,5 @@
 import React from "react"
-import { StaticQuery, graphql, Link } from "gatsby"
+import { StaticQuery, graphql } from "gatsby"
 import HeadingTwo from "../typography/HeadingTwo"
 import constants from "../../constants"
 import ChapterBox from "./ChapterBox"
