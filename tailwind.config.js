@@ -46,7 +46,7 @@ module.exports = {
       "sm-land": [{ min: "667px" }],
       md: "768px",
       lg: "992px",
-      x: "1024px",
+      x: [{ max: "1024px" }],
       lapie: [{ min: "1280px", max: "1366px" }],
       xl: [{ min: "1500px" }],
     },
