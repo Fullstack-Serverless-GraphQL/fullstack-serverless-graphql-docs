@@ -27,6 +27,10 @@ h6 {
   margin-right: auto;
   @apply p-3;
 }
+
+.gatsby-highlight {
+  max-width: 980px;
+}
 /* .markdown code {
   background-color: #272822;
   color: #f8f8f2;
