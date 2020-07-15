@@ -1,6 +1,7 @@
 import React from "react"
 import { StaticQuery, graphql } from "gatsby"
 import HeadingTwo from "../typography/HeadingTwo"
+import HeadingThree from "../typography/HeadingThree"
 import constants from "../../constants"
 import ChapterBox from "./ChapterBox"
 const SideChapterBox = ({
@@ -106,7 +107,9 @@ const SideChapterBox = ({
       <div className="mt-10 ml-5 p-3">
         <HeadingTwo className="text-left">Chapters</HeadingTwo>
         {/* chAPTERS GRID */}
-        <HeadingTwo className="text-left">Backend</HeadingTwo>
+        <HeadingThree className="text-left text-green-dark">
+          Backend
+        </HeadingThree>
 
         <div className="flex flex-col">
           {/* <ChapterBox edges={epilouges} text="Epilouge" />
@@ -125,7 +128,7 @@ const SideChapterBox = ({
             />
           ))}
         </div>
-        <HeadingTwo className="text-left">Frontend</HeadingTwo>
+        <HeadingThree className="text-left text-blue">Frontend</HeadingThree>
 
         <div className="flex flex-col">
           {frontendPosts.map(i => (
