@@ -8,7 +8,6 @@ const ChapterBox = ({ text, edges, collapse }) => {
   const [open, setOpen] = useState(false)
 
   const openChapters = () => {
-    console.log("hi")
     setOpen(!open)
   }
   return (
@@ -23,7 +22,7 @@ const ChapterBox = ({ text, edges, collapse }) => {
             >
               {text}
             </button>
-            <span role="chapter opener">
+            <span>
               {open === true && (
                 <>
                   {edges.map(edge => (
