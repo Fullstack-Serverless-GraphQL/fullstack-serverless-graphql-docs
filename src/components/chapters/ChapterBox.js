@@ -30,7 +30,7 @@ const ChapterBox = ({ text, edges, collapse }) => {
           <>
             {" "}
             <button
-              className="cursor-pointer"
+              className="cursor-pointer focus:outline-none text-left"
               onClick={() => openChapters() && console.log(open)}
             >
               {text}
