@@ -16,18 +16,6 @@ const ChapterBox = ({ text, edges, collapse }) => {
       <div className="mt-5">
         {collapse ? (
           <>
-            <HeadingThree className="">{text}</HeadingThree>
-
-            {edges.map(edge => (
-              <BodyOne className="text-yellow m-3" key={edge.node.id}>
-                <Link to={edge.node.frontmatter.path}>
-                  {edge.node.frontmatter.title}
-                </Link>
-              </BodyOne>
-            ))}
-          </>
-        ) : (
-          <>
             {" "}
             <button
               className="cursor-pointer focus:outline-none text-left"
@@ -48,6 +36,18 @@ const ChapterBox = ({ text, edges, collapse }) => {
                 </>
               )}
             </span>
+          </>
+        ) : (
+          <>
+            <HeadingThree className="">{text}</HeadingThree>
+
+            {edges.map(edge => (
+              <BodyOne className="text-yellow m-3" key={edge.node.id}>
+                <Link to={edge.node.frontmatter.path}>
+                  {edge.node.frontmatter.title}
+                </Link>
+              </BodyOne>
+            ))}
           </>
         )}
       </div>

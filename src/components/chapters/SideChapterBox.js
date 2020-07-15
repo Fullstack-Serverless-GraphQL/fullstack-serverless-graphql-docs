@@ -4,10 +4,12 @@ import HeadingTwo from "../typography/HeadingTwo"
 import constants from "../../constants"
 import ChapterBox from "./ChapterBox"
 const SideChapterBox = ({
+  collapse,
   data: {
     allMarkdownRemark: { edges },
   },
 }) => {
+  console.log("pp", collapse)
   const epilouges = constants.filterByPart(edges, "Epilouge")
   const backendPosts = constants.filterByPart(edges, "setting up backend")
   const librariesPosts = constants.filterByChapter(edges, "Adding libraries")
@@ -116,14 +118,22 @@ const SideChapterBox = ({
           /> */}
 
           {allChapters.map(i => (
-            <ChapterBox edges={i.chapterEdge} text={i.chapterTitle} />
+            <ChapterBox
+              edges={i.chapterEdge}
+              text={i.chapterTitle}
+              collapse={collapse}
+            />
           ))}
         </div>
         <HeadingTwo className="text-left">Frontend</HeadingTwo>
 
         <div className="flex flex-col">
           {frontendPosts.map(i => (
-            <ChapterBox edges={i.chapterEdge} text={i.chapterTitle} />
+            <ChapterBox
+              edges={i.chapterEdge}
+              text={i.chapterTitle}
+              collapse={collapse}
+            />
           ))}
         </div>
       </div>

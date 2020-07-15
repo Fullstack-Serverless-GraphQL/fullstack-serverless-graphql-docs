@@ -23,7 +23,7 @@ export default function Template({ data, pageContext }) {
             dangerouslySetInnerHTML={{ __html: html }}
           />
         </div>
-        <SideChapterBox />
+        <SideChapterBox collapse />
       </div>
 
       <div className="mt-10">
