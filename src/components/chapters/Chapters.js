@@ -13,7 +13,7 @@ const Chapters = ({
     allMarkdownRemark: { edges },
   },
 }) => {
-  const { framework } = useContext(FrameworkContext)
+  const { framework, toggleFramework } = useContext(FrameworkContext)
 
   console.log("eee", framework)
 

@@ -10,7 +10,7 @@ const IndexPage = () => {
   const [framework, setFramework] = useState("vue")
 
   const toggleFramework = () => {
-    setFramework(framework === "vue" ? "react" : "react")
+    setFramework(framework => (framework === "vue" ? "react" : "vue"))
   }
   return (
     <FrameworkContext.Provider value={{ framework, toggleFramework }}>
