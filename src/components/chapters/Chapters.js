@@ -13,10 +13,9 @@ const Chapters = ({
     allMarkdownRemark: { edges },
   },
 }) => {
-  const [framework, setFramework] = useState("vue")
-  const frameworkContext = useContext(FrameworkContext)
+  const { framework } = useContext(FrameworkContext)
 
-  console.log("eee", frameworkContext)
+  console.log("eee", framework)
 
   //filtering of chapters
   const epilouges = constants.filterByPart(edges, "Epilouge")
@@ -145,33 +144,25 @@ const Chapters = ({
         </div>
         <HeadingTwo className="text-center">Frontend</HeadingTwo>
 
-        <FrameworkContext.Consumer>
-          {({ framework, toggleFramework }) => (
+        <button onClick={() => toggleFramework()}>React posts</button>
+        <button onClick={() => toggleFramework()}>Vue posts posts</button>
+        <div className="grid grid-cols-2">
+          {framework === "vue" ? (
             <>
-              <button onClick={() => setFramework("react")}>React posts</button>
-              <button onClick={() => toggleFramework(frameworks.vue)}>
-                Vue posts posts
-              </button>
-              <div className="grid grid-cols-2">
-                {framework === "vue" ? (
-                  <>
-                    {" "}
-                    {frontendPosts.map(i => (
-                      <ChapterBox edges={i.chapterEdge} text={i.chapterTitle} />
-                    ))}
-                  </>
-                ) : (
-                  <>
-                    {" "}
-                    {reactFrontEndPosts.map(i => (
-                      <ChapterBox edges={i.chapterEdge} text={i.chapterTitle} />
-                    ))}
-                  </>
-                )}
-              </div>
+              {" "}
+              {frontendPosts.map(i => (
+                <ChapterBox edges={i.chapterEdge} text={i.chapterTitle} />
+              ))}
+            </>
+          ) : (
+            <>
+              {" "}
+              {reactFrontEndPosts.map(i => (
+                <ChapterBox edges={i.chapterEdge} text={i.chapterTitle} />
+              ))}
             </>
           )}
-        </FrameworkContext.Consumer>
+        </div>
       </div>
     </>
   )

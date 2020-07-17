@@ -13,7 +13,7 @@ const IndexPage = () => {
     setFramework(framework === "vue" ? "react" : "react")
   }
   return (
-    <FrameworkContext.Provider value={framework}>
+    <FrameworkContext.Provider value={{ framework, toggleFramework }}>
       <Layout>
         <SEO title="Home" />
         <Hero />
