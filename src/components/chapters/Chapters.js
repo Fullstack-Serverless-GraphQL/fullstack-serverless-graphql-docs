@@ -3,11 +3,11 @@ import { StaticQuery, graphql } from "gatsby"
 import HeadingTwo from "../typography/HeadingTwo"
 import constants from "../../constants"
 import ChapterBox from "./ChapterBox"
-import {
-  FrameworkContext,
-  toggleFramework,
-  frameworks,
-} from "../../frameworkContext"
+import FrameworkButton from "../buttons/FrameworkButton"
+import VueIcon from "../../images/vue.svg"
+import ReactIcon from "../../images/react-icon.svg"
+
+import { FrameworkContext } from "../../frameworkContext"
 const Chapters = ({
   data: {
     allMarkdownRemark: { edges },
@@ -144,7 +144,9 @@ const Chapters = ({
         </div>
         <HeadingTwo className="text-center">Frontend</HeadingTwo>
 
-        <button onClick={() => toggleFramework()}>React posts</button>
+        <FrameworkButton onClick={() => toggleFramework()} img={ReactIcon}>
+          React posts
+        </FrameworkButton>
         <button onClick={() => toggleFramework()}>Vue posts posts</button>
         <div className="grid grid-cols-2">
           {framework === "vue" ? (
