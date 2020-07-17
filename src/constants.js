@@ -93,4 +93,22 @@ const filterByChapter = (array, path) => {
     )
   return result
 }
-export default { techStack, backendTechStack, filterByPart, filterByChapter }
+const filterByFramework = (array, path, framework) => {
+  const result = array
+    .filter(
+      i =>
+        i.node.frontmatter.chapter.trim() === path &&
+        i.node.frontmatter.framework === framework
+    )
+    .sort(
+      (a, b) => a.node.frontmatter.postnumber - b.node.frontmatter.postnumber
+    )
+  return result
+}
+export default {
+  techStack,
+  backendTechStack,
+  filterByPart,
+  filterByChapter,
+  filterByFramework,
+}

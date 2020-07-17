@@ -8,6 +8,7 @@ const Chapters = ({
     allMarkdownRemark: { edges },
   },
 }) => {
+  console.log("eee", edges)
   const epilouges = constants.filterByPart(edges, "Epilouge")
   const backendPosts = constants.filterByPart(edges, "setting up backend")
   const librariesPosts = constants.filterByChapter(edges, "Adding libraries")
@@ -27,7 +28,7 @@ const Chapters = ({
     edges,
     "Deploy Backend"
   )
-  //frontend posts
+  //Vue - frontend posts
   const allCLIPosts = constants.filterByChapter(edges, "Vue cli")
   const allTailwindPosts = constants.filterByChapter(edges, "Tailwind")
   const allResuablePosts = constants.filterByChapter(
@@ -121,6 +122,8 @@ const Chapters = ({
         </div>
         <HeadingTwo className="text-center">Frontend</HeadingTwo>
 
+        <button>React posts</button>
+        <button>Vue posts posts</button>
         <div className="grid grid-cols-2">
           {frontendPosts.map(i => (
             <ChapterBox edges={i.chapterEdge} text={i.chapterTitle} />
@@ -144,6 +147,7 @@ export default props => (
                 part
                 chapter
                 postnumber
+                framework
               }
             }
           }
