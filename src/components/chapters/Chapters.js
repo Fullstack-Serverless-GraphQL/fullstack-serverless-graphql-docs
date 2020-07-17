@@ -144,10 +144,14 @@ const Chapters = ({
         </div>
         <HeadingTwo className="text-center">Frontend</HeadingTwo>
 
-        <FrameworkButton onClick={() => toggleFramework()} img={ReactIcon}>
-          React posts
-        </FrameworkButton>
-        <button onClick={() => toggleFramework()}>Vue posts posts</button>
+        <div className="flex justify-around">
+          <FrameworkButton onClick={() => toggleFramework()} img={ReactIcon}>
+            React posts
+          </FrameworkButton>
+          <FrameworkButton onClick={() => toggleFramework()} img={VueIcon}>
+            Vue posts
+          </FrameworkButton>
+        </div>
         <div className="grid grid-cols-2">
           {framework === "vue" ? (
             <>
