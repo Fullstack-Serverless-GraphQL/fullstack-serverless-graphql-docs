@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import { StaticQuery, graphql } from "gatsby"
 import HeadingTwo from "../typography/HeadingTwo"
 import constants from "../../constants"
@@ -9,6 +9,7 @@ const Chapters = ({
   },
 }) => {
   console.log("eee", edges)
+  const [framework, setFramework] = useState("vue")
   const epilouges = constants.filterByPart(edges, "Epilouge")
   const backendPosts = constants.filterByPart(edges, "setting up backend")
   const librariesPosts = constants.filterByChapter(edges, "Adding libraries")
@@ -39,6 +40,12 @@ const Chapters = ({
   const allListingPosts = constants.filterByChapter(edges, "View Listing")
   const allBookingsPosts = constants.filterByChapter(edges, "Make A Booking")
 
+  //react posts
+  const allReactSetupPosts = constants.filterByFramework(
+    edges,
+    "Setting up React Frontend",
+    "react"
+  )
   const allChapters = [
     {
       chapterEdge: epilouges,
@@ -100,6 +107,13 @@ const Chapters = ({
       chapterTitle: "14. Make A Booking",
     },
   ]
+
+  const reactFrontEndPosts = [
+    {
+      chapterEdge: allReactSetupPosts,
+      chapterTitle: "9. Scaffold React Frontend",
+    },
+  ]
   return (
     <>
       <div className="mt-10">
@@ -122,12 +136,24 @@ const Chapters = ({
         </div>
         <HeadingTwo className="text-center">Frontend</HeadingTwo>
 
-        <button>React posts</button>
-        <button>Vue posts posts</button>
+        <button onClick={() => setFramework("react")}>React posts</button>
+        <button onClick={() => setFramework("vue")}>Vue posts posts</button>
         <div className="grid grid-cols-2">
-          {frontendPosts.map(i => (
-            <ChapterBox edges={i.chapterEdge} text={i.chapterTitle} />
-          ))}
+          {framework === "vue" ? (
+            <>
+              {" "}
+              {frontendPosts.map(i => (
+                <ChapterBox edges={i.chapterEdge} text={i.chapterTitle} />
+              ))}
+            </>
+          ) : (
+            <>
+              {" "}
+              {reactFrontEndPosts.map(i => (
+                <ChapterBox edges={i.chapterEdge} text={i.chapterTitle} />
+              ))}
+            </>
+          )}
         </div>
       </div>
     </>
