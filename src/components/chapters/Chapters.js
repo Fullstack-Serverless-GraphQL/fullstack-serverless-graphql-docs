@@ -54,6 +54,12 @@ const Chapters = ({
     "Setting up React Frontend",
     "react"
   )
+
+  const allTailwindPosts = constants.filterByFramework(
+    edges,
+    "Tailwind",
+    "react"
+  )
   const allChapters = [
     {
       chapterEdge: epilouges,
