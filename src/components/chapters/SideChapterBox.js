@@ -208,14 +208,22 @@ const SideChapterBox = ({
             <>
               {" "}
               {frontendPosts.map(i => (
-                <ChapterBox edges={i.chapterEdge} text={i.chapterTitle} />
+                <ChapterBox
+                  edges={i.chapterEdge}
+                  text={i.chapterTitle}
+                  collapse={collapse}
+                />
               ))}
             </>
           ) : (
             <>
               {" "}
               {reactFrontEndPosts.map(i => (
-                <ChapterBox edges={i.chapterEdge} text={i.chapterTitle} />
+                <ChapterBox
+                  edges={i.chapterEdge}
+                  text={i.chapterTitle}
+                  collapse={collapse}
+                />
               ))}
             </>
           )}
