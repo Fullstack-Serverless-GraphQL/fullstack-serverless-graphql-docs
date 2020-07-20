@@ -1,4 +1,4 @@
-import React, { useContext } from "react"
+import React, { useState } from "react"
 import { StaticQuery, graphql } from "gatsby"
 import HeadingTwo from "../typography/HeadingTwo"
 import HeadingThree from "../typography/HeadingThree"
@@ -7,7 +7,7 @@ import ChapterBox from "./ChapterBox"
 import FrameworkButton from "../buttons/FrameworkButton"
 import VueIcon from "../../images/vue.svg"
 import ReactIcon from "../../images/react-icon.svg"
-import { FrameworkContext } from "../../frameworkContext"
+import { FrameworkContext, frameworks } from "../../frameworkContext"
 
 const SideChapterBox = ({
   collapse,
@@ -16,8 +16,7 @@ const SideChapterBox = ({
   },
 }) => {
   //get contenxt for the frameworks
-  const { framework, toggleFramework } = useContext(FrameworkContext)
-
+  const [framework, toggleFramework] = useState("vue")
   //filtering of chapters
   const epilouges = constants.filterByPart(edges, "Epilouge")
   const backendPosts = constants.filterByPart(edges, "setting up backend")
@@ -79,6 +78,7 @@ const SideChapterBox = ({
     "View Listing",
     "react"
   )
+  console.log("fff", allViewListingsPosts)
 
   const allChapters = [
     {
@@ -193,10 +193,13 @@ const SideChapterBox = ({
         <HeadingThree className="text-left text-blue">Frontend</HeadingThree>
 
         <div className="flex flex-col">
-          <FrameworkButton onClick={() => toggleFramework()} img={ReactIcon}>
+          <FrameworkButton
+            onClick={() => toggleFramework("react")}
+            img={ReactIcon}
+          >
             React posts
           </FrameworkButton>
-          <FrameworkButton onClick={() => toggleFramework()} img={VueIcon}>
+          <FrameworkButton onClick={() => toggleFramework("vue")} img={VueIcon}>
             Vue posts
           </FrameworkButton>
         </div>
@@ -235,6 +238,7 @@ export default props => (
                 part
                 chapter
                 postnumber
+                framework
               }
             }
           }
