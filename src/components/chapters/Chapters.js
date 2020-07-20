@@ -66,6 +66,12 @@ const Chapters = ({
     "Building reusable components",
     "react"
   )
+
+  const allListingsPosts = constants.filterByFramework(
+    edges,
+    "Get All Listings",
+    "react"
+  )
   const allChapters = [
     {
       chapterEdge: epilouges,
