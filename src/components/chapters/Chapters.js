@@ -55,7 +55,7 @@ const Chapters = ({
     "react"
   )
 
-  const allTailwindPosts = constants.filterByFramework(
+  const allTailwindReactPosts = constants.filterByFramework(
     edges,
     "Tailwind",
     "react"
@@ -144,6 +144,22 @@ const Chapters = ({
     {
       chapterEdge: allReactSetupPosts,
       chapterTitle: "9. Scaffold React Frontend",
+    },
+    {
+      chapterEdge: allTailwindReactPosts,
+      chapterTitle: "10. Tailwind",
+    },
+    {
+      chapterEdge: allReuseablePosts,
+      chapterTitle: "11. Buiilding Reusable Components",
+    },
+    {
+      chapterEdge: allListingsPosts,
+      chapterTitle: "12. All Listings Component",
+    },
+    {
+      chapterEdge: allViewListingsPosts,
+      chapterTitle: "13. View A Listing Component",
     },
   ]
   return (
