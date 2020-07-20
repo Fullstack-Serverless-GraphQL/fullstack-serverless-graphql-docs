@@ -192,7 +192,7 @@ const SideChapterBox = ({
         </div>
         <HeadingThree className="text-left text-blue">Frontend</HeadingThree>
 
-        <div className="flex justify-around">
+        <div className="flex flex-col">
           <FrameworkButton onClick={() => toggleFramework()} img={ReactIcon}>
             React posts
           </FrameworkButton>
@@ -200,7 +200,7 @@ const SideChapterBox = ({
             Vue posts
           </FrameworkButton>
         </div>
-        <div className="grid grid-cols-2">
+        <div className="flex flex-col">
           {framework === "vue" ? (
             <>
               {" "}
