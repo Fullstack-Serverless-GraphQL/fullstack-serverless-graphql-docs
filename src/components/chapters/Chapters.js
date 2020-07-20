@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react"
+import React, { useContext } from "react"
 import { StaticQuery, graphql } from "gatsby"
 import HeadingTwo from "../typography/HeadingTwo"
 import constants from "../../constants"
@@ -14,8 +14,6 @@ const Chapters = ({
   },
 }) => {
   const { framework, toggleFramework } = useContext(FrameworkContext)
-
-  console.log("eee", framework)
 
   //filtering of chapters
   const epilouges = constants.filterByPart(edges, "Epilouge")

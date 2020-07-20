@@ -1,16 +1,19 @@
-import React from "react"
+import React, { useContext } from "react"
 import { StaticQuery, graphql } from "gatsby"
 import HeadingTwo from "../typography/HeadingTwo"
 import HeadingThree from "../typography/HeadingThree"
 import constants from "../../constants"
 import ChapterBox from "./ChapterBox"
+import FrameworkButton from "../buttons/FrameworkButton"
+import VueIcon from "../../images/vue.svg"
+import ReactIcon from "../../images/react-icon.svg"
+
 const SideChapterBox = ({
   collapse,
   data: {
     allMarkdownRemark: { edges },
   },
 }) => {
-  console.log("pp", collapse)
   const epilouges = constants.filterByPart(edges, "Epilouge")
   const backendPosts = constants.filterByPart(edges, "setting up backend")
   const librariesPosts = constants.filterByChapter(edges, "Adding libraries")
@@ -40,6 +43,37 @@ const SideChapterBox = ({
   const allLandpagePosts = constants.filterByChapter(edges, "Landing Page")
   const allListingPosts = constants.filterByChapter(edges, "View Listing")
   const allBookingsPosts = constants.filterByChapter(edges, "Make A Booking")
+
+  //react posts
+  const allReactSetupPosts = constants.filterByFramework(
+    edges,
+    "Setting up React Frontend",
+    "react"
+  )
+
+  const allTailwindReactPosts = constants.filterByFramework(
+    edges,
+    "Tailwind",
+    "react"
+  )
+
+  const allReuseablePosts = constants.filterByFramework(
+    edges,
+    "Building reusable components",
+    "react"
+  )
+
+  const allListingsPosts = constants.filterByFramework(
+    edges,
+    "Get All Listings",
+    "react"
+  )
+
+  const allViewListingsPosts = constants.filterByFramework(
+    edges,
+    "View Listing",
+    "react"
+  )
 
   const allChapters = [
     {
@@ -102,6 +136,29 @@ const SideChapterBox = ({
       chapterTitle: "14. Make A Booking",
     },
   ]
+
+  const reactFrontEndPosts = [
+    {
+      chapterEdge: allReactSetupPosts,
+      chapterTitle: "9. Scaffold React Frontend",
+    },
+    {
+      chapterEdge: allTailwindReactPosts,
+      chapterTitle: "10. Tailwind",
+    },
+    {
+      chapterEdge: allReuseablePosts,
+      chapterTitle: "11. Buiilding Reusable Components",
+    },
+    {
+      chapterEdge: allListingsPosts,
+      chapterTitle: "12. All Listings Component",
+    },
+    {
+      chapterEdge: allViewListingsPosts,
+      chapterTitle: "13. View A Listing Component",
+    },
+  ]
   return (
     <>
       <div className="mt-10 ml-5 p-3">
@@ -130,14 +187,30 @@ const SideChapterBox = ({
         </div>
         <HeadingThree className="text-left text-blue">Frontend</HeadingThree>
 
-        <div className="flex flex-col">
-          {frontendPosts.map(i => (
-            <ChapterBox
-              edges={i.chapterEdge}
-              text={i.chapterTitle}
-              collapse={collapse}
-            />
-          ))}
+        <div className="flex justify-around">
+          <FrameworkButton onClick={() => toggleFramework()} img={ReactIcon}>
+            React posts
+          </FrameworkButton>
+          <FrameworkButton onClick={() => toggleFramework()} img={VueIcon}>
+            Vue posts
+          </FrameworkButton>
+        </div>
+        <div className="grid grid-cols-2">
+          {framework === "vue" ? (
+            <>
+              {" "}
+              {frontendPosts.map(i => (
+                <ChapterBox edges={i.chapterEdge} text={i.chapterTitle} />
+              ))}
+            </>
+          ) : (
+            <>
+              {" "}
+              {reactFrontEndPosts.map(i => (
+                <ChapterBox edges={i.chapterEdge} text={i.chapterTitle} />
+              ))}
+            </>
+          )}
         </div>
       </div>
     </>
