@@ -72,6 +72,12 @@ const Chapters = ({
     "Get All Listings",
     "react"
   )
+
+  const allViewListingsPosts = constants.filterByFramework(
+    edges,
+    "View Listing",
+    "react"
+  )
   const allChapters = [
     {
       chapterEdge: epilouges,
