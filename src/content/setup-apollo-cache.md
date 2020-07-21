@@ -10,11 +10,7 @@ chapter: Make A Booking Mutation
 ---
 In this post we setup the Apollo cache and our local resolvers to be able to store the form data.
 
-
-
 First in your index.js file add the following:
-
-
 
 ```javascript
 import { InMemoryCache } from "apollo-cache-inmemory";
@@ -34,19 +30,13 @@ cache.writeData({
 });
 ```
 
-
-
 🍗  Here we are simply import the InMemoryCache function and then making an instance of a cache object
 
 🍗 .Next we use the writeData function to create our initial formData object that has a datem email and customer fields to store that data.
 
 🍗 .  Very important is the __typename field the lets GraphQL know that the formData object is the type we will be querying and mutating
 
-
-
 Next up in src make a file called resolvers.js and add the following:
-
-
 
 ```javascript
 import { GET_FORM_DATA } from "./graphql/Queries";
@@ -74,7 +64,6 @@ export const resolvers = {
     },
   },
 };
-
 ```
 
    🍗   Do we have a resolvers object that has mutation which has a function called updateFormData.
@@ -84,8 +73,6 @@ export const resolvers = {
 🍗  Then i creates a new object that takes in new arguments to overwrite the form data with update data.
 
 🍗  form data is then returned.
-
-
 
 next up go to the Queries.js file and add the following:
 
@@ -98,10 +85,32 @@ export const GET_FORM_DATA = gql`
     }
   }
 `;
-
 ```
 
 We have to create a schema doc to read the formData the @client directive lets GraphQL know it is directly for the client only.
+
+
+
+In the mutations.js add the following:
+
+
+
+```javascript
+import gql from "graphql-tag";
+
+export const UPDATE_FORM_DATA = gql`
+  mutation UPDATE_FORM_DATA(
+    $date: String
+    $email: String
+    $customer: CustomerInput
+  ) {
+    updateFormData(date: $date, email: $email, customer: $customer) @client
+  }
+`;
+
+```
+
+Here we are just creating a mutation to update the form data
 
 
 
