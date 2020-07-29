@@ -17,7 +17,7 @@ const ChapterBox = ({ text, edges, collapse }) => {
           <>
             {" "}
             <button
-              className="cursor-pointer focus:outline-none text-left"
+              className="cursor-pointer focus:outline-none text-left font-display"
               onClick={() => openChapters() && console.log(open)}
             >
               {text}
