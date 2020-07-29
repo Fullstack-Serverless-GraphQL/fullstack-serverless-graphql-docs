@@ -7,7 +7,6 @@ import ChapterBox from "./ChapterBox"
 import FrameworkButton from "../buttons/FrameworkButton"
 import VueIcon from "../../images/vue.svg"
 import ReactIcon from "../../images/react-icon.svg"
-import { FrameworkContext, frameworks } from "../../frameworkContext"
 
 const SideChapterBox = ({
   collapse,

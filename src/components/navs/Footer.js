@@ -3,7 +3,11 @@ import BodyOne from "../typography/BodyOne"
 const Footer = () => (
   <footer className="border-bottom  mt-20 text-center">
     <BodyOne className="mb-5">
-      Manufactured in 🇿🇦 by{" "}
+      Manufactured in{" "}
+      <span role="img" aria-label="emoji">
+        🇿🇦
+      </span>{" "}
+      by{" "}
       <a
         className="text-yellow mb-5"
         target="_blank"
