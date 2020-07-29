@@ -38,9 +38,10 @@ const Chapters = ({
   //Vue - frontend posts
   const allCLIPosts = constants.filterByChapter(edges, "Vue cli")
   const allTailwindPosts = constants.filterByChapter(edges, "Tailwind")
-  const allResuablePosts = constants.filterByChapter(
+  const allResuablePosts = constants.filterByFramework(
     edges,
-    "Building reusable components"
+    "Building reusable components",
+    "vue"
   )
   const allLandpagePosts = constants.filterByChapter(edges, "Landing Page")
   const allListingPosts = constants.filterByChapter(edges, "View Listing")
