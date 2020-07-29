@@ -76,6 +76,12 @@ const Chapters = ({
     "View Listing",
     "react"
   )
+
+  const allMakeAMutationReactPosts = constants.filterByFramework(
+    edges,
+    "Make A Booking Mutation",
+    "react"
+  )
   const allChapters = [
     {
       chapterEdge: epilouges,
@@ -158,6 +164,10 @@ const Chapters = ({
     {
       chapterEdge: allViewListingsPosts,
       chapterTitle: "13. View A Listing Component",
+    },
+    {
+      chapterEdge: allMakeAMutationReactPosts,
+      chapterTitle: "14. Make A Booking",
     },
   ]
   return (
