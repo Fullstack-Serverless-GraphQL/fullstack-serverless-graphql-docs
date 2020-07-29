@@ -79,8 +79,11 @@ const SideChapterBox = ({
     "View Listing",
     "react"
   )
-  console.log("fff", allViewListingsPosts)
-
+  const allMakeAMutationReactPosts = constants.filterByFramework(
+    edges,
+    "Make A Booking Mutation",
+    "react"
+  )
   const allChapters = [
     {
       chapterEdge: epilouges,
@@ -163,6 +166,10 @@ const SideChapterBox = ({
     {
       chapterEdge: allViewListingsPosts,
       chapterTitle: "13. View A Listing Component",
+    },
+    {
+      chapterEdge: allMakeAMutationReactPosts,
+      chapterTitle: "14. Make A Booking",
     },
   ]
   return (
