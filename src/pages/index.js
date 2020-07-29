@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Hero from "../components/landing/hero"
 import Chapters from "../components/chapters/Chapters"
-import { FrameworkContext, frameworks } from "../frameworkContext"
+import { FrameworkContext } from "../frameworkContext"
 
 const IndexPage = () => {
   const [framework, setFramework] = useState("vue")
