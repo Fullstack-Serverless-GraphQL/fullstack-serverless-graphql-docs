@@ -12,8 +12,6 @@ Usually to setup a React app you would use Create React App, unlike Vue it does 
 
 For this course, we will use the React Bleeding Edge Kit (TM) however you are most welcome to set up the project however you like and try and plugin different parts of the course where possible.
 
-
-
 However, the React Bleeding Edge Kit comes with the following:
 
 \* Apollo Client setup
@@ -26,28 +24,38 @@ However, the React Bleeding Edge Kit comes with the following:
 
 So first thing we got to do is go to Github and use the kit as a templete:
 
-\[Add picture of creating repo]
+![](/uploads/task_1.png)
 
 After that we can now create the repo based on the template.
 
-\[Add picture of creating templated repo]
+![](/uploads/task_2.png)
 
-Then we can now clone the repo to our local machine
+Then we can now clone the repo to our local machine. 
 
-\[Steps to clone]
+```
+$ git clone url-of-repo
+```
 
-Then cd into the repo and install the modules
+Then cd into the repo :
 
-\[steps to cd and install modules]
+```
+$ cd lunar-tour-client
+```
+
+Install the node modules:
+
+```
+$ yarn install
+```
+
+
 
 Then we can start the app and go to local host to view the app
 
-\[steps to view app] 
-
-
-
-\[screenshot of app]
-
-
+```
+$ yarn start
+```
 
 Now we have our React frontend setup for us!
+
+![](/uploads/task_3.png)
