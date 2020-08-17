@@ -12,7 +12,7 @@ In this section we will embark on create UI components for the application. The 
 
 Usually I create a component library and package it to NPM and import it into my app, but that would be overkill for such a small project like this. 
 
-First up under the components folder, create a folder called inputs, then create a file called input.js and paste the following:
+First up under the components folder, create a folder called `inputs`, then create a file called `input.js` and paste the following:
 
 
 
@@ -51,4 +51,4 @@ export default Input;
 
 
 
-Here we have a basic input component that can accept a couple of props.
+Here we have a basic input component that can accept a couple of props and events.
