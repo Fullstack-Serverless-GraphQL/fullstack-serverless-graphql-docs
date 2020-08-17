@@ -8,9 +8,9 @@ postnumber: 38
 framework: react
 chapter: Building reusable components
 ---
-In this chapter we will build out our components that we will be using through out the application. First lets go ahead and create a Primary button.
+As we continue to build out these components we need a couple of buttons. So we will build our "Primary Button"
 
-In the components folder create a folder called buttons. Then create a RedBlockButton.js component and add the following:
+In the components folder create a folder called `buttons`. Then create a `RedBlockButton.js` component and add the following:
 
 
 
@@ -33,51 +33,47 @@ const ImageStyles = styled.img`
   animation: ${rotate} 2s infinite linear;
 `;
 
-const RedBlockButton = ({
+const BlueBlockButton = ({
   className = "",
   onClick,
-  text,
+  children,
   disabled = false,
   isLoading,
   large,
   long,
   ...props
 }) => {
-  console.log(onClick);
   return (
     <button
       /* eslint-disable no-template-curly-in-string*/
-      className={`${className} ccursor-pointer bg-red-lightest text-red-darkest focus:outline-none font-display rounded-px px-16 py-2 hover:bg-transparent hover:border hover:border-red-darkest`}
+      className={`${className} cursor-pointer bg-blue-lightest text-blue-darkest focus:outline-none font-display rounded-px px-16 py-2 hover:bg-transparent hover:border hover:border-blue-darkest`}
       onClick={onClick}
       disabled={disabled}
       {...props}
     >
-      {isLoading === true ? (
-        <ImageStyles src={loading} alt="loading..." />
-      ) : (
-        text
-      )}
+      {isLoading ? <ImageStyles src={loading} alt="loading..." /> : children}
     </button>
   );
 };
 const propTypes = {
   className: PropTypes.string,
   onClick: PropTypes.func,
-  text: PropTypes.string,
+  children: PropTypes.string,
   disabled: PropTypes.bool,
   large: PropTypes.bool,
   long: PropTypes.bool,
   isLoading: PropTypes.bool,
 };
-RedBlockButton.propTypes = propTypes;
-export default RedBlockButton;
-
+BlueBlockButton.propTypes = propTypes;
+export default BlueBlockButton;
 ```
 
 
 
-🧁In the template part we have a button with a handle click event.
+🧁 Generally buttons have a spinner inside them to allow you to accept a signal that after you click on it that it is loading after making a call to an API or something. That is why we use StyledComponents and a basic CSS animation to get the icon to spin
 
-🧁 with a v-if statement that is triggered if the isLoading prop is set to true. It will show the loading the loading spinner.
+🧁 Then we have a couple of Props and events passed into the button.
 
-🧁 We have a method that emits a click event.
+🧁  Now we have a ternary operator to see if the `isLoading` prop is true, if so render the Loading spinner. If not render the children in the button.
+
+Now it is really easy to pull something out of Bootstrap or your fav library. However, I've found this a lot easier in cases when a designer has custom button button designs. It takes longer to find the necessary CSS class to override than to just write HTML and JavaScript to create things. 
