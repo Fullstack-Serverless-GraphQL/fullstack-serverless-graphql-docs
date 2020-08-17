@@ -8,9 +8,9 @@ postnumber: 37
 framework: react
 chapter: Building reusable components
 ---
-In this post we will create two typography components that we will use throughout the App for all of our Typography.
+In this post we will create a couple of typography components that we will use throughout the App for all of our Typography.
 
-First create a folder in the components directory called typography. And create a file called HeadingOne.js and add the following:
+First create a folder in the components directory called `typography`. And create a file called `HeadingOne.js` and add the following:
 
 
 
@@ -27,7 +27,7 @@ const HeadingOne = ({ className, children }) => {
 
 HeadingOne.propTypes = {
   className: PropTypes.string,
-  children: PropTypes.string,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
 };
 
 HeadingOne.defaultProps = {
@@ -35,9 +35,10 @@ HeadingOne.defaultProps = {
 };
 export default HeadingOne;
 
+
 ```
 
-🛩️ We are creating a paragraph component with a slot inside it that will allow us to add additional content inside it.
+🛩️ We are creating a H1 component that will allow us to add additional content inside it via the children prop.
 
 🛩️ Then we given it some styles.
 
@@ -58,13 +59,14 @@ const HeadingTwo = ({ className, children }) => {
 
 HeadingTwo.propTypes = {
   className: PropTypes.string,
-  children: PropTypes.string,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
 };
 
 HeadingTwo.defaultProps = {
   className: "",
 };
 export default HeadingTwo;
+
 
 ```
 
@@ -85,13 +87,14 @@ const HeadingThree = ({ className, children }) => {
 
 HeadingThree.propTypes = {
   className: PropTypes.string,
-  children: PropTypes.string,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
 };
 
 HeadingThree.defaultProps = {
   className: "",
 };
 export default HeadingThree;
+
 
 ```
 
@@ -112,7 +115,7 @@ const BodyOne = ({ className, children }) => {
 
 BodyOne.propTypes = {
   className: PropTypes.string,
-  children: PropTypes.string,
+  children: PropTypes.oneOfType([PropTypes.string, PropTypes.array]),
 };
 
 BodyOne.defaultProps = {
@@ -120,11 +123,12 @@ BodyOne.defaultProps = {
 };
 export default BodyOne;
 
+
 ```
 
 
 
-Last lets create an index.js file so we can import the components in one line through out the app:
+Last lets create an `index.js` file so we can import the components in one line through out the app:
 
 ```javascript
 import HeadingOne from "./HeadingOne";
