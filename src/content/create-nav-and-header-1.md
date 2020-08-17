@@ -10,7 +10,7 @@ chapter: Building reusable components
 ---
 In this post we will create a Navigation bar and a Header component for our landing page.
 
-Go head and create a navs folder and create a Nav.js file with the following:
+Go head and create a `navs` folder and create a `Nav.js` file with the following:
 
 ```javascript
 import React from "react";
@@ -33,18 +33,18 @@ export default Nav;
 
 🌞 We have an HTML Nav bar that is is responsive and allows the user to redirect to the Home page of the site.
 
-Next up create a headers folder and create a file called LandingHeader.js with the following contents:
+Next up create a `headers` folder and create a file called `LandingHeader.js` with the following contents:
 
 
 
 ```javascript
 import React from "react";
-
+import { HeadingOne } from "../typography";
 const LandingHeader = ({ imgURL, text = "" }) => {
   return (
     <>
       <div
-        class=" text-center bg-transparent "
+        className=" text-center bg-transparent "
         style={{
           background: `url(${imgURL})no-repeat center center`,
           backgroundSize: "cover",
@@ -52,9 +52,7 @@ const LandingHeader = ({ imgURL, text = "" }) => {
           marginTop: "-85px",
         }}
       >
-        <h1 class="text-white font-display text-5xl pt-44 s:text-4xl">
-          {text}
-        </h1>
+        <HeadingOne className="text-5xl pt-44 s:text-4xl">{text}</HeadingOne>
       </div>
     </>
   );
@@ -62,10 +60,11 @@ const LandingHeader = ({ imgURL, text = "" }) => {
 
 export default LandingHeader;
 
+
 ```
 
-🌞In this div have a v-if statement that accepts text to be displayed
+🌞 This is a `div` with a custom style to allow the image to sit in the background of the component. Tailwind CSS has directive and plugins for this sort of thing, however I left this out and went the vanilla route. Do not be scared to code!
 
-🌞 There is also a computed style prop that accepts an image url that will display a picture in the background based on the image URL.
+🌞 Then we have Vanilla CSS styles for this component as you are unable to replicate this in TailwindCSS.
 
-🌞Then we have Vanilla CSS styles for this component as you are unable to replicate this in TailwindCSS.
+🌞  Lastly, we have two props for the image URL and whatever text you want to put in the H1.
