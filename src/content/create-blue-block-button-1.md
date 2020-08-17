@@ -36,7 +36,7 @@ const ImageStyles = styled.img`
 const BlueBlockButton = ({
   className = "",
   onClick,
-  text,
+  children,
   disabled = false,
   isLoading,
   large,
@@ -51,18 +51,14 @@ const BlueBlockButton = ({
       disabled={disabled}
       {...props}
     >
-      {isLoading === true ? (
-        <ImageStyles src={loading} alt="loading..." />
-      ) : (
-        text
-      )}
+      {isLoading ? <ImageStyles src={loading} alt="loading..." /> : children}
     </button>
   );
 };
 const propTypes = {
   className: PropTypes.string,
   onClick: PropTypes.func,
-  text: PropTypes.string,
+  children: PropTypes.string,
   disabled: PropTypes.bool,
   large: PropTypes.bool,
   long: PropTypes.bool,
@@ -71,12 +67,7 @@ const propTypes = {
 BlueBlockButton.propTypes = propTypes;
 export default BlueBlockButton;
 
+
 ```
 
-
-
-🧁In the template part we have a button with a handle click event.
-
-🧁 with a v-if statement that is triggered if the isLoading prop is set to true. It will show the loading the loading spinner.
-
-🧁 We have a method that emits a click event.
+Yet again we are doingg something simalr, only difference is that it is a different colour button. 
