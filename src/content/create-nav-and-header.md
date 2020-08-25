@@ -84,3 +84,7 @@ export default {
 🌞 There is also a computed style prop that accepts an image url that will display a picture in the background based on the image URL.
 
 🌞Then we have Vanilla CSS styles for this component as you are unable to replicate this in TailwindCSS.
+
+Once you're done it should look like this:
+
+![landingheader-component](/uploads/landingheader.png)
