@@ -52,3 +52,7 @@ export default {
 ```
 
 🥤This input component accepts text and has a handleInput method
+
+Once you're done it should look like this:
+
+![input-component](/uploads/input.png)
