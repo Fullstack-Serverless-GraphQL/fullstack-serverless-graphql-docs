@@ -10,7 +10,7 @@ chapter: Building reusable components
 ---
 In this chapter we will build out our components that we will be using through out the application. First lets go ahead and create a Remove button.
 
-In the components folder create a folder called buttons. Then create a RemoveButton.vue component and add the following:
+In the components folder create a folder called ```buttons```. Then create a ```RemoveButton.js``` component and add the following:
 
 
 
@@ -58,8 +58,4 @@ export default RemoveButton;
 
 ```
 
-🧁In the template part we have a button with a handle click event.
-
-🧁 with a v-if statement that is triggered if the isLoading prop is set to true. It will show the loading the loading spinner.
-
-🧁 We have a method that emits a click event.
+🧁 This button has an icon that will allow us to remove items in forms that we want to be removed.
