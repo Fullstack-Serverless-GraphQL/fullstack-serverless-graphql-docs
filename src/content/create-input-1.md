@@ -8,17 +8,16 @@ postnumber: 35
 framework: react
 chapter: Building reusable components
 ---
-In this section we will embark on create UI components for the application. The reason why I like creating basic components like inputs,buttons etc from scratch is because I will always have control over the styling and not need to overwrite CSS classes. 
 
-Usually I create a component library and package it to NPM and import it into my app, but that would be overkill for such a small project like this. 
+In this section we will embark on create UI components for the application. The reason why I like creating basic components like inputs,buttons etc from scratch is because I will always have control over the styling and not need to overwrite CSS classes.
+
+Usually I create a component library and package it to NPM and import it into my app, but that would be overkill for such a small project like this.
 
 First up under the components folder, create a folder called `inputs`, then create a file called `input.js` and paste the following:
 
-
-
 ```javascript
-import React from "react";
-import PropTypes from "prop-types";
+import React from "react"
+import PropTypes from "prop-types"
 
 const Input = ({ className, value, onChange, ...props }) => {
   return (
@@ -36,19 +35,18 @@ const Input = ({ className, value, onChange, ...props }) => {
       onChange={onChange}
       {...props}
     />
-  );
-};
+  )
+}
 
 const propTypes = {
   className: PropTypes.string,
   value: PropTypes.string,
   onChange: PropTypes.func,
-};
-Input.propTypes = propTypes;
-export default Input;
-
+}
+Input.propTypes = propTypes
+export default Input
 ```
 
+Here we have a basic input component that can accept a couple of props and events. Once you're done it should look like this:
 
-
-Here we have a basic input component that can accept a couple of props and events.
+![input-component](/uploads/input.png)
