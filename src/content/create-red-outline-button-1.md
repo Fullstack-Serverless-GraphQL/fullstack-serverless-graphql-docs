@@ -8,17 +8,16 @@ postnumber: 39
 framework: react
 chapter: Building reusable components
 ---
+
 In this chapter we will build out our components that we will be using through out the application. First lets go ahead and create a Secondary button.
 
 In the components folder create a folder called buttons. Then create a RedOutlineButton.js component and add the following:
 
-
-
 ```javascript
-import React from "react";
-import PropTypes from "prop-types";
-import styled, { keyframes } from "styled-components";
-import loading from "../../assets/loop.svg";
+import React from "react"
+import PropTypes from "prop-types"
+import styled, { keyframes } from "styled-components"
+import loading from "../../assets/loop.svg"
 
 const rotate = keyframes`
   from {
@@ -27,11 +26,11 @@ const rotate = keyframes`
   to {
 	  transform: rotate(360deg);
   }
-`;
+`
 const ImageStyles = styled.img`
   display: inline-block;
   animation: ${rotate} 2s infinite linear;
-`;
+`
 
 const RedOutlineButton = ({
   className = "",
@@ -53,8 +52,8 @@ const RedOutlineButton = ({
     >
       {isLoading ? <ImageStyles src={loading} alt="loading..." /> : children}
     </button>
-  );
-};
+  )
+}
 const propTypes = {
   className: PropTypes.string,
   onClick: PropTypes.func,
@@ -63,12 +62,13 @@ const propTypes = {
   large: PropTypes.bool,
   long: PropTypes.bool,
   isLoading: PropTypes.bool,
-};
-RedOutlineButton.propTypes = propTypes;
-export default RedOutlineButton;
-
+}
+RedOutlineButton.propTypes = propTypes
+export default RedOutlineButton
 ```
 
-
-
 We are doing the exact same thing from the `RedBlockButton` we just literally removing the background.
+
+Once you're done it should look like this:
+
+![redoutline-component](/uploads/redoutline.png)
