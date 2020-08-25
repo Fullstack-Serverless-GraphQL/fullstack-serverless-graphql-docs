@@ -8,11 +8,10 @@ postnumber: 40
 framework: react
 chapter: Building reusable components
 ---
+
 In this chapter we will build out our components that we will be using through out the application. First lets go ahead and create a Secondary button Blue.
 
 In the components folder create a folder called buttons. Then create a BlueBlockButton.js component and add the following:
-
-
 
 ```
 import React from "react";
@@ -70,4 +69,8 @@ export default BlueBlockButton;
 
 ```
 
-Yet again we are doingg something simalr, only difference is that it is a different colour button. 
+Yet again we are doingg something simalr, only difference is that it is a different colour button.
+
+Once you're done it should look like this:
+
+![blueoutline-component](/uploads/blueoutline.png)
