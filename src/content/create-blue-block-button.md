@@ -66,3 +66,7 @@ export default {
 🧁 with a v-if statement that is triggered if the isLoading prop is set to true. It will show the loading the loading spinner.
 
 🧁 We have a method that emits a click event.
+
+Once you're done it should look like this:
+
+![blueoutline-component](/uploads/blueoutline.png)
