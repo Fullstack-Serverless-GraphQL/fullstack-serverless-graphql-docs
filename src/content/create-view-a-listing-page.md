@@ -11,7 +11,7 @@ chapter: View Listing
 
 In this chapter we will create the page that will allow users to view an individual listing.
 
-In the pages directory create a ViewListing.js file and add the following:
+In the `pages` directory create a `ViewListing.js` file and add the following:
 
 ```javascript
 import React from "react"
@@ -119,11 +119,11 @@ const ViewListing = props => {
 export default ViewListing
 ```
 
-👁️ Like with the getAllListings query we are hit the GET_A_LISTING query however we are passing in the listingId as the variable which we are getting from the URL of this component.
+👁️ Like with the `getAllListings` query we are hit the `GET_A_LISTING` query however we are passing in the listingId as the variable which we are getting from the URL of this component.
 
 👁️ In our Return block we have basic markup with CSS Grid to display the content of the listing in a responsive manner. We also map over the activities and types with icons.
 
-Next up go into the Queries.js file and add the following schema doc:
+Next up go into the `Queries.js` file and add the following schema doc:
 
 ```javascript
 export const GET_A_LISTING = gql`
@@ -153,9 +153,9 @@ export const GET_A_LISTING = gql`
 `
 ```
 
-👁️ For this specific query we are specifing that the listingId is a string and we are query all the fields from the listing Type
+👁️ For this specific query we are specifing that the `listingId` is a string and we are querying all the fields from the `listing` Type
 
-Next go over to the routes.js file and add the following:
+Next go over to the `routes.js` file and add the following:
 
 ```javascript
 import React from "react"
@@ -174,7 +174,7 @@ const Routes = ({ props }) => {
 export default Routes
 ```
 
-👁️ All we doing here is making our ViewListing component accessabile on the /listing/:id routee, where we will swap :id for the actual id of the listing from the server to enable us to query the API for the listing data.
+👁️ All we doing here is making our `ViewListing` component accessabile on the `/listing/:id` route, where we will swap `:id` for the actual id of the listing from the server to enable us to query the API for the listing data.
 
 👁️ By passing down the props into the components we can pass down functions from Reach router and other utils so that it is accessible in other parts of the application.
 
