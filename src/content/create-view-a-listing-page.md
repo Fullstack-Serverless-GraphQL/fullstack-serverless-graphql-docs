@@ -179,3 +179,5 @@ export default Routes
 👁️ By passing down the props into the components we can pass down functions from Reach router and other utils so that it is accessible in other parts of the application.
 
 Now you should be able to view any listing.
+
+![view-a-listing](/uploads/viewlisting.png)
