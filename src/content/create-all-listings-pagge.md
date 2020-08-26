@@ -28,7 +28,6 @@ const Index = () => {
   if (loading) return <Skeleton />
   if (error) return <p className="text-red">{error}</p>
 
-  console.log(data)
   return (
     <>
       <LandingHeader
