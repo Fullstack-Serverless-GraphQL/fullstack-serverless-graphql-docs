@@ -8,58 +8,54 @@ postnumber: 44
 framework: react
 chapter: View Listing
 ---
+
 In this chapter we will create the page that will allow users to view an individual listing.
-
-
 
 In the pages directory create a ViewListing.js file and add the following:
 
 ```javascript
-import React from "react";
-import RedBlockButton from "../components/buttons/RedBlockButton";
-import { useQuery } from "@apollo/react-hooks";
-import { GET_A_LISTING } from "../graphql/Queries";
-import activy from "../assets/trip_type.svg";
-import amenities from "../assets/trip_activity.svg";
-import LandingHeader from "../components/navs/LandingHeader";
-import { Skeleton } from "antd";
+import React from "react"
+import RedBlockButton from "../components/buttons/RedBlockButton"
+import { useQuery } from "@apollo/react-hooks"
+import { GET_A_LISTING } from "../graphql/Queries"
+import activy from "../assets/trip_type.svg"
+import amenities from "../assets/trip_activity.svg"
+import LandingHeader from "../components/navs/LandingHeader"
+import { Skeleton } from "antd"
 
 import {
   HeadingOne,
   HeadingTwo,
   HeadingThree,
   BodyOne,
-} from "../components/typography";
-const ViewListing = (props) => {
-  console.log(props);
-
+} from "../components/typography"
+const ViewListing = props => {
   const { loading, data, error } = useQuery(GET_A_LISTING, {
     variables: {
       listingId: props.id,
     },
-  });
+  })
 
-  if (loading) return <Skeleton />;
-  if (error) return <p className="text-red">{error}</p>;
+  if (loading) return <Skeleton />
+  if (error) return <p className="text-red">{error}</p>
 
-  console.log(error);
-
+  const listing = data.getAListing
   return (
     <>
-      <LandingHeader imgURL={data.getAListing.coverPhoto} />
+      <LandingHeader imgURL={listing.coverPhoto} />
       <div className="grid grid-cols-13 p-5 mt-10">
         <div className="mr-16">
           <HeadingOne className="font-display  font-semibold text-3xl text-black">
-            {data.getAListing.listingName}
+            {listing.listingName}
           </HeadingOne>
           <HeadingTwo className="font-display text-xl text-black mt-4 mb-8">
-            {data.getAListing.listingLocation}
+            {listing.listingLocation}
           </HeadingTwo>
           <HeadingThree className="font-display font-bold text-xl text-center s:text-left mb-5 text-black ">
-            $ {data.getAListing.price}
+            $ {listing.price}
           </HeadingThree>
           <BodyOne className="font-display text-left text-black ">
-            {data.getAListing.listingDescription}
+            {listing.listingDescription}
           </BodyOne>
 
           <HeadingThree className="font-display text-2xl font-bold text-black mt-10">
@@ -67,8 +63,8 @@ const ViewListing = (props) => {
           </HeadingThree>
 
           <div className="flex flex-col p-3" key="types">
-            {data.getAListing.listingType.map((t) => (
-              <div key={t} className="flex flex-row">
+            {listing.listingType.map((t, index) => (
+              <div key={index} className="flex flex-row">
                 <img src={activy} alt="activity" />
                 <BodyOne className="font-display ml-2 mt-2">{t.name}</BodyOne>
               </div>
@@ -79,8 +75,8 @@ const ViewListing = (props) => {
             Activites
           </HeadingThree>
           <div className="flex flex-col p-3" key="activies">
-            {data.getAListing.listingActivities.map((a) => (
-              <div key={a} className="flex flex-row">
+            {listing.listingActivities.map((a, index) => (
+              <div key={index} className="flex flex-row">
                 <img src={amenities} alt="amend" />
                 <BodyOne className="font-display ml-2 mt-2">{a.name}</BodyOne>
               </div>
@@ -91,47 +87,43 @@ const ViewListing = (props) => {
           <div>
             <RedBlockButton
               onClick={() => props.navigate(`/booking/${props.id}`)}
-              text="Book"
               className=" text-center s:pr-20 mb-10 mt-10"
-            />
+            >
+              Book
+            </RedBlockButton>
           </div>
           <div>
             <HeadingThree className="font-display text-xl   text-black mt-10 mb-10">
               Your guide
             </HeadingThree>
             <img
-              src={data.getAListing.guide.Avatar}
+              src={listing.guide.Avatar}
               alt="guide"
               className="rounded-lg h-48"
             />
           </div>
           <div>
             <HeadingThree className="font-display text-xl   text-black mt-10">
-              {data.getAListing.guide.Name}
+              {listing.guide.Name}
             </HeadingThree>
             <BodyOne className="font-display   text-black mt-5 ">
-              {data.getAListing.guide.Bio}
+              {listing.guide.Bio}
             </BodyOne>
           </div>
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default ViewListing;
-
+export default ViewListing
 ```
 
-👁️  Like with the getAllListings query we are hit the GET_A_LISTING query however we are passing in the listingId as the variable which we are getting from the URL of this component. 
+👁️ Like with the getAllListings query we are hit the GET_A_LISTING query however we are passing in the listingId as the variable which we are getting from the URL of this component.
 
-👁️  In our Return block we have basic markup with CSS Grid to display the content of the listing in a responsive manner.  We also map over the activities and types with icons.
-
-
+👁️ In our Return block we have basic markup with CSS Grid to display the content of the listing in a responsive manner. We also map over the activities and types with icons.
 
 Next up go into the Queries.js file and add the following schema doc:
-
-
 
 ```javascript
 export const GET_A_LISTING = gql`
@@ -158,39 +150,32 @@ export const GET_A_LISTING = gql`
       specialType
     }
   }
-`;
-
+`
 ```
 
-  👁️   For this specific query we are specifing that the listingId is a string and we are query all the fields from the listing Type
-
-
+👁️ For this specific query we are specifing that the listingId is a string and we are query all the fields from the listing Type
 
 Next go over to the routes.js file and add the following:
 
 ```javascript
-import React from "react";
-import { Router } from "@reach/router";
-import Home from "./pages/index";
-import ViewListing from "./pages/ViewListing";
+import React from "react"
+import { Router } from "@reach/router"
+import Home from "./pages/index"
+import ViewListing from "./pages/ViewListing"
 const Routes = ({ props }) => {
   return (
     <Router>
       <Home path="/" props={props} />
       <ViewListing path="/listing/:id" props={props} />
     </Router>
-  );
-};
+  )
+}
 
-export default Routes;
+export default Routes
 ```
 
+👁️ All we doing here is making our ViewListing component accessabile on the /listing/:id routee, where we will swap :id for the actual id of the listing from the server to enable us to query the API for the listing data.
 
-
-  👁️   All we doing here is making our ViewListing component accessabile on the /listing/:id routee, where we will swap :id for the actual id of the listing from the server to enable us to query the API for the listing data. 
-
-  👁️   By passing down the props into the components we can pass down functions from Reach router and other utils so that it is accessible in other parts of the application. 
-
-
+👁️ By passing down the props into the components we can pass down functions from Reach router and other utils so that it is accessible in other parts of the application.
 
 Now you should be able to view any listing.
