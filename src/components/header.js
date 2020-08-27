@@ -2,6 +2,7 @@ import { Link } from "gatsby"
 import PropTypes from "prop-types"
 import React from "react"
 import Github from "../assets/github.svg"
+import FSGQLogo from "../images/logo_transparent.png"
 const Header = ({ siteTitle }) => (
   <header className="border-top bg-transparent flex items-center justify-between flex-wrap p-6">
     <div className="flex items-center flex-no-shrink text">
@@ -12,7 +13,7 @@ const Header = ({ siteTitle }) => (
             textDecoration: `none`,
           }}
         >
-          {siteTitle}
+          <img src={FSGQLogo} alt="github icon" className="w-16" />
         </Link>
       </h1>
     </div>
