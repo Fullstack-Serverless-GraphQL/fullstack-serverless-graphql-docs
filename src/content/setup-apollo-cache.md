@@ -8,15 +8,15 @@ postnumber: 46
 framework: react
 chapter: Make A Booking Mutation
 ---
+
 In this post we setup the Apollo cache and our local resolvers to be able to store the form data.
 
-First in your index.js file add the following:
+First in your `index.js` file add the following:
 
 ```javascript
-import { InMemoryCache } from "apollo-cache-inmemory";
+import { InMemoryCache } from "apollo-cache-inmemory"
 
-const cache = new InMemoryCache();
-
+const cache = new InMemoryCache()
 
 cache.writeData({
   data: {
@@ -27,26 +27,25 @@ cache.writeData({
       __typename: "formData",
     },
   },
-});
+})
 ```
 
-🍗  Here we are simply import the InMemoryCache function and then making an instance of a cache object
+🍗 Here we are simply importing the `InMemoryCache` function and then making an instance of a cache object.
 
-🍗 .Next we use the writeData function to create our initial formData object that has a datem email and customer fields to store that data.
+🍗 Next we use the `writeData` function to create our initial `formData` object that has a date, email and customer fields to store that data.
 
-🍗 .  Very important is the __typename field the lets GraphQL know that the formData object is the type we will be querying and mutating
+🍗 . Very important is the `__typename` field the lets GraphQL know that the `formData` object is the type we will be querying and mutating
 
-Next up in src make a file called resolvers.js and add the following:
+Next up in `src` make a file called `resolvers.js` and add the following:
 
 ```javascript
-import { GET_FORM_DATA } from "./graphql/Queries";
+import { GET_FORM_DATA } from "./graphql/Queries"
 
 export const resolvers = {
   Mutation: {
     updateFormData: (parent, args, context, info) => {
-      console.log("rrr", args);
-      const queryResult = context.cache.readQuery({ query: GET_FORM_DATA });
-      const { formData } = queryResult;
+      const queryResult = context.cache.readQuery({ query: GET_FORM_DATA })
+      const { formData } = queryResult
       if (queryResult) {
         const data = {
           formData: {
@@ -55,26 +54,26 @@ export const resolvers = {
             customer: args.customers,
             __typename: formData["__typename"],
           },
-        };
+        }
 
-        context.cache.writeQuery({ query: GET_FORM_DATA, data });
-        return data.formData;
+        context.cache.writeQuery({ query: GET_FORM_DATA, data })
+        return data.formData
       }
-      return [];
+      return []
     },
   },
-};
+}
 ```
 
-   🍗   Do we have a resolvers object that has mutation which has a function called updateFormData.
+🍗 We have a resolvers object that has a mutation which has a function called `updateFormData`.
 
-🍗  updateFormData reads the cache to get the most update version of the formData
+🍗 `updateFormData` reads the cache to get the most update version of the `formData`
 
-🍗  Then i creates a new object that takes in new arguments to overwrite the form data with update data.
+🍗 Then it creates a new object that takes in new arguments to overwrite the form data with update data.
 
-🍗  form data is then returned.
+🍗 `formData` is then returned.
 
-next up go to the Queries.js file and add the following:
+Next up go to the `Queries.js` file and add the following:
 
 ```javascript
 export const GET_FORM_DATA = gql`
@@ -84,19 +83,15 @@ export const GET_FORM_DATA = gql`
       email
     }
   }
-`;
+`
 ```
 
-We have to create a schema doc to read the formData the @client directive lets GraphQL know it is directly for the client only.
+We have to create a schema doc to read the `formData` the `@client` directive lets GraphQL know it is directly for the client only.
 
-
-
-In the mutations.js add the following:
-
-
+In the `mutations.js` add the following:
 
 ```javascript
-import gql from "graphql-tag";
+import gql from "graphql-tag"
 
 export const UPDATE_FORM_DATA = gql`
   mutation UPDATE_FORM_DATA(
@@ -106,12 +101,9 @@ export const UPDATE_FORM_DATA = gql`
   ) {
     updateFormData(date: $date, email: $email, customer: $customer) @client
   }
-`;
-
+`
 ```
 
 Here we are just creating a mutation to update the form data
-
-
 
 This is it for now, next up we will start with building out the forms
