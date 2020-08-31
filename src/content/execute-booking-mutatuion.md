@@ -8,12 +8,12 @@ postnumber: 50
 framework: react
 chapter: Make A Booking Mutation
 ---
+
 Here we will start integrating the booking mutation.
 
-Head over to the mutations.js file in the graphql directory and the following:
+Head over to the `mutations.js` file in the `graphql` directory and add the following:
 
 ```javascript
-
 export const MAKE_A_BOOKING = gql`
   mutation MAKE_A_BOOKING(
     $customerEmail: String
@@ -43,94 +43,92 @@ export const MAKE_A_BOOKING = gql`
       chargeReciept
     }
   }
-`;
+`
 ```
 
-This is the schema document we will use to make the booking for the customer. 
+This is the schema document we will use to make the booking for the customer.
 
-
-
-next go into the Checkout.js file and add the following :
+Next go into the `Checkout.js` file and add the following :
 
 ```javascript
-import { useMutation, useQuery } from "@apollo/react-hooks";
-import { MAKE_A_BOOKING } from "../../graphql/Mutations";
-
+import { useMutation, useQuery } from "@apollo/react-hooks"
+import { MAKE_A_BOOKING } from "../../graphql/Mutations"
 ```
 
-Next we need to call the mutate function to make the booking and store the booking data in state so that we can us it on the Confirmation Tab:
+Next we need to call the `mutate` function to make the booking and store the booking data in state so that we can us it on the Confirmation Tab:
 
 ```javascript
-  const [mutate, { data: mutationData, loading }] = useMutation(MAKE_A_BOOKING);
+const [mutate, { data: mutationData, loading }] = useMutation(MAKE_A_BOOKING)
 const mutationData = await mutate({
-      variables: {
-        customerEmail: data.formData.email,
-        bookingDate: data.formData.date,
-        customers: data.formData.customer,
-        listingId: props.id,
-      },
-    });
+  variables: {
+    customerEmail: data.formData.email,
+    bookingDate: data.formData.date,
+    customers: data.formData.customer,
+    listingId: props.id,
+  },
+})
 
-    props.setActiveTab("4");
-    props.setBookingData(mutationData.data.makeABooking);
+props.setActiveTab("4")
+props.setBookingData(mutationData.data.makeABooking)
 ```
 
+🍷 So we initilise the mutation as a function from the hook and give the mutation result an alias `MutationData`
 
+🍷 Next up we use the the data from our local state to add the `customerEmail`, `BookingDate` and `customers`. We use the `id` from the `URL` to pass in the `listingId`.
 
-🍷 So we initilise the mutation as a function from the hook and give the mutation result an alias "MutationData"
+🍷 We call our `setBookingData` hooking and set the mutation result.
 
-🍷   Next up we use the the data from our local state to add the customerEmail, BookingDate and customers. we use the id from the URL to pass in the listingId
-
-🍷   We call our setBookingData hooking and set the mutation result.
-
-Make sure your Checkout.js file looks like this:
+Make sure your `Checkout.js` file looks like this:
 
 ```javascript
-import React from "react";
-import { loadStripe } from "@stripe/stripe-js";
+import React from "react"
+import { loadStripe } from "@stripe/stripe-js"
 import {
   CardElement,
   Elements,
   useStripe,
   useElements,
-} from "@stripe/react-stripe-js";
-import { useMutation, useQuery } from "@apollo/react-hooks";
+} from "@stripe/react-stripe-js"
+import { useMutation, useQuery } from "@apollo/react-hooks"
 
-import HeadingOne from "../../components/typography/HeadingOne";
-import BodyOne from "../../components/typography/BodyOne";
-import RedBlockButton from "../../components/buttons/RedBlockButton";
-import RedOutlineButton from "../../components/buttons/RedOutlineButton";
-import { MAKE_A_BOOKING } from "../../graphql/Mutations";
-import { GET_FORM_DATA } from "../../graphql/Queries";
-const StripeElements = (props) => {
-  const stripe = useStripe();
-  const elements = useElements();
-  const { data } = useQuery(GET_FORM_DATA);
-  const [mutate, { data: mutationData, loading }] = useMutation(MAKE_A_BOOKING);
-  console.log("stripe", data, props);
+import HeadingOne from "../../components/typography/HeadingOne"
+import BodyOne from "../../components/typography/BodyOne"
+import RedBlockButton from "../../components/buttons/RedBlockButton"
+import RedOutlineButton from "../../components/buttons/RedOutlineButton"
+import { MAKE_A_BOOKING } from "../../graphql/Mutations"
+import { GET_FORM_DATA } from "../../graphql/Queries"
+const StripeElements = props => {
+  const stripe = useStripe()
+  const elements = useElements()
+  const { data } = useQuery(GET_FORM_DATA)
+  const [mutate, { loading, error }] = useMutation(MAKE_A_BOOKING)
 
   const pay = async () => {
     const result = await stripe.createPaymentMethod({
       type: "card",
       card: elements.getElement(CardElement),
-    });
+    })
 
-    const mutationData = await mutate({
-      variables: {
-        customerEmail: data.formData.email,
-        bookingDate: data.formData.date,
-        customers: data.formData.customer,
-        listingId: props.id,
-      },
-    });
-
-    props.setActiveTab("4");
-    props.setBookingData(mutationData.data.makeABooking);
-    console.log(result, mutationData.data.makeABooking);
-  };
+    try {
+      const mutationData = await mutate({
+        variables: {
+          customerEmail: data.formData.email,
+          bookingDate: data.formData.date,
+          customers: data.formData.customer,
+          listingId: props.id,
+        },
+      })
+      props.setActiveTab("4")
+      props.setBookingData(mutationData.data.makeABooking)
+      console.log(result, mutationData.data.makeABooking)
+    } catch (e) {
+      return <p className="text-red">{e.message} </p>
+    }
+  }
   return (
     <>
       <CardElement />
+      {error && <p className="text-red-dark">{error.message}</p>}
       {loading && (
         <>
           <p className="text-red">Busy booking your trip</p>
@@ -138,19 +136,23 @@ const StripeElements = (props) => {
       )}
       <div class="flex flex-row mt-20">
         <RedBlockButton
-          text="Pay"
           className="mr-5 s:mb-5  lg:mb-0"
           isLoading={loading}
           onClick={() => pay()}
-        />
-        <RedOutlineButton text="Back" onClick={() => props.setActiveTab("2")} />
+        >
+          Pay
+        </RedBlockButton>
+        <RedOutlineButton onClick={() => props.setActiveTab("2")}>
+          {" "}
+          Back
+        </RedOutlineButton>
       </div>
     </>
-  );
-};
-const stripePromise = loadStripe("pk_test_6pRNASCoBOKtIshFeQd4XMUh");
+  )
+}
+const stripePromise = loadStripe(`${process.env.REACT_APP_STRIPE_KEY}`)
 
-const Checkout = (props) => {
+const Checkout = props => {
   return (
     <Elements stripe={stripePromise}>
       <div className="flex flex-col">
@@ -167,21 +169,19 @@ const Checkout = (props) => {
         />
       </div>
     </Elements>
-  );
-};
+  )
+}
 
-export default Checkout;
-
+export default Checkout
 ```
 
-Next up in the index.js file in the booking directory make sure you add the hook:
+Next up in the `index.js` file in the booking directory make sure you add the hook:
 
 ```javascript
-  const [bookingData, setBookingData] = useState({});
-
+const [bookingData, setBookingData] = useState({})
 ```
 
-and then pass down the hook, the id and bookingData into the relevant components that need them:
+and then pass down the hook, the `id` and `bookingData` into the relevant components that need them:
 
 ```javascript
 <Tabs.TabPane key="3" className="flex justify-center">
@@ -200,16 +200,16 @@ and then pass down the hook, the id and bookingData into the relevant components
         </Tabs.TabPane>
 ```
 
-Lastly lets head over to the ConfirmationTab.js file: 
+Lastly lets head over to the `ConfirmationTab.js` file:
 
 ```javascript
-import React from "react";
-import HeadingOne from "../../components/typography/HeadingOne";
-import BodyOne from "../../components/typography/BodyOne";
-import RedBlockButton from "../../components/buttons/RedBlockButton";
-import vector from "../../assets/Vector.svg";
-import ticket from "../../assets/confirmation_number.svg";
-const ConfirmationTab = (props) => {
+import React from "react"
+import HeadingOne from "../../components/typography/HeadingOne"
+import BodyOne from "../../components/typography/BodyOne"
+import RedBlockButton from "../../components/buttons/RedBlockButton"
+import vector from "../../assets/Vector.svg"
+import ticket from "../../assets/confirmation_number.svg"
+const ConfirmationTab = props => {
   return (
     <>
       <div class="flex flex-col p-20 ">
@@ -239,11 +239,10 @@ const ConfirmationTab = (props) => {
         </div>
       </div>
     </>
-  );
-};
+  )
+}
 
-export default ConfirmationTab;
-
+export default ConfirmationTab
 ```
 
-🍷  All we have done here is refence the booking data in the right parts to show the user,
+🍷 All we have done here is refence the booking data in the right parts to show the user.
