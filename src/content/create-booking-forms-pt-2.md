@@ -8,42 +8,36 @@ postnumber: 48
 framework: react
 chapter: Make A Booking Mutation
 ---
+
 Here we will make two components: One to get the details of the customer and another to get all the customers travelling together.
 
-
-
-In the booking directory create a file called CustomerDetails.js and add the following:
-
-
+In the `booking` directory create a file called `CustomerDetails.js` and add the following:
 
 ```javascript
-import React from "react";
-import { useMutation } from "@apollo/react-hooks";
-import { UPDATE_FORM_DATA } from "../../graphql/Mutations";
-import HeadingOne from "../../components/typography/HeadingOne";
-import BodyOne from "../../components/typography/BodyOne";
-import RedBlockButton from "../../components/buttons/RedBlockButton";
-import RedOutlineButton from "../../components/buttons/RedOutlineButton";
-import Input from "../../components/inputs/Input";
-import { Form } from "antd";
-const CustomerDetails = (props) => {
-  console.log(props);
+import React from "react"
+import { useMutation } from "@apollo/react-hooks"
+import { UPDATE_FORM_DATA } from "../../graphql/Mutations"
+import HeadingOne from "../../components/typography/HeadingOne"
+import BodyOne from "../../components/typography/BodyOne"
+import RedBlockButton from "../../components/buttons/RedBlockButton"
+import RedOutlineButton from "../../components/buttons/RedOutlineButton"
+import Input from "../../components/inputs/Input"
+import { Form } from "antd"
+const CustomerDetails = props => {
+  console.log(props)
 
-  const [mutate] = useMutation(UPDATE_FORM_DATA);
+  const [mutate] = useMutation(UPDATE_FORM_DATA)
 
   return (
     <>
       <Form
-        // fields={props.fields}
         onValuesChange={(changedValues, allValues) => {
-          console.log("rrr", allValues.date);
-
           mutate({
             variables: {
               email: allValues.email,
               date: allValues.date,
             },
-          });
+          })
         }}
       >
         <div className="flex flex-col p-20 ">
@@ -73,68 +67,67 @@ const CustomerDetails = (props) => {
         </div>
       </Form>
     </>
-  );
-};
+  )
+}
 
-export default CustomerDetails;
-
+export default CustomerDetails
 ```
 
-🌈   Here we have a Form from Ant Design that has an change event that will get all the values of the form and send it to our local resolvers for updating the cache.
+🌈 Here we have a Form from Ant Design that has a `onValuesChange` event that will get all the values of the form and send it to our local resolvers for updating the cache.
 
-🌈   We then have a buttone that will allow the user to go to the next tab with function we've sent down via props
+🌈 We then have a button that will allow the user to go to the next tab with the `setActiveTab` function we've sent down via props
 
-in the same directory create a file called Customers.js and add the following:
+In the same directory create a file called `Customers.js` and add the following:
 
 ```javascript
-import React, { useState } from "react";
-import { UPDATE_FORM_DATA } from "../../graphql/Mutations";
-import { GET_FORM_DATA } from "../../graphql/Queries";
-import { useMutation, useQuery } from "@apollo/react-hooks";
-import BodyOne from "../../components/typography/BodyOne";
-import Input from "../../components/inputs/Input";
-import RedBlockButton from "../../components/buttons/RedBlockButton";
-import RedOutlineButton from "../../components/buttons/RedOutlineButton";
-import RemoveButton from "../../components/buttons/RemoveButton";
-import BlueBlockButton from "../../components/buttons/BlueBlockButton";
+import React, { useState } from "react"
+import { UPDATE_FORM_DATA } from "../../graphql/Mutations"
+import { GET_FORM_DATA } from "../../graphql/Queries"
+import { useMutation, useQuery } from "@apollo/react-hooks"
+import BodyOne from "../../components/typography/BodyOne"
+import Input from "../../components/inputs/Input"
+import RedBlockButton from "../../components/buttons/RedBlockButton"
+import RedOutlineButton from "../../components/buttons/RedOutlineButton"
+import RemoveButton from "../../components/buttons/RemoveButton"
+import BlueBlockButton from "../../components/buttons/BlueBlockButton"
 
-const Customers = (props) => {
-  const [customers, setCustomers] = useState([]);
-  const { data } = useQuery(GET_FORM_DATA);
-  const [mutate] = useMutation(UPDATE_FORM_DATA);
+const Customers = props => {
+  const [customers, setCustomers] = useState([])
+  const { data } = useQuery(GET_FORM_DATA)
+  const [mutate] = useMutation(UPDATE_FORM_DATA)
 
   const addCustomer = () => {
-    const o = [...customers];
+    const o = [...customers]
     o.push({
       name: null,
       physioScore: null,
       surname: null,
       passportNumber: null,
       country: null,
-    });
+    })
 
-    setCustomers(o);
-  };
+    setCustomers(o)
+  }
 
   const updateCustomer = ({ index, field, value }) => {
-    const o = [...customers];
-    o[index][field] = value;
+    const o = [...customers]
+    o[index][field] = value
     mutate({
       variables: {
         email: data.formData.email,
         date: data.formData.date,
         customer: o,
       },
-    });
+    })
 
-    setCustomers(o);
-  };
+    setCustomers(o)
+  }
 
-  const removeCustomer = (index) => {
-    const o = [...customers];
-    o.splice(index, 1);
-    setCustomers(o);
-  };
+  const removeCustomer = index => {
+    const o = [...customers]
+    o.splice(index, 1)
+    setCustomers(o)
+  }
 
   const inputs = customers.map((c, index) => {
     return (
@@ -142,12 +135,12 @@ const Customers = (props) => {
         <div className="flex lg:flex-row s:flex-col mt-10" key={index}>
           <hr />
           <div className="flex flex-col mr-5">
-            <BodyOne> customer name </BodyOne>
+            <BodyOne>Customer name </BodyOne>
 
             <Input
-              placeholder="Bog Iger"
+              placeholder="Bob"
               type="name"
-              onChange={(e) =>
+              onChange={e =>
                 updateCustomer({
                   index,
                   field: "name",
@@ -156,12 +149,12 @@ const Customers = (props) => {
               }
             />
 
-            <BodyOne> customer country </BodyOne>
+            <BodyOne> Customer country </BodyOne>
 
             <Input
               placeholder="Iran"
               type="text"
-              onChange={(e) =>
+              onChange={e =>
                 updateCustomer({
                   index,
                   field: "country",
@@ -175,7 +168,7 @@ const Customers = (props) => {
             <Input
               placeholder="4"
               type="text"
-              onChange={(e) =>
+              onChange={e =>
                 updateCustomer({
                   index,
                   field: "physioScore",
@@ -188,9 +181,9 @@ const Customers = (props) => {
             <BodyOne> Customer surname </BodyOne>
 
             <Input
-              placeholder="iGER"
+              placeholder="Iger"
               type="text"
-              onChange={(e) =>
+              onChange={e =>
                 updateCustomer({
                   index,
                   field: "surname",
@@ -204,9 +197,9 @@ const Customers = (props) => {
             <BodyOne> Passport number </BodyOne>
 
             <Input
-              placeholder="4"
+              placeholder="GFC3453453"
               type="text"
-              onChange={(e) =>
+              onChange={e =>
                 updateCustomer({
                   index,
                   field: "passportNumber",
@@ -219,54 +212,48 @@ const Customers = (props) => {
           </div>
         </div>
       </>
-    );
-  });
+    )
+  })
   return (
     <div className="flex flex-col">
       {inputs}
       <div className="flex flex-col">
         <div className="mt-5 ">
-          <BlueBlockButton
-            text="Add a customer"
-            onClick={() => addCustomer()}
-          />
+          <BlueBlockButton onClick={() => addCustomer()}>
+            Add a customer
+          </BlueBlockButton>
         </div>
         <div className="flex lg:flex-row mt-5 s:flex-col">
           <RedBlockButton
-            text="Proceed"
             className="mr-5 s:mb-5  lg:mb-0"
             onClick={() => props.setActiveTab("3")}
-          />
-          <RedOutlineButton
-            text="Back"
-            onClick={() => props.setActiveTab("1")}
-          />
+          >
+            Proceed
+          </RedBlockButton>
+          <RedOutlineButton onClick={() => props.setActiveTab("1")}>
+            Back
+          </RedOutlineButton>
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
 
-export default Customers;
-
+export default Customers
 ```
 
- 🌈  Basically we have a component that will create an array of customers for us to add to the state.
+🌈 Basically we have a component that will create an array of customers for us to add to the state.
 
-🌈   first off we declare customers via a hook, we have a query to get data from the cache and have the mutation to update the cache data.
+🌈 first off we declare customers via a hook, we have a query to get data from the cache and have the mutation to update the cache data.
 
-🌈   our addCustomer function will allow us to make a deep clone of the customers currently in the state, then push a new customer to the array and update the state.
+🌈 Our `addCustomer` function will allow us to make a deep clone of the `customers` currently in the state, then push a new `customer` to the array and update the state.
 
-🌈  Our updateCustomer function wiill allow us to add the customer to the state of the cache.
+🌈 Our `updateCustomer` function will allow us to add the `customer` to the state of the cache.
 
-🌈   removeCustomer will allow us to remove the customer from the state.
+🌈 `removeCustomer` will allow us to remove the customer from the state.
 
+🌈 The inputs function renders customers over some `JSX` to produce a form that will allow the user to add data. There are `onChange` events that will allow the `customer` object to get updated.
 
+🌈 The remove button removes the selected `customer` form the Array
 
-🌈  the inputs function renders customers over some JSX to produce a form that will allow the user to add data. There are onChange events that will allow the customer object to get updated.
-
-🌈   The remove button removes the selected customer form the Array
-
-🌈  Our final return block displays the inputs function and renders buttons that allow the user to move between forms 
-
-\
+🌈 Our final return block displays the inputs function and renders buttons that allow the user to move between forms.
