@@ -8,6 +8,7 @@ postnumber: 41
 framework: react
 chapter: Building reusable components
 ---
+
 ![remove button](/uploads/remove.png)
 
 In this chapter we will build out our components that we will be using through out the application. First lets go ahead and create a Remove button.
@@ -15,9 +16,9 @@ In this chapter we will build out our components that we will be using through o
 In the components folder create a folder called `buttons`. Then create a `RemoveButton.js` component and add the following:
 
 ```javascript
-import React from "react";
-import PropTypes from "prop-types";
-import remove from "../../assets/remove.svg";
+import React from "react"
+import PropTypes from "prop-types"
+import remove from "../../assets/remove.svg"
 
 const RemoveButton = ({
   className = "",
@@ -42,8 +43,8 @@ const RemoveButton = ({
         <p className="text-sm font-display text-bold ml-3 mt-3">Remove</p>
       </div>
     </button>
-  );
-};
+  )
+}
 const propTypes = {
   className: PropTypes.string,
   onClick: PropTypes.func,
@@ -52,9 +53,13 @@ const propTypes = {
   large: PropTypes.bool,
   long: PropTypes.bool,
   isLoading: PropTypes.bool,
-};
-RemoveButton.propTypes = propTypes;
-export default RemoveButton;
+}
+RemoveButton.propTypes = propTypes
+export default RemoveButton
 ```
 
 🧁 This button has an icon that will allow us to remove items in forms that we want to be removed.
+
+Once you're done, it will look like this:
+
+![remove-button](/uploads/remove.png)
