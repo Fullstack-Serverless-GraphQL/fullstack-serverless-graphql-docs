@@ -143,3 +143,7 @@ export default {
 ```
 
 So if we go to the landing page in the browser we should see all the listings load.
+
+If all goes well, you should have this:
+
+![landing-page](/uploads/landing.png)
