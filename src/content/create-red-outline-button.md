@@ -29,21 +29,22 @@ In the components folder create a folder called buttons. Then create a RedOutlin
         src="../../assets/loop.svg"
       />
     </div>
-    <div v-else>{{ text }}</div>
+    <div v-else>
+      <slot></slot>
+    </div>
   </button>
 </template>
 <script>
 export default {
   name: "RedOutlineButton",
   props: {
-    text: String,
-    isLoading: Boolean
+    isLoading: Boolean,
   },
   methods: {
     handleClick(evt) {
       this.$emit("click", evt);
-    }
-  }
+    },
+  },
 };
 </script>
 <style>
@@ -60,6 +61,7 @@ export default {
   }
 }
 </style>
+
 
 ```
 
