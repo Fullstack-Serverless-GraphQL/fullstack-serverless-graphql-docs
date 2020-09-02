@@ -184,8 +184,6 @@ export default {
 
 Here we are making an array to allow the user to add multplie customers.
 
-````
-
 Next we will add the third form in third tab to execute the mutation, create a file called `CheckoutTab.vue`:
 
 ```javascript
@@ -264,7 +262,7 @@ export default {
 }
 </style>
 
-````
+```
 
 Here we are simply using the Stripe vue library to allow the user to enter their card. We are also conditionally rendering stuff which will come into play when we render the mutation.
 
