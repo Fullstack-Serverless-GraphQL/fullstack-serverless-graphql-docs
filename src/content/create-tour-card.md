@@ -50,6 +50,10 @@ export default {
 
 ```
 
+🔇 Here we have a div that is styled accordingly to look like a card, which will accept props.
+
+🔇 It also uses Ant Design's `<Rate/>` component so we can display the rating of the listing.
+
 Once you're done, it will look like this:
 
 ![tour-card](/uploads/tourcard.png)
