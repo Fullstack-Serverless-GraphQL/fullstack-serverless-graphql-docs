@@ -48,11 +48,11 @@ Next up open the Home.vue component and copy the following:
             <router-link
               :to="{
                 path: `listing/${listing.listingId}`,
-                params: { id: listing.listingId }
+                params: { id: listing.listingId },
               }"
               class="no-underline"
             >
-              <TourCard
+              <ListingCard
                 :listingTitle="listing.listingName"
                 :listingLocation="listing.listingLocation"
                 :price="listing.price"
@@ -68,14 +68,14 @@ Next up open the Home.vue component and copy the following:
   </div>
 </template>
 <script>
-import LandingHeader from "../components/headers/LandingHeader.vue";
-import TourCard from "../components/cards/TourCard";
+import LandingHeader from "../components/navs/LandingHeader.vue";
+import ListingCard from "../components/cards/ListingCard";
 export default {
   name: "Home",
   components: {
     LandingHeader,
-    TourCard
-  }
+    ListingCard,
+  },
 };
 </script>
 <style>
@@ -84,6 +84,7 @@ export default {
   grid-template-columns: repeat(3, 1fr);
 } */
 </style>
+
 ```
 
 What is happening here ?
