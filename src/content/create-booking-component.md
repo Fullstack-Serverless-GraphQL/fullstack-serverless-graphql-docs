@@ -168,4 +168,4 @@ export default {
 
 🐢 The fourth tab is the confirmation one that will fire once they ahve successfully paid for the trip.
 
-Next up we will start building out the forms.
+Next up we will start building out the forms. So if things do not work while we build out the components do not stress
