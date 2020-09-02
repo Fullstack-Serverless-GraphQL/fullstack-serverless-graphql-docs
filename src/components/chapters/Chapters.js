@@ -44,7 +44,11 @@ const Chapters = ({
     "vue"
   )
   const allLandpagePosts = constants.filterByChapter(edges, "Landing Page")
-  const allListingPosts = constants.filterByChapter(edges, "View Listing")
+  const allListingPosts = constants.filterByFramework(
+    edges,
+    "View Listing",
+    "vue"
+  )
   const allBookingsPosts = constants.filterByChapter(edges, "Make A Booking")
 
   //react posts
