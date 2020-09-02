@@ -17,7 +17,10 @@ In the components folder create a folder called buttons. Then create a RedBlockB
 <template>
   <button
     @click="handleClick"
-    class="cursor-pointer bg-red-lightest text-red-darkest focus:outline-none font-display rounded-px px-16 py-2 hover:bg-transparent hover:border hover:border-red-darkest"
+    class="cursor-pointer bg-white border
+    border-red-light text-red-darkest focus:outline-none
+    font-display rounded-px px-16 py-2 hover:bg-transparent
+    hover:border hover:border-red-darkest"
   >
     <div v-if="isLoading">
       <img
@@ -26,21 +29,22 @@ In the components folder create a folder called buttons. Then create a RedBlockB
         src="../../assets/loop.svg"
       />
     </div>
-    <div v-else>{{ text }}</div>
+    <div v-else>
+      <slot></slot>
+    </div>
   </button>
 </template>
 <script>
 export default {
-  name: "RedBlockButton",
+  name: "RedOutlineButton",
   props: {
-    text: String,
-    isLoading: Boolean
+    isLoading: Boolean,
   },
   methods: {
     handleClick(evt) {
       this.$emit("click", evt);
-    }
-  }
+    },
+  },
 };
 </script>
 <style>
@@ -57,6 +61,7 @@ export default {
   }
 }
 </style>
+
 
 
 ```
