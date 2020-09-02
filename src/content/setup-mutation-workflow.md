@@ -11,7 +11,7 @@ framework: vue
 
 In this chapter we will eventually create a mutation that allows the user to make a booking for a listing.
 
-First off lets add a schema document called makeABooking.gql in the graphql folder:
+First off lets add a schema document called `makeABooking.gql` in the `graphql` folder:
 
 ```javascript
 mutation MAKE_A_BOOKING(
@@ -53,7 +53,7 @@ Next off we need to add Ant Design because we will use it's tabs component to cr
 $ yarn add ant-design-vue
 ```
 
-Then next head over to the main.js file to register it globally:
+Then next head over to the `main.js` file to register it globally:
 
 ```
 import { Tabs} from "ant-design-vue";
@@ -63,7 +63,7 @@ Vue.use(Tabs);
 
 ```
 
-Lastly, lets add a route for the Booking page in the router.js file:
+Lastly, lets add a route for the Booking page in the `router.js` file:
 
 ```
 import Index from "./pages/booking";
