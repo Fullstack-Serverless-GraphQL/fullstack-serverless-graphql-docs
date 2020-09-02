@@ -11,7 +11,7 @@ framework: vue
 
 In this section we will start with building the component to allow our users to be able to view every individual listing.
 
-Fist head over to the router.js file and add the new route:
+Fist head over to the `router.js` file and add the new route:
 
 ```javascript
 import Listing from "./pages/Listing"
@@ -26,7 +26,7 @@ const routes = [
 
 The ":id" in the URL will tell the router to put id of the listing in the URL whenever it is navigated to. This will also allow us to send the id of that specific Listing to API for us to fetch.
 
-Next up create a Listing.vue file in the pages folder and add the following:
+Next up create a `Listing.vue` file in the pages folder and add the following:
 
 ```javascript
 <template>
@@ -52,58 +52,62 @@ Next up create a Listing.vue file in the pages folder and add the following:
 
           <div class="grid p-5 mt-10">
             <div class="mr-16">
-              <h1 class="font-display  font-semibold text-3xl text-black">
+              <HeadingOne
+                class="font-display  font-semibold text-3xl text-black"
+              >
                 {{ data.getAListing.listingName }}
-              </h1>
-              <h1 class="font-display text-xl text-black mt-4 mb-8">
+              </HeadingOne>
+              <HeadingThree class="text-black mt-4 mb-8">
                 {{ data.getAListing.listingLocation }}
-              </h1>
-              <h1
-                class="font-display font-bold text-xl text-center s:text-left mb-5 text-black "
+              </HeadingThree>
+              <HeadingThree
+                class=" font-bold  text-center s:text-left mb-5 text-black "
               >
                 $ {{ data.getAListing.price }}
-              </h1>
-              <p class="font-display text-left text-black ">
+              </HeadingThree>
+              <BodyOne class="text-left text-black ">
                 {{ data.getAListing.listingDescription }}
-              </p>
+              </BodyOne>
 
-              <h3 class="font-display text-2xl font-bold text-black mt-10">
+              <HeadingTwo class=" font-bold text-black mt-10">
                 Trip ammenities
-              </h3>
+              </HeadingTwo>
 
               <div
                 class="flex flex-row p-3"
-                v-for="types in data.getAListing.listingType"
-                :key="types"
+                v-for="(types, index) in data.getAListing.listingType"
+                :key="index"
               >
                 <img src="../assets/trip_type.svg" />
                 <p class="font-display ml-2">{{ types.name }}</p>
               </div>
 
-              <h3 class="font-display text-2xl font-bold text-black  mt-10">
+              <HeadingTwo class=" font-bold text-black  mt-10">
                 Activites
-              </h3>
+              </HeadingTwo>
               <div
                 class="flex flex-row p-3"
-                v-for="activies in data.getAListing.listingActivities"
-                :key="activies"
+                v-for="(activies, index) in data.getAListing.listingActivities"
+                :key="index"
               >
                 <img src="../assets/trip_activity.svg" />
-                <p class="font-display ml-2">{{ activies.name }}</p>
+                <BodyOne class="font-display ml-2">{{ activies.name }}</BodyOne>
               </div>
             </div>
             <div class="flex flex-col ">
               <div>
                 <RedBlockButton
-                  text="Book"
                   class=" text-center s:pr-20 mb-10 mt-10"
                   @click.native="forward"
-                />
+                  >Book</RedBlockButton
+                >
               </div>
               <div>
-                <h3 class="font-display text-xl   text-black mt-10 mb-10">
+                <HeadingThree
+                  class="font-display text-xl   text-black mt-10 mb-10"
+                >
                   Your guide
-                </h3>
+                </HeadingThree>
                 <img
                   :src="data.getAListing.guide.Avatar"
                   alt="guide"
@@ -111,12 +115,12 @@ Next up create a Listing.vue file in the pages folder and add the following:
                 />
               </div>
               <div>
-                <h3 class="font-display text-xl   text-black mt-10">
+                <HeadingThree class="text-black mt-10">
                   {{ data.getAListing.guide.Name }}
-                </h3>
-                <p class="font-display   text-black mt-5 ">
+                </HeadingThree>
+                <BodyOne class=" text-black mt-5 ">
                   {{ data.getAListing.guide.Bio }}
-                </p>
+                </BodyOne>
               </div>
             </div>
           </div>
@@ -126,19 +130,25 @@ Next up create a Listing.vue file in the pages folder and add the following:
   </div>
 </template>
 <script>
-import LandingHeader from "../components/headers/LandingHeader";
+import LandingHeader from "../components/navs/LandingHeader";
 import RedBlockButton from "../components/buttons/RedBlockButton";
+import Typography from "../components/typography";
+const { HeadingOne, HeadingTwo, HeadingThree, BodyOne } = Typography;
 export default {
   name: "Listing",
   components: {
     LandingHeader,
-    RedBlockButton
+    RedBlockButton,
+    HeadingOne,
+    HeadingThree,
+    BodyOne,
+    HeadingTwo,
   },
   methods: {
     forward() {
       this.$router.push(`/booking/${this.$route.params.id}`);
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -159,7 +169,7 @@ export default {
 
 🌶️ Then in the data part we are rending all the data associated with the Listing.
 
-Next up lets go ahead and add a schema document in the graphql folder called getAListing.gql:
+Next up lets go ahead and add a schema document in the `graphql` folder called `getAListing.gql`:
 
 ```javascript
 query GetAListing($listingId: String!) {
@@ -187,6 +197,8 @@ query GetAListing($listingId: String!) {
 }
 ```
 
-So if you click on anyother listings you should be good to go.
+So if you click on any other listings you should be good to go.
 
-Add steps to download icons
+Now you should be able to view any listing.
+
+![view-a-listing](/uploads/viewlisting.png)
