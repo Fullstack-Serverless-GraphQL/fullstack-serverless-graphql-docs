@@ -5,7 +5,4 @@ export const frameworks = {
   vue: "vue",
 }
 
-export const FrameworkContext = React.createContext({
-  framework: frameworks.vue,
-  toggleFramework: () => {},
-})
+export const FrameworkContext = React.createContext({})
