@@ -8,6 +8,7 @@ import VueIcon from "../../images/vue.svg"
 import ReactIcon from "../../images/react-icon.svg"
 
 import { FrameworkContext } from "../../frameworkContext"
+import HeadingThree from "../typography/HeadingThree"
 const Chapters = ({
   data: {
     allMarkdownRemark: { edges },
@@ -180,7 +181,7 @@ const Chapters = ({
       <div className="mt-10">
         <HeadingTwo className="text-center">Chapters</HeadingTwo>
         {/* chAPTERS GRID */}
-        <HeadingTwo className="text-center">Backend</HeadingTwo>
+        <HeadingThree className="text-center">Backend</HeadingThree>
 
         <div className="grid grid-cols-2">
           {/* <ChapterBox edges={epilouges} text="Epilouge" />
@@ -195,7 +196,7 @@ const Chapters = ({
             <ChapterBox edges={i.chapterEdge} text={i.chapterTitle} />
           ))}
         </div>
-        <HeadingTwo className="text-center">Frontend</HeadingTwo>
+        <HeadingThree className="text-center">Frontend</HeadingThree>
 
         <div className="flex justify-around">
           <FrameworkButton onClick={() => toggleFramework()} img={ReactIcon}>
