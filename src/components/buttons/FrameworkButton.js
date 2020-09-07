@@ -17,6 +17,6 @@ FrameworkButton.propTypes = {
 }
 
 FrameworkButton.defaultProps = {
-  className: ``,
+  className: `font-display rounded-px px-16`,
 }
 export default FrameworkButton
