@@ -203,4 +203,4 @@ const miro = () => (
     </defs>
   </svg>
 )
-export { github }
+export { github, airtable, aws, miro, figma, netlify, seed }
