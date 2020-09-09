@@ -1,6 +1,7 @@
 import React from "react"
 import constants from "../../constants"
 import HeadingThree from "../typography/HeadingThree"
+import BodyOne from "../typography/BodyOne"
 const Partners = () => {
   return (
     <>
@@ -12,7 +13,7 @@ const Partners = () => {
         {constants.partners.map((p, i) => (
           <div className="flex flex-col" key={i}>
             <img src={p.logo} alt="partners" />
-            <p>{p.use}</p>
+            <BodyOne>{p.use}</BodyOne>
           </div>
         ))}
       </div>
