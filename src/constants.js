@@ -9,7 +9,51 @@ import StripLogo from "./images/stripe.svg"
 import TailwindLogo from "./images/tailwind.svg"
 import ServerlessLogo from "./images/serverless.svg"
 import SeedLogo from "./images/seed.png"
+import airtable from "./images/airtable.svg"
+import aws from "./images/aws.svg"
+import figma from "./images/figma"
+import github from "./images/github"
+import netlify from "./images/netlify"
+import miro from "./images/miro"
 
+const partners = [
+  {
+    logo: github,
+    use: "Hosting of repos",
+    url: "",
+  },
+  {
+    logo: aws,
+    use: "Cloud provider",
+    url: "",
+  },
+  {
+    logo: SeedLogo,
+    use: "CI/CD provider",
+    url: "",
+  },
+  {
+    logo: airtable,
+    use: "Product management",
+    url: "",
+  },
+  {
+    logo: figma,
+    use: "Prototyping",
+    url: "",
+  },
+  {
+    logo: netlify,
+    use: "Hosting/CMS",
+    url: "",
+  },
+  ,
+  {
+    logo: Miro,
+    use: "Product management",
+    url: "",
+  },
+]
 const techStack = [
   {
     logo: VueLogo,
@@ -111,4 +155,5 @@ export default {
   filterByPart,
   filterByChapter,
   filterByFramework,
+  partners,
 }
