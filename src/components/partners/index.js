@@ -1,9 +1,10 @@
 import React from "react"
+import constants from "../../constants"
 const Partners = () => {
   return (
     <>
       <div className="gri grid-cols-3 gap-2">
-        {partners.map((p, i) => (
+        {constants.partners.map((p, i) => (
           <div className="flex flex-col" key={i}>
             <p.image />
             <p>{p.use}</p>

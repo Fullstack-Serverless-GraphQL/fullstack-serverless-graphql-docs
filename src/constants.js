@@ -47,9 +47,8 @@ const partners = [
     use: "Hosting/CMS",
     url: "",
   },
-  ,
   {
-    logo: Miro,
+    logo: miro,
     use: "Product management",
     url: "",
   },
