@@ -11,11 +11,11 @@ import ServerlessLogo from "./images/serverless.svg"
 import SeedLogo from "./images/seed.png"
 import airtable from "./images/airtable.svg"
 import aws from "./images/aws.svg"
-import figma from "./images/figma"
-import github from "./images/github"
-import netlify from "./images/netlify"
-import miro from "./images/miro"
-
+import figma from "./images/figma.svg"
+import github from "./images/github.svg"
+import netlify from "./images/netlify.svg"
+import miro from "./images/miro.svg"
+import seed from "./images/seed.svg"
 const partners = [
   {
     logo: github,
@@ -28,7 +28,7 @@ const partners = [
     url: "",
   },
   {
-    logo: SeedLogo,
+    logo: seed,
     use: "CI/CD provider",
     url: "",
   },

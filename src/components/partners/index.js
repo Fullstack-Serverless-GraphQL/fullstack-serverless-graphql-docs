@@ -6,7 +6,7 @@ const Partners = () => {
       <div className="gri grid-cols-3 gap-2">
         {constants.partners.map((p, i) => (
           <div className="flex flex-col" key={i}>
-            <p.image />
+            <img src={p.logo} alt="partners" />
             <p>{p.use}</p>
           </div>
         ))}
