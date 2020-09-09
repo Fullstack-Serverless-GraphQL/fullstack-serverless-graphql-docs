@@ -4,8 +4,8 @@ import HeadingThree from "../typography/HeadingThree"
 import BodyOne from "../typography/BodyOne"
 const Partners = () => {
   return (
-    <>
-      <HeadingThree>
+    <div className="mt-10">
+      <HeadingThree className="p-3 mt-5 mb-10 text-center">
         To make a bleeding edge appilcation you need amazing providers to make
         it imaginable and practical
       </HeadingThree>
@@ -17,7 +17,7 @@ const Partners = () => {
           </div>
         ))}
       </div>
-    </>
+    </div>
   )
 }
 
