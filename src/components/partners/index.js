@@ -18,7 +18,7 @@ const Partners = () => {
       <div className="gri grid-cols-3 gap-2">
         {partners.map((p, i) => (
           <div className="flex flex-col" key={i}>
-            <img src={p.image} alt="partners" />
+            <p.image />
             <p>{p.use}</p>
           </div>
         ))}
