@@ -19,7 +19,7 @@ const Partners = () => {
             key={i}
           >
             <img src={p.logo} alt="partners" />
-            <BodyOne>{p.use}</BodyOne>
+            <BodyOne className="text-blue-dark mt-4">{p.use}</BodyOne>
           </a>
         ))}
       </div>
