@@ -20,37 +20,37 @@ const partners = [
   {
     logo: github,
     use: "Hosting of repos",
-    url: "",
+    url: "https://github.com/",
   },
   {
     logo: aws,
     use: "Cloud provider",
-    url: "",
+    url: "https://aws.amazon.com/",
   },
   {
     logo: seed,
     use: "CI/CD provider",
-    url: "",
+    url: "https://seed.run/",
   },
   {
     logo: airtable,
     use: "Product management",
-    url: "",
+    url: "https://airtable.com/",
   },
   {
     logo: figma,
     use: "Prototyping",
-    url: "",
+    url: "https://www.figma.com/",
   },
   {
     logo: netlify,
     use: "Hosting/CMS",
-    url: "",
+    url: "https://netlify.com/",
   },
   {
     logo: miro,
     use: "Product management",
-    url: "",
+    url: "https://miro.com/",
   },
 ]
 const techStack = [
