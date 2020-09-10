@@ -16,7 +16,7 @@ const TechStack = () => (
         ))}
       </div>
 
-      <HeadingThree className="text-blue text-center mb-5">
+      <HeadingThree className="text-blue text-center mb-5 mt-5">
         Back end
       </HeadingThree>
       <div className="grid grid-cols-3 gap-5">
