@@ -12,8 +12,15 @@ const Partners = () => {
       <div className="grid grid-cols-3 gap-2">
         {constants.partners.map((p, i) => (
           <div className="flex flex-col" key={i}>
-            <img src={p.logo} alt="partners" />
-            <BodyOne>{p.use}</BodyOne>
+            <a
+              className=""
+              target="_blank"
+              rel="noopener noreferrer"
+              href={p.url}
+            >
+              <img src={p.logo} alt="partners" />
+              <BodyOne>{p.use}</BodyOne>
+            </a>
           </div>
         ))}
       </div>
