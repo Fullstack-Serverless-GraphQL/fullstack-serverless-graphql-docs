@@ -18,3 +18,9 @@ The things that stand out for me using Netlify:
 🦚 The ability to get deploy previews from a specific branch. Very useful if you're trying to test something specfic and want to test it in a somewhat live environment, you can just create a PR and deploy that branch in isolation.
 
 🦚 Unlimted sites can be deployed for free, which makes its affordable for everybody.
+
+First thing you got to do is head over to [Netlify](https://netlify.com/) and login or if you have not created an account simply sign up.
+
+Once you've done that you should see all or your sites. Click the "add site" button so we can start the process of adding our site:
+
+![step-1](/uploads/net_r_1.png)
