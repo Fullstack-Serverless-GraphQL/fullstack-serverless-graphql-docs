@@ -35,9 +35,11 @@ Once you've selected your provider you should be able to select the repo you wan
 
 ![step-3](/uploads/net_v_1.png)
 
-Next up, our deploy settings will display. In the :
+Next up, our deploy settings will display. In the build command text box add `yarn run build`, while the publish directory textbox add `/dist`:
 
 ![step-4](/uploads/net_v_3.png)
+
+This will basically tell Netlify's robots to run the `build` command in our project and put the minified build into our `/dist` directory.
 
 So by now our site should have deployed by now but it probably won't work, because we need to give the site our environemnt variables. Click the "Overview" tab, then click on the "site settings" button ---> then click the "build and deploy" pane and scoll till you reach the "environment" section and make sure you environment variables names match mine:
 
