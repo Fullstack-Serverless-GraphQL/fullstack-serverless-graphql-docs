@@ -36,6 +36,9 @@ const SideChapterBox = ({
     edges,
     "Deploy Backend"
   )
+
+  const deployVue = constants.filterByFramework(edges, "Deploy Frontend", "vue")
+
   //frontend posts
   const allCLIPosts = constants.filterByChapter(edges, "Vue cli")
   const allTailwindPosts = constants.filterByChapter(edges, "Tailwind")
@@ -81,6 +84,12 @@ const SideChapterBox = ({
   const allMakeAMutationReactPosts = constants.filterByFramework(
     edges,
     "Make A Booking Mutation",
+    "react"
+  )
+
+  const deployReact = constants.filterByFramework(
+    edges,
+    "Deploy Frontend",
     "react"
   )
   const allChapters = [
@@ -143,6 +152,10 @@ const SideChapterBox = ({
       chapterEdge: allBookingsPosts,
       chapterTitle: "14. Make A Booking",
     },
+    {
+      chapterEdge: deployVue,
+      chapterTitle: "15. Deploy Frontend",
+    },
   ]
 
   const reactFrontEndPosts = [
@@ -169,6 +182,10 @@ const SideChapterBox = ({
     {
       chapterEdge: allMakeAMutationReactPosts,
       chapterTitle: "14. Make A Booking",
+    },
+    {
+      chapterEdge: deployReact,
+      chapterTitle: "15. Deploy Frontend",
     },
   ]
   return (
