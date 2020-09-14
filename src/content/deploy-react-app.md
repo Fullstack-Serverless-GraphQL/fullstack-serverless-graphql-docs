@@ -24,3 +24,13 @@ First thing you got to do is head over to [Netlify](https://netlify.com/) and lo
 Once you've done that you should see all or your sites. Click the "add site" button so we can start the process of adding our site:
 
 ![step-1](/uploads/net_r_1.png)
+
+Now we come to the screen where it gives options to select our Git provider:
+
+![step-2](/uploads/net_r_2.png)
+
+Please select your prefered Git provider.
+
+Once you've selected your provider you should be able to select the repo you want to deploy, in my case I'm deploy a repo from an a organistation:
+
+![step-3](/uploads/net_r_3.png)
