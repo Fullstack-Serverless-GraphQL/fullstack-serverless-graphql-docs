@@ -37,7 +37,7 @@ Once you've selected your provider you should be able to select the repo you wan
 
 Next up, our deploy settings will display. In the :
 
-![step-4](/uploads/net_v_2.png)
+![step-4](/uploads/net_v_3.png)
 
 So by now our site should have deployed by now but it probably won't work, because we need to give the site our environemnt variables. Click the "Overview" tab, then click on the "site settings" button ---> then click the "build and deploy" pane and scoll till you reach the "environment" section and make sure you environment variables names match mine:
 
