@@ -51,7 +51,7 @@ const Chapters = ({
     "vue"
   )
   const allBookingsPosts = constants.filterByChapter(edges, "Make A Booking")
-
+  const deployVue = constants.filterByFramework(edges, "Deploy Frontend", "vue")
   //react posts
   const allReactSetupPosts = constants.filterByFramework(
     edges,
@@ -86,6 +86,12 @@ const Chapters = ({
   const allMakeAMutationReactPosts = constants.filterByFramework(
     edges,
     "Make A Booking Mutation",
+    "react"
+  )
+
+  const deployReact = constants.filterByFramework(
+    edges,
+    "Deploy Frontend",
     "react"
   )
   const allChapters = [
