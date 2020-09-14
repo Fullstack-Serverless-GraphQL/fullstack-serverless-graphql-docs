@@ -38,3 +38,7 @@ Once you've selected your provider you should be able to select the repo you wan
 Next up, our deploy settings will display. In our case the template we used to build our project came with a Netlify.toml file that has build commands for us. So all the fields are prepopulated for us. If you're techincally advanced enough you are most welcome to tinker around:
 
 ![step-4](/uploads/net_r_4.png)
+
+So by now our site should have deployed by now but it probably won't work, because we need to give the site our environemnt variables. Click the "Overview" tab, then click on the "site settings" button ---> then click the "build and deploy" pane and scoll till you reach the "environment" section and make sure you environment variables names match mine:
+
+![step-5](/uploads/net_r_5.png)
