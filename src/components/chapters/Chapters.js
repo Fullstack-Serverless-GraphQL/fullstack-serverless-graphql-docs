@@ -154,6 +154,10 @@ const Chapters = ({
       chapterEdge: allBookingsPosts,
       chapterTitle: "14. Make A Booking",
     },
+    {
+      chapterEdge: deployVue,
+      chapterTitle: "15. Deploy Frontend",
+    },
   ]
 
   const reactFrontEndPosts = [
@@ -180,6 +184,10 @@ const Chapters = ({
     {
       chapterEdge: allMakeAMutationReactPosts,
       chapterTitle: "14. Make A Booking",
+    },
+    {
+      chapterEdge: deployReact,
+      chapterTitle: "15. Deploy Frontend",
     },
   ]
   return (
