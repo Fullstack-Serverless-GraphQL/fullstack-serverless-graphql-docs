@@ -1,8 +1,8 @@
 module.exports = {
   siteMetadata: {
     title: `Fullstack Serverless GraphQL`,
-    description: `Fullstack Serverless GraphQL`,
-    author: `@gatsbyjs`,
+    description: `Fullstack Serverless GraphQL enables you to master GraphQL on AWS Lambda, while showing you how create bleeding edge frontends in React or Vue.`,
+    author: `Amo Moloko`,
   },
   plugins: [
     `gatsby-plugin-netlify-cms`,
