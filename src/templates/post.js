@@ -38,7 +38,7 @@ export default function Template({ data, pageContext }) {
               </Link>
             )}
           </li>
-          <GithubButton href="https://github.com/Fullstack-Serverless-GraphQL/fullstack-serverless-graphql-docs/issues/new">
+          <GithubButton href="https://github.com/Fullstack-Serverless-GraphQL/fullstack-serverless-graphql-docs/issues/new?assignees=&labels=&template=help.md&title=">
             Open an issue
           </GithubButton>
 
