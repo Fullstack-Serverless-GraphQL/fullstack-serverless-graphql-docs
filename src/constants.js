@@ -124,8 +124,8 @@ const backendTechStack = [
   },
 ]
 
-const track = name => {
-  mixpanel.track(name)
+const track = (name, props) => {
+  mixpanel.track(name, props)
 }
 const filterByPart = (array, path) => {
   const result = array

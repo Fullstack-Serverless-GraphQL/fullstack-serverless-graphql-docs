@@ -8,10 +8,14 @@ import ArrowRight from "../assets/arrow-right.svg"
 import SideChapterBox from "../components/chapters/SideChapterBox"
 import GithubButton from "../components/buttons/GithubButtton"
 import SEO from "../components/seo"
+import constants from "../constants"
 export default function Template({ data, pageContext }) {
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
   const { previous, next } = pageContext
+  constants.track("App.Post.View", {
+    postName: frontmatter.title,
+  })
   return (
     <Layout>
       <SEO
