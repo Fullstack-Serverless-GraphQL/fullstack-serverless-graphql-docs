@@ -32,7 +32,7 @@ const Hero = () => (
             className="flex flex-row"
             target="_blank"
             rel="noopener noreferrer"
-            href="https://lunar-tour-vue.netlify.com/"
+            href="https://lunar-tour.netlify.com/"
           >
             View Demo
           </a>
