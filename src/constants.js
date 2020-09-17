@@ -148,6 +148,8 @@ const filterByFramework = (array, path, framework) => {
     )
   return result
 }
+
+const mixpanel 
 export default {
   techStack,
   backendTechStack,
