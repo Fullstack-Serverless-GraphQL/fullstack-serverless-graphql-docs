@@ -1,4 +1,4 @@
-import mixpanel from 'mixpanel-browser';
+import mixpanel from "mixpanel-browser"
 
 import VueLogo from "./images/vue.svg"
 import ApolloLogo from "./images/apollo.svg"
@@ -19,7 +19,7 @@ import netlify from "./images/netlify.svg"
 import miro from "./images/miro.svg"
 import seed from "./images/seed.svg"
 
-mixpanel.init(config.MIXPANEL_API_KEY);
+mixpanel.init(process.env.REACT_APP_MIXPANEL)
 
 const partners = [
   {
@@ -124,6 +124,9 @@ const backendTechStack = [
   },
 ]
 
+const track = name => {
+  mixpanel.track(name)
+}
 const filterByPart = (array, path) => {
   const result = array
     .filter(i => i.node.frontmatter.part.trim() === path)
@@ -154,7 +157,6 @@ const filterByFramework = (array, path, framework) => {
   return result
 }
 
-const mixpanel 
 export default {
   techStack,
   backendTechStack,
@@ -162,4 +164,5 @@ export default {
   filterByChapter,
   filterByFramework,
   partners,
+  track,
 }
