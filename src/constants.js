@@ -1,3 +1,5 @@
+import mixpanel from 'mixpanel-browser';
+
 import VueLogo from "./images/vue.svg"
 import ApolloLogo from "./images/apollo.svg"
 import AntLogo from "./images/ant.svg"
@@ -16,6 +18,9 @@ import github from "./images/github.svg"
 import netlify from "./images/netlify.svg"
 import miro from "./images/miro.svg"
 import seed from "./images/seed.svg"
+
+mixpanel.init(config.MIXPANEL_API_KEY);
+
 const partners = [
   {
     logo: github,
