@@ -1,10 +1,10 @@
 import PropTypes from "prop-types"
 import React from "react"
-
-const GithubButton = ({ children, className, img, onClick }) => (
+import Github from "../../assets/github.svg"
+const GithubButton = ({ children, className, onClick }) => (
   <button className={`${className} cursor-pointer `} onClick={onClick}>
     <span className="flex flex-row">
-      {children} <img src={img} alt="framework" className="w-6" />
+      {children} <img src={Github} alt="framework" className="w-6" />
     </span>
   </button>
 )
@@ -13,7 +13,6 @@ GithubButton.propTypes = {
   children: PropTypes.string,
   className: PropTypes.string,
   onClick: PropTypes.func,
-  img: PropTypes.string,
 }
 
 GithubButton.defaultProps = {
