@@ -12,12 +12,11 @@ export default function Template({ data, pageContext }) {
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
   const { previous, next } = pageContext
-  console.log("ddd", frontmatter.path)
   return (
     <Layout>
       <SEO
         title={frontmatter.title}
-        website={`https://fullstack-serverless-graphql.netlify.app/${frontmatter.path}`}
+        url={`https://fullstack-serverless-graphql.netlify.app/${frontmatter.path}`}
       />
       <div className="flex justify-center x:flex-col">
         <div className="blog-post">

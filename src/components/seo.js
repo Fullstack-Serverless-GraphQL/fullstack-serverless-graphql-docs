@@ -49,8 +49,8 @@ function SEO({ description, lang, meta, title, url }) {
         },
         {
           property: `og:type`,
-          content: website
-            ? website
+          content: url
+            ? url
             : `https://fullstack-serverless-graphql.netlify.app/`,
         },
         {
