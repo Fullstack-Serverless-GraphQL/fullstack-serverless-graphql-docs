@@ -6,6 +6,7 @@ import HeadingThree from "../components/typography/HeadingThree"
 import ArrowLeft from "../assets/arrow-left.svg"
 import ArrowRight from "../assets/arrow-right.svg"
 import SideChapterBox from "../components/chapters/SideChapterBox"
+import GithubButton from "../components/buttons/GithubButtton"
 export default function Template({ data, pageContext }) {
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
@@ -26,6 +27,7 @@ export default function Template({ data, pageContext }) {
         <SideChapterBox collapse />
       </div>
 
+      <GithubButton>Open an issue</GithubButton>
       <div className="mt-10">
         <ul className="flex justify-between">
           <li>

@@ -16,6 +16,6 @@ GithubButton.propTypes = {
 }
 
 GithubButton.defaultProps = {
-  className: `font-display rounded-px px-16 border border-black border-3`,
+  className: `font-display rounded-px px-8 border border-black border-3`,
 }
 export default GithubButton
