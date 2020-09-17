@@ -4,7 +4,7 @@ import BodyOne from "../typography/BodyOne"
 import RedBlockButton from "../buttons/RedBlockButton"
 import RedOutlineButton from "../buttons/RedOutlineButton"
 import HeroImage from "../../images/hero_image.svg"
-
+import constants from "../../constants"
 const Hero = () => (
   <>
     <div className="flex lg:flex-row s:flex-col text-left">
@@ -24,7 +24,10 @@ const Hero = () => (
         </BodyOne>
         <RedBlockButton className="">Learn now!</RedBlockButton>
 
-        <RedOutlineButton className="s:mt-5 lg:ml-5">
+        <RedOutlineButton
+          className="s:mt-5 lg:ml-5"
+          onClick={() => constants.track("App.RedirctToDemo")}
+        >
           <a
             className="flex flex-row"
             target="_blank"
