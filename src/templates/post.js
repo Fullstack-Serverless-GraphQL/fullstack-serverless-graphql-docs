@@ -27,7 +27,6 @@ export default function Template({ data, pageContext }) {
         <SideChapterBox collapse />
       </div>
 
-      <GithubButton>Open an issue</GithubButton>
       <div className="mt-10">
         <ul className="flex justify-between">
           <li>
@@ -39,6 +38,10 @@ export default function Template({ data, pageContext }) {
               </Link>
             )}
           </li>
+          <GithubButton href="https://github.com/Fullstack-Serverless-GraphQL/fullstack-serverless-graphql-docs/issues/new">
+            Open an issue
+          </GithubButton>
+
           <li className="ml-20">
             {previous && (
               <Link to={previous.node.frontmatter.path}>
