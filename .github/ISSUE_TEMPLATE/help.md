@@ -1,6 +1,7 @@
 ---
 name: Help
-about: Describe this issue template's purpose here.
+about: Please describe what issue you are experiencing with tutorial so we can help
+  you out.
 title: ''
 labels: ''
 assignees: ''
@@ -32,6 +33,11 @@ Link to code example:
   relevant to your bug report. Here are some tips for providing a minimal
   example: https://stackoverflow.com/help/mcve.
 -->
+
+<!-- Here simply tell us what part of tutorial you got stuck on eg: "Create Nav and Header"
+-->
+
+Title of post you're stuck on:
 
 ## The current behavior
 
