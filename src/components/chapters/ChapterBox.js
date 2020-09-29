@@ -26,7 +26,7 @@ const ChapterBox = ({ text, edges, collapse }) => {
               {open === true && (
                 <>
                   {edges.map(edge => (
-                    <BodyOne className="text-yellow m-3" key={edge.node.id}>
+                    <BodyOne className="text-blue-dark m-3" key={edge.node.id}>
                       <Link to={edge.node.frontmatter.path}>
                         {edge.node.frontmatter.title}
                       </Link>
@@ -41,7 +41,7 @@ const ChapterBox = ({ text, edges, collapse }) => {
             <HeadingThree className="">{text}</HeadingThree>
 
             {edges.map(edge => (
-              <BodyOne className="text-yellow m-3" key={edge.node.id}>
+              <BodyOne className="text-blue-dark m-3" key={edge.node.id}>
                 <Link to={edge.node.frontmatter.path}>
                   {edge.node.frontmatter.title}
                 </Link>
