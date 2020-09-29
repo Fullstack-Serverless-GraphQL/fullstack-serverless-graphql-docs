@@ -214,6 +214,7 @@ const Chapters = ({
 
         <div className="flex justify-around">
           <FrameworkButton
+            className="bg-blue-lightest text-blue-darkest px-4 py-2 rounded"
             onClick={() => toggleFramework("react")}
             img={ReactIcon}
           >
