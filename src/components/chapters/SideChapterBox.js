@@ -218,12 +218,17 @@ const SideChapterBox = ({
 
         <div className="flex flex-col">
           <FrameworkButton
+            className="bg-blue-lightest text-blue-darkest px-4 py-2 rounded mb-3"
             onClick={() => toggleFramework("react")}
             img={ReactIcon}
           >
             React posts
           </FrameworkButton>
-          <FrameworkButton onClick={() => toggleFramework("vue")} img={VueIcon}>
+          <FrameworkButton
+            className="bg-green-lightest text-green-darker px-4 py-2 rounded focus:border-green-darker focus:border"
+            onClick={() => toggleFramework("vue")}
+            img={VueIcon}
+          >
             Vue posts
           </FrameworkButton>
         </div>
