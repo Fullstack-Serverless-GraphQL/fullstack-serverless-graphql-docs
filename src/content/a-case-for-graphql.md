@@ -75,4 +75,4 @@ GraphQL has a better developer experience because once you create the schema on 
 
 Server-side graphQL libraries come with Playground or GraphQil for you to test your API, so no more fiddling with Postman.
 
-GraphQL also comes with subscriptions which are real connections to the server for use cases like messaging, notifications etc. All without using other libraries for this use case.
+GraphQL also comes with subscriptions which are real-time connections to the server for use cases like messaging, notifications etc. All without using other libraries for this use case.
