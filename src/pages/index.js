@@ -10,8 +10,8 @@ import constants from "../constants"
 const IndexPage = () => {
   const [framework, setFramework] = useState("vue")
 
-  const toggleFramework = () => {
-    setFramework(framework => (framework === "vue" ? "react" : "vue"))
+  const toggleFramework = selectedFramework => {
+    setFramework(selectedFramework)
   }
 
   constants.track("App.LandingPage.View")

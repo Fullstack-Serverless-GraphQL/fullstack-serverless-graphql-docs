@@ -213,10 +213,13 @@ const Chapters = ({
         <HeadingThree className="text-center">Frontend</HeadingThree>
 
         <div className="flex justify-around">
-          <FrameworkButton onClick={() => toggleFramework()} img={ReactIcon}>
+          <FrameworkButton
+            onClick={() => toggleFramework("react")}
+            img={ReactIcon}
+          >
             React posts
           </FrameworkButton>
-          <FrameworkButton onClick={() => toggleFramework()} img={VueIcon}>
+          <FrameworkButton onClick={() => toggleFramework("vue")} img={VueIcon}>
             Vue posts
           </FrameworkButton>
         </div>
