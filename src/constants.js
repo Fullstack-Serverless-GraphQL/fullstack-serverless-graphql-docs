@@ -19,8 +19,7 @@ import netlify from "./images/netlify.svg"
 import miro from "./images/miro.svg"
 import seed from "./images/seed.svg"
 
-mixpanel.init(process.env.REACT_APP_MIXPANEL)
-
+mixpanel.init(process.env.GATSBY_MIXPANEL)
 const partners = [
   {
     logo: github,

@@ -15,6 +15,7 @@ const IndexPage = () => {
   }
 
   constants.track("App.LandingPage.View")
+
   console.log("ff-1", framework)
   return (
     <FrameworkContext.Provider value={{ framework, toggleFramework }}>
