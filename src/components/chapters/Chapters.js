@@ -192,7 +192,7 @@ const Chapters = ({
   ]
   return (
     <>
-      <div className="mt-10">
+      <div className="mt-10 text-center">
         <HeadingTwo className="text-center">Chapters</HeadingTwo>
         {/* chAPTERS GRID */}
         <HeadingThree className="text-center">Backend</HeadingThree>
