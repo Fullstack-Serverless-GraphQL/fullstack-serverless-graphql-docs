@@ -220,7 +220,11 @@ const Chapters = ({
           >
             React posts
           </FrameworkButton>
-          <FrameworkButton onClick={() => toggleFramework("vue")} img={VueIcon}>
+          <FrameworkButton
+            className="bg-green-lightest text-green-darker px-4 py-2 rounded focus:border-green-darker focus:border"
+            onClick={() => toggleFramework("vue")}
+            img={VueIcon}
+          >
             Vue posts
           </FrameworkButton>
         </div>
