@@ -12,13 +12,13 @@ Here we will set up the AWS SDK to be able to interact with DynamoDDB.
 
 First do the following in your terminal:
 
-```
+```bash
 $ yarn add aws-sdk
 ```
 
-Then go ahead and create a \`libs/\` directory in the root of the folder and create a file called \`dynamodb-lib.js\`.
+Then go ahead and create a `libs` directory in the root of the folder and create a file called `dynamodb-lib.js`.
 
-Lets now work on a wrapper around the \`AWS-SDK\` for Dynamo and add the following to \`dynamodb-lib.js\`:
+Lets now work on a wrapper around the `AWS-SDK` for Dynamo and add the following to `dynamodb-lib.js`:
 
 ```javascript
 import AWS from "aws-sdk"
