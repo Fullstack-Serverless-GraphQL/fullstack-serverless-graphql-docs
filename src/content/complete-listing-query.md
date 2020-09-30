@@ -97,6 +97,6 @@ Next lets now go to Playground and test the query by executing the following que
 }
 ```
 
-[ADD PLAYGROUND IMAGE]
+Now the function returns our data as we have shaped it:
 
-Now the function returns our data as we have shaped it.
+![](/uploads/playground2.png)
