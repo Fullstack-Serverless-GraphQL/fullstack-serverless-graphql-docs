@@ -12,22 +12,19 @@ Now we have successfully deployed our function that has a basic Hello World quer
 
 In your terminal run the following:
 
-```
+```bash
 $ sls offline
 ```
 
-This will run your Lambda on port 4000. So in your browser if you go to \`localhost:4000/graphql\` you see an instance of GraphQL Playground:
-
-\[add playground image here]
+This will run your Lambda on port`4000`. So in your browser if you go to `localhost:4000/graphql` you should see an instance of GraphQL Playground.
 
 GraphQL Playground is where you can test your Queries/Mutations or Subscriptions for your GraphQL API and see the responses that come back from your server. Also it shows you the schema for your API, which makes it self documenting to a certain extent.
 
 Now we can run the following query :
 
-```
+```json
 {
-
-hello
+  hello
 }
 ```
 
