@@ -8,7 +8,9 @@ chapter: Setting Up infrastructure
 postnumber: 4
 ---
 
-In this part we will set up [Seed](https://seed.run/), which is our Continous Integration & deployment tool that will allow us to deploy our back-end whenever there is a change in the master branch of our repo and configure different stages. The reason why we are doing this so soon is that for our Apollo Server to work with Serverless Offline we need the Lambda and the other resources to be provisioned to work with GraphQL playground.
+In this part we will set up [Seed](https://seed.run/), which is our Continous Integration & deployment tool that will allow us to deploy our backend whenever there is a change in the master branch of our repo and configure different stages.
+
+The reason why we are doing this so soon is that for our Apollo Server to work with [Serverless Offline](https://github.com/dherault/serverless-offline) we need the Lambda and the other resources to be provisioned to work with GraphQL playground.
 
 First, sign up for an account: \[add account sign up]
 
