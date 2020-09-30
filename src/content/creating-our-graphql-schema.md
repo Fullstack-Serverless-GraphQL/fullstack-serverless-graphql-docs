@@ -53,7 +53,7 @@ What are we doing here:
 
 Next up we will set up the query type :
 
-```
+```javascript
 type Query {
     getAllListings: [Listing]
   }
