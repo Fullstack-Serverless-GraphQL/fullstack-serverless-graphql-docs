@@ -40,12 +40,12 @@ Resources:
 
 ### What is happening?
 
-🎩 We are creating a table with a Primary Key called \`listingId\` and a Sort Key called \`listingName\` both of them are strings.
+🎩 We are creating a table with a Primary Key called `listingId` and a Sort Key called `listingName` both of them are strings.
 
 🎩 For the ProvisionedThroughput section we are basically tell AWS how many operations per second can be allowed when data is being written or read. \
 \
 \
-In the same directory lets create the table that will store our bookings called \`booking-db.yml\`:
+In the same directory lets create the table that will store our bookings called `booking-db.yml`:
 
 ```YAML
 Resources:
@@ -71,9 +71,9 @@ Resources:
         WriteCapacityUnits: ${self:custom.tableThroughput}
 ```
 
-We are doing the same thing here, only difference is that we made the Sort Key the \`listingId\`.
+We are doing the same thing here, only difference is that we made the Sort Key the `listingId`.
 
-Now we need to reference it in our \`serverless.yml\`:
+Now we need to reference it in our `serverless.yml`:
 
 ```YAML
 resources:
