@@ -26,9 +26,9 @@ Now we need to clone the [servless-graphQL starter](https://github.com/pimp-my-b
 $ serverless install --url https://github.com/pimp-my-book/serverless-graphql-nodejs-starter --name lunar-tour-api
 ```
 
-now we need to send the code up to GitHub:
+Now we need to send the code up to GitHub:
 
-**go into the directory of the repo:**
+**Go into the directory of the repo:**
 
 ```bash
 $ cd lunar-tour-api
@@ -52,7 +52,7 @@ Create a commit message:
 $ git commit -m "initial commit"
 ```
 
-Add the remote URL:
+Add the remote URL (Make sure you add the one you created!):
 
 ```bash
 $ git remote add origin https://github.com/name-of-repo.git
