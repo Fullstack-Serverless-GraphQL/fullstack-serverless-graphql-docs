@@ -8,20 +8,19 @@ chapter: All listings query
 postnumber: 11
 ---
 
-Here we are just going to set up the function and export it so that Apollo Server can pick up the query.
+Here we are just going to set up the function that grabs all our listings and export it so that Apollo Server can pick up the query.
 
-First lets go into our query.js file and create the following function:
+First lets go into our `query.js` file and create the following function:
 
-```
+```javascript
 export const getAllListings = async (args, context) => {
-
-return null
+  return null
 }
 ```
 
-All we are doing here is creating an async function that accepts args and context as properties.
+All we are doing here is creating an async function that accepts `args` and `context` as properties.
 
-Next we are going to import this function from above into our index.js file:
+Next we are going to import this function from above into our `index.js` file:
 
 ```
 import { getAllListings } from "./query";
