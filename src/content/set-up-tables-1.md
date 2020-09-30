@@ -8,7 +8,7 @@ chapter: Setting Up infrastructure
 postnumber: 5
 ---
 
-In this chapter we are going to create our DynamoDB tables. DynamoDB is a NoSQL key-value store serverless native database. Sounds like a mouthful, in a nutshell it does not force your data to adhere to any data model schema and you do not have to provide any server instances for it to run.
+In this chapter we are going to create our DynamoDB tables. DynamoDB is a NoSQL key-value store serverless native database. Sounds like a mouthful, in a nutshell it does not force your data to adhere to any data model or schema and you do not have to provide any server instances for it to run. However, lately I've found myself using it for a variety of workloads, you should be fully aware of it's downsides.
 
 The way we will be provisioning our tables will enable us to create tables for any of our environment stages.
 
@@ -42,12 +42,12 @@ Resources:
 
 🎩 We are creating a table with a Primary Key called \`listingId\` and a Sort Key called \`listingName\` both of them are strings.
 
-🎩 Specify what the Read/Write Units should be. \
+🎩 For the ProvisionedThroughput section we are basically tell AWS how many operations per second can be allowed when data is being written or read. \
 \
 \
 In the same directory lets create the table that will store our bookings called \`booking-db.yml\`:
 
-```
+```YAML
 Resources:
  BookingsDB:
     Type: AWS::DynamoDB::Table
