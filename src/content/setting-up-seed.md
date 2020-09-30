@@ -12,7 +12,7 @@ In this part we will set up [Seed](https://seed.run/), which is our Continous In
 
 The reason why we are doing this so soon is that for our Apollo Server to work with [Serverless Offline](https://github.com/dherault/serverless-offline) we need the Lambda and the other resources to be provisioned to work with GraphQL playground.
 
-First, sign up for an account: \[add account sign up]
+First, sign up for an account:
 
 ![](/uploads/1-seed.png)
 
