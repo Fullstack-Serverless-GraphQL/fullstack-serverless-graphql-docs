@@ -22,15 +22,15 @@ All we are doing here is creating an async function that accepts `args` and `con
 
 Next we are going to import this function from above into our `index.js` file:
 
-```
-import { getAllListings } from "./query";
+```javascript
+import { getAllListings } from "./query"
 export const resolvers = {
   Query: {
     getAllListings: (root, args, context) => getAllListings(args, context),
-  }
- }
+  },
+}
 ```
 
-We are creating a resolvers object that has a query property that returns our getAllListings function.
+We are creating a resolvers object that has a query property that returns our `getAllListings` function.
 
 Next we can start writing the code to return data!
