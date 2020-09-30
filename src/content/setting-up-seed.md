@@ -20,9 +20,7 @@ Then click add an App
 
 ![](/uploads/2-seed.png)
 
-Now connect to your favorite git provider
-
-It should pick up our service manually.
+Once you've selected the Git provider that your repo is in, it should detect the service automatically.
 
 Then you need to add your AWS credentials:
 
