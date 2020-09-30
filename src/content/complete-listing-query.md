@@ -8,65 +8,65 @@ chapter: All listings query
 postnumber: 12
 ---
 
-In this part we get the data from Dynamo And return it.
+In this part we get the data from DynamoDB And return it.
 
-Back in our query.js file we can import the dynamoDB wrapper at the top of the file:
+Back in our `query.js` file we need to import the DynamoDB wrapper at the top of the file:
 
-```
-import * as dynamoDBLib from "../../libs/dynamodb-lib";
+```javascript
+import * as dynamoDBLib from "../../libs/dynamodb-lib"
 ```
 
 Next up we can create the parameters for our DynamoDB operation:
 
-```
+```javascript
 const params = {
-    TableName: process.env.ListingsDB || "dev-listings"
-  };
+  TableName: process.env.ListingsDB || "dev-listings",
+}
 ```
 
-Just a simple object that has the tablename. reason why we have the or operator is for when we test, Jest cannot pickup the .env file.
+Just a simple object that has the tablename. reason why we have the or operator is for when we test, Jest cannot pickup the `.env` file.
 
 Next we have a try catch block that will help us fetch the data and return it:
 
-```
-  try {
-    const result = await dynamoDBLib.call("scan", params);
+```javascript
+try {
+  const result = await dynamoDBLib.call("scan", params)
 
-    if (result.Items.length === 0) {
-      return "You have no listings";
-    } else {
-      return result.Items.map((i) => ({
-        listingId: i.listingId,
-        coverPhoto: i.coverPhoto,
-        listingName: i.listingName,
-        listingDescription: i.listingDescription,
-        listingType: i.listingType.map((m) => ({
-          name: m,
-        })),
-        listingLocation: i.listingLocation,
-        listingActivities: i.listingActivities.map((k) => ({
-          name: k,
-        })),
-        specialType: i.specialType,
-        specialAmount: i.specialAmount,
-        rating: i.rating,
-        guide: {
-          Name: i.guide.name,
-          Bio: i.guide.bio,
-          Avatar: i.guide.avatar,
-        },
-        price: i.price,
-        numberOfDays: i.numberOfDays,
-      }));
-    }
-
-    // return result;
-  } catch (e) {
-    return {
-      message: e.message,
-      code: "500x",
-    };
+  if (result.Items.length === 0) {
+    return "You have no listings"
+  } else {
+    return result.Items.map(i => ({
+      listingId: i.listingId,
+      coverPhoto: i.coverPhoto,
+      listingName: i.listingName,
+      listingDescription: i.listingDescription,
+      listingType: i.listingType.map(m => ({
+        name: m,
+      })),
+      listingLocation: i.listingLocation,
+      listingActivities: i.listingActivities.map(k => ({
+        name: k,
+      })),
+      specialType: i.specialType,
+      specialAmount: i.specialAmount,
+      rating: i.rating,
+      guide: {
+        Name: i.guide.name,
+        Bio: i.guide.bio,
+        Avatar: i.guide.avatar,
+      },
+      price: i.price,
+      numberOfDays: i.numberOfDays,
+    }))
   }
+
+  // return result;
+} catch (e) {
+  return {
+    message: e.message,
+    code: "500x",
+  }
+}
 ```
 
 🔋First we return a promise and execute a scan on Dynamo and pass through our params object.
