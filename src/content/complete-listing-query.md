@@ -83,6 +83,20 @@ try {
 
 Next lets now go to Playground and test the query by executing the following query:
 
+```javascript
+{
+  getAllListings{
+    listingId
+    listingName
+    listingLocation
+    rating
+    listingType{
+      name
+    }
+  }
+}
+```
+
 [ADD PLAYGROUND IMAGE]
 
 Now the function returns our data as we have shaped it.
