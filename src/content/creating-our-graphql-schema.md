@@ -12,7 +12,7 @@ Now we finally get to the core of this course! We will start building our first 
 
 So let's go into our `schema.js` file and add the necessary types to get a query running:
 
-```
+```javascript
 type ListingType {
   name: String
 }
