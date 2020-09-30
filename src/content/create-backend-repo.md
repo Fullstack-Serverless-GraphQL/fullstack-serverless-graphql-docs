@@ -20,7 +20,7 @@ Then create an empty repo and call it lunar-tour-api, and leave the other fields
 
 ![](/uploads/2.png)
 
-Now we need to clone the servless-graphQL starter, so open your terminal and type in the following:
+Now we need to clone the [servless-graphQL starter](https://github.com/pimp-my-book/serverless-graphql-nodejs-starter), so open your terminal and type in the following:
 
 ```bash
 $ serverless install --url https://github.com/pimp-my-book/serverless-graphql-nodejs-starter --name lunar-tour-api
