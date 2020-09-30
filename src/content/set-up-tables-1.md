@@ -75,7 +75,7 @@ We are doing the same thing here, only difference is that we made the Sort Key t
 
 Now we need to reference it in our \`serverless.yml\`:
 
-```
+```YAML
 resources:
   - ${file(resources/listing-db.yml)}
   - ${file(resources/bookingDB.yml)}
@@ -83,7 +83,7 @@ resources:
 
 In the same file we need to create those tables in the custom section of the file:
 
-```
+```YAML
 custom:
   stage: ${opt:stage, self:provider.stage}
   region: ${opt:region, self:provider.region}
@@ -97,7 +97,7 @@ custom:
 
 As we well as create them as environment variables and add IAM role statements for this Lambda:
 
-```
+```YAML
 provider:
   name: aws
   runtime: nodejs10.x
