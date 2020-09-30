@@ -8,15 +8,15 @@ chapter: creating repo
 postnumber: 3
 ---
 
-In this chapter, we will initialise the back-end repo and get everything setup
+In this chapter, we will initialise the back-end repo and get everything setup.
 
 ## Create a repo on Github
 
-head over to Github and click on create a repo
+Then head over to [Github](https://github.com/) and click on create a repo
 
 ![](/uploads/1.png)
 
-then create an empty repo and call it lunar-tour-api, and leave the other fields blank.
+Then create an empty repo and call it lunar-tour-api, and leave the other fields blank.
 
 ![](/uploads/2.png)
 
