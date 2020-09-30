@@ -61,4 +61,4 @@ type Query {
 
 🔋 We creating a `getAllListings` query that will return an array of the `Listings`.
 
-So now we went through the process of adding editing our Schema in an SDL manner to create a query.
+So now we went through the process of adding editing our Schema in an SDL manner to create a query. You can also follow a [code-first](https://www.prisma.io/blog/the-problems-of-schema-first-graphql-development-x1mn4cb0tyl3) approach to creating a GraphQL schema.
