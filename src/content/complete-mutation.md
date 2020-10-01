@@ -161,6 +161,6 @@ mutation{
 
 If all went well our mutation should match the screenshot below:
 
-\[Add the playground screenshot]
+![muatuion-screenshot](/uploads/mutation_bk.png)
 
 Now our mutation is working. Now we can write unit test for functions.
