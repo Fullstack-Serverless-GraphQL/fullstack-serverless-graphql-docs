@@ -8,9 +8,7 @@ const GithubButton = ({ children, className, href }) => (
     rel="noopener noreferrer"
     href={href}
   >
-    <span className="flex flex-row">
-      {children} <img src={Github} alt="framework" className="w-6 ml-2" />
-    </span>
+    {children} <img src={Github} alt="framework" className="w-6 inline-block" />
   </a>
 )
 

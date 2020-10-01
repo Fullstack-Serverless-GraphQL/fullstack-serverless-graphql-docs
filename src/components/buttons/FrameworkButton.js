@@ -3,10 +3,8 @@ import React from "react"
 
 const FrameworkButton = ({ children, className, img, onClick }) => (
   <button className={`${className} cursor-pointer `} onClick={onClick}>
-    <div className="grid grid-cols-2 text-center">
-      <span>{children} </span>
-      <img src={img} alt="framework" className="w-6 ml-5" />
-    </div>
+    {children}
+    <img src={img} alt="framework" className="w-6 ml-5 inline-block" />
   </button>
 )
 
@@ -18,6 +16,6 @@ FrameworkButton.propTypes = {
 }
 
 FrameworkButton.defaultProps = {
-  className: `font-display rounded-px text-right py-1`,
+  className: `font-display rounded-px text-right py-1 px-16`,
 }
 export default FrameworkButton
