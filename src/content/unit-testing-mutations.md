@@ -10,7 +10,7 @@ postnumber: 19
 
 In this chapter we will be unit testing our mutation.
 
-In the tests folder, create a makeABooking.test.js file and add the following:
+In the `tests` folder, create a `makeABooking.test.js` file and add the following:
 
 ```javascript
 import { makeABooking } from "../src/resolvers/mutation";
@@ -49,13 +49,13 @@ describe("Make a booking", () => {
   }
 ```
 
-💣 We are creating a mutation in the args with the necessary data.
+💣 We are creating a mutation in the `args` with the necessary data.
 
-💣 Next we are making sure we get back a bookingId that the charge matches what we expect it to be.
+💣 Next we are making sure we get back a `bookingId` that the charge matches what we expect it to be.
 
 Then go to your terminal and run the test:
 
-```
+```javascript
 $ yarn test makeABooking.test.js
 ```
 
