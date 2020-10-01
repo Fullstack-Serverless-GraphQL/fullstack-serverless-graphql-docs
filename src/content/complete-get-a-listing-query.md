@@ -8,7 +8,7 @@ chapter: Get A Listing Query
 postnumber: 14
 ---
 
-Now lets do what we did in the previous query and lets start in the Query.js file and add the following:
+Now lets do what we did in the previous query and lets start in the `Query.js` file and add the following:
 
 ```javascript
 const params = {
@@ -20,19 +20,17 @@ const params = {
 }
 ```
 
-🍕In this params object we are using a FilterExpression to get the specific listing from the table, which is the listingId in our case.
+🍕In this params object we are using a `FilterExpression` to get the specific listing from the table, which is the `listingId` in our case.
 
-🍕The ExpressionAttributesValues object is where we need assign a value to the property we declared in the FilterExpression.
+🍕The `ExpressionAttributesValues` object is where we need to assign a value to the property we declared in the `FilterExpression`.
 
-🍕 args is short for the arguments we take in from query.
+🍕 `args` is short for the arguments we take in from query, in this case we are taking in the `listingId`.
 
-Next we can start sending these params to Dynamo and return the selected listing:
+Next we can start sending these params to DynamoDB and return the selected listing:
 
 ```javascript
 try {
   const listing = await dynamoDBLib.call("scan", params)
-
-  console.log(listing)
 
   if (listing.Items.length === 0) {
     return "There is no listing"
@@ -65,7 +63,7 @@ try {
 } catch (e) {
   return {
     message: e.message,
-    code: "500x",
+    code: "500",
   }
 }
 ```
