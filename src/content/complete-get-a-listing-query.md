@@ -30,7 +30,7 @@ Next we can start sending these params to DynamoDB and return the selected listi
 
 ```javascript
 try {
-  const listing = await dynamoDBLib.call("scan", params)
+  const listing = await dynamodb.scan(params)
 
   if (listing.Items.length === 0) {
     return "There is no listing"
