@@ -8,24 +8,24 @@ chapter: Get A Listing Query
 postnumber: 13
 ---
 
-In this chapter we will attempt to get a single a listing from Dynamo when given a listingID.
+In this chapter we will attempt to get a single a listing from Dynamo when given a `listingID`.
 
 To do this let's edit our schema and add the following query:
 
-```
+```json
     getAListing(listingId: String!): Listing!
 ```
 
 Your Query Type should now look like this:
 
-```
+```json
   type Query {
     getAllListings: [Listing]
     getAListing(listingId: String!): Listing!
   }
 ```
 
-Next lets go ahead and export our getAListing query. Go into the query.js file and add the following:
+Next lets go ahead and export our `getAListing` query. Go into the `query.js` file and add the following:
 
 ```javascript
 export const getAListing = async (args, context) => {
@@ -33,7 +33,7 @@ export const getAListing = async (args, context) => {
 }
 ```
 
-Then finally import it into the index for the resolvers:
+Then finally import it into the `index` of the resolvers:
 
 ```javascript
 import { getAllListings, getAListing } from "./query"
