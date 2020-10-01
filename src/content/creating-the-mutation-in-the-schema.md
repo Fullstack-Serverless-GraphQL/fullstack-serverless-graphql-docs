@@ -44,15 +44,15 @@ Open up your `schema.js` file and paste the following:
 
 ```
 
-🌍 Our first type is a Booking Type, with the data we need to capture the booking of the specific listing. If you note there is a Customers field.
+🌍 Our first type is a `Booking` Type, with the data we need to capture the booking of the specific listing. If you note there is a `Customers` field.
 
-🌍 This Customers field is meant to return an array of customers, which we have defined as its own type.
+🌍 This `Customers` field is meant to return an array of customers, which we have defined as its own type.
 
-🌍 lastly, we have an input called InputCustomer. An input in GraphQL is a Type that is used for mutations to pass in large objects. This will make it easier to call our mutation.
+🌍 lastly, we have an input called `InputCustomer`. An input in GraphQL is a Type that is used for mutations to pass in large objects. This will make it easier to call our mutation.
 
 Next up lets create a mutation type in our schema:
 
-```
+```javascript
   type Mutation {
     makeABooking(
       listingId: String
@@ -66,6 +66,6 @@ Next up lets create a mutation type in our schema:
 
 ```
 
-🌍 We are saying that our makeABooking mutation should take a listingId,size, bookingDate and customerEmail arguments. Then customers is also an argument but we are assigning it as an array of the InputCustomer. This means we can add multiple entires of the customer to our mutation.
+🌍 We are saying that our `makeABooking`mutation should take a `listingId`,`size`, `bookingDate` and `customerEmail` arguments. Then `customers` is also an argument but we are assigning it as an array of the `InputCustomer`. This means we can add multiple entires of the customer to our mutation.
 
 The beauty of GraphQL is that it comes with nifty features that REST does not. Best of all any other developers will be able to know how to call this Mutation easily by looking at it in the schema pane in Playground.
