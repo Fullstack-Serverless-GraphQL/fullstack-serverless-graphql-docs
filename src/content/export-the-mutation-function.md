@@ -10,7 +10,7 @@ postnumber: 15
 
 In this chapter we just set up our mutation by exporting it.
 
-In the mutation.js file add the following function:
+In the `mutation.js` file add the following function:
 
 ```javascript
 export const makeABooking = async (args, context) => {
@@ -18,7 +18,7 @@ export const makeABooking = async (args, context) => {
 }
 ```
 
-Then head over the the index of the resolvers and import it:
+Then head over the the `index` of the resolvers and import it:
 
 ```javascript
 import { makeABooking } from "./mutation"
@@ -29,7 +29,7 @@ export const resolvers = {
 }
 ```
 
-Your resolvers index should look like this:
+Your resolvers `index.js` should look like this:
 
 ```javascript
 import { getAllListings, getAListing } from "./query"
@@ -45,4 +45,4 @@ export const resolvers = {
 }
 ```
 
-Next up we setup a Stripe Account
+Next up we will setup a Stripe Account
