@@ -10,20 +10,20 @@ postnumber: 17
 
 Now we are going to complete the mutation. First off let's install some packages:
 
-```
+```javascript
 $ yarn add uuid stripe
 ```
 
-⌛ uuid is used to generate random UUID's for the bookingId. Since Dynamo is a NoSQL datastore it does not auto-generate IDs like a SQL datastore.
+⌛ `uuid` is used to generate random UUID's for the `bookingId`. Since DynamoDB is a NoSQL datastore it does not auto-generate IDs like a SQL datastore.
 
-⌛ stripe will allow us to interact with the stripe API.
+⌛ `stripe` will allow us to interact with the stripe API.
 
-Next lets go into our makeABooking mutation and add the following:
+Next lets go into our `makeABooking` mutation and add the following:
 
-```
-import { v1 as uuidv1 } from "uuid";
-import stripePackage from "stripe";
-import * as dynamoDBLib from "../../libs/dynamodb-lib";
+```javascript
+import { v1 as uuidv1 } from "uuid"
+import stripePackage from "stripe"
+import * as dynamoDBLib from "../../libs/dynamodb-lib"
 
 export const makeABooking = async (args, context) => {
   //Get the listing that the user selected
@@ -35,21 +35,20 @@ export const makeABooking = async (args, context) => {
       ExpressionAttributeValues: {
         ":listingId": args.listingId,
       },
-    };
-    try {
-      const listings = await dynamoDBLib.call("query", params);
-      return listings;
-    } catch (e) {
-      return e;
     }
-  };
-
+    try {
+      const listings = await dynamoDBLib.call("query", params)
+      return listings
+    } catch (e) {
+      return e
+    }
   }
+}
 ```
 
 ⌛ First off we are adding our necessary libs to the file
 
-⌛ then we are creating a function called getPrices that will go into the listings table and get the listing that matches thee listingId for the listing the customer wants to make a booking for.
+⌛ Then we are creating a function called `getPrices` that will go into the `listings` table and get the listing that matches the `listingId` for the listing the customer wants to make a booking for.
 
 Next up let's calculate the price of the booking:
 
@@ -66,7 +65,6 @@ const bookingCharge = parseInt(listingObject.Items[0].price) * args.size
 const listingName = listingObject.listingName
 //create an instance of the stripe lib
 
-console.log(process.env.stripeSecretKey)
 const stripe = stripePackage(process.env.stripeSecretKey)
 
 //charge the users card
@@ -108,9 +106,9 @@ const params = {
 }
 ```
 
-⌛ As before we are simply creating a params object that has the necessary TableName, and the fields that match the Booking Type in the schema. We have added a createdTimestamp and paymentDetails fields for internal use that will not be exposed to the API.
+⌛ As before we are simply creating a `params` object that has the necessary `TableName`, and the fields that match the Booking Type in the schema. We have added a `createdTimestamp` and `paymentDetails` fields for internal use that will not be exposed to the API.
 
-Next let's send the params to Dynamo:
+Next let's send the params to DynamoDB:
 
 ```javascript
 try {
@@ -138,7 +136,7 @@ try {
 }
 ```
 
-⌛ We are simply doing a put action to Dynamo to insert the mutation into the table.
+⌛ We are simply doing a put action to DynamoDB to insert the mutation into the table.
 
 ⌛ Then we are returning the Booking object back to the API.
 
