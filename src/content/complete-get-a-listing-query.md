@@ -78,6 +78,9 @@ try {
 
 Next up we can run this query in Playground:
 
-\[Add playgorund query screen shoot]
+```javascript
+```
+
+![playground](/uploads/get-a-listing.png)
 
 Now that we have the query working we can start on the mutation.
