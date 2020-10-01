@@ -79,7 +79,21 @@ try {
 Next up we can run this query in Playground:
 
 ```javascript
+{
+  getAListing(listingId:"a114dded-ddef-4052-a106-bb18b94e6b51"){
+    listingId
+    listingName
+    listingType{
+      name
+    }
+    listingActivities{
+      name
+    }
+  }
+}
 ```
+
+The query above should get you the same output as shown in the screenshot:
 
 ![playground](/uploads/get-a-listing.png)
 
