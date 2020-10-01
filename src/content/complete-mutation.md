@@ -142,7 +142,24 @@ try {
 
 ⌛ In the customers section we are simply mapping over the customers supplied.
 
-Next let's test the function:
+Next let's test the function with the follow mutation:
+
+```javascript
+
+mutation{
+  makeABooking(listingId:"a114dded-ddef-4052-a106-bb18b94e6b51",bookingDate:"20-May-30",
+    customerEmail:"peter@gmail.com",customers:{name: "Peter",surname:"Griffin",physioScore:"0",country:"USA",passportNumber:"34343445"}){
+    chargeReciept
+    bookingId
+    size
+  }
+}
+
+
+
+```
+
+If all went well our mutation should match the screenshot below:
 
 \[Add the playground screenshot]
 
