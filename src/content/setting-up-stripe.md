@@ -12,15 +12,15 @@ In this section we will get a stripe account setup.
 
 Head over to Stripe.com and sign up for an account:
 
-\[Add stripe sign up shot]
+![stripe](/uploads/stripe_step1.png)
 
 Then Click on the Developers link:
 
-\[dashboard screenshopt]
+![stripe](/uploads/stripe_step2.png)
 
 Then click on API Keys
 
-\[Api keys shot]
+![stripe](/uploads/stripe_step3.png)
 
 Then copy the Secret key
 
