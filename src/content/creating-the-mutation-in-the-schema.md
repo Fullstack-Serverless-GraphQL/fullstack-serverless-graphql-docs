@@ -10,9 +10,9 @@ postnumber: 16
 
 In this chapter we will be building our mutation which will allow users to be able to book for listings. First lets create the necessary Types for our mutations.
 
-Open up your schema.js file and paste the following:
+Open up your `schema.js` file and paste the following:
 
-```
+```javascript
 
   type Booking {
       ID: String
