@@ -24,7 +24,7 @@ const routes = [
 ]
 ```
 
-The ":id" in the URL will tell the router to put id of the listing in the URL whenever it is navigated to. This will also allow us to send the id of that specific Listing to API for us to fetch.
+The `:id` in the URL will tell the router to put the `id` of the listing in the URL whenever it is navigated to. This will also allow us to send the `id` of that specific Listing to API for us to fetch.
 
 Next up create a `Listing.vue` file in the pages folder and add the following:
 
@@ -161,11 +161,9 @@ export default {
 
 ```
 
-🌶️ Similar to the landing page wee have an Apollo Query Component that will allow us to fetch the data for the listing and gives variables for the data, error and loading states.
+🌶️ Similar to the landing page we have an Apollo Query Component that will allow us to fetch the data for the listing and gives variables for the `data`, `error` and `loading` states.
 
-🌶️ In our template slot we first check for the Loading state to be true. then render a loading state.
-
-🌶️ Same thing for the error state
+🌶️ In our template `slot` we first check for the Loading state to be true, then render a loading state.
 
 🌶️ Then in the data part we are rending all the data associated with the Listing.
 
