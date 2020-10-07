@@ -9,11 +9,11 @@ postnumber: 30
 framework: vue
 ---
 
-In this part we will integrate Vue Apollo to be able to content to our GraphQL API.
+In this part we will integrate [Vue Apollo](https://apollo.vuejs.org/) to be able to content to our GraphQL API.
 
 Head to your terminal and run the following:
 
-```
+```bash
 $ vue ui
 ```
 
@@ -31,11 +31,11 @@ Then click on add plugin:
 
 ![](/uploads/step_three_cli.png)
 
-search for vue-cli-plugin-apollo and select it
+Search for vue-cli-plugin-apollo and select it
 
 ![](/uploads/step_four_cli.png)
 
-then click install and sit back. You will get a prompt to scaffold other stuff, ignore it and continue:
+Then click install and sit back. You will get a prompt to scaffold other stuff, ignore it and continue:
 
 ![](/uploads/step_five_cli.png)
 
