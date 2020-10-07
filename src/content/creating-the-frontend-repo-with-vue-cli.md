@@ -86,3 +86,5 @@ $ git push -u origin master
 ```
 
 Now all our code is synced with Github.
+
+Lastly, create a folder `assets` in the `src` directory and copy all the images in this [Google Driver folder](https://drive.google.com/drive/folders/178c-yMzNPj013dpEwkcDAQHArxjTa1HZ?usp=sharing). These are all the icons and images we will need for the project.
