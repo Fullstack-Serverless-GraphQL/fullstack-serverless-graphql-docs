@@ -17,13 +17,13 @@ First go to Github and create new repo:
 
 Now that we have it created. We need to install the [Vue CLI](https://cli.vuejs.org/). It will allow us to scaffold the project. In your terminal run the following:
 
-```
+```bash
 $ yarn global add @vue/cli
 ```
 
 Once it is installed run the following:
 
-```
+```bash
 $ vue create lunar-tour-frontend
 ```
 
@@ -45,33 +45,33 @@ Sit back and let the CLI do the work:
 
 Now change into the directory and start the app:
 
-```
+```bash
 $ yarn serve
 ```
 
-If you go to localhost:8080 your app should be visible.
+If you go to `localhost:8080` your app should be visible.
 
 Now we need to commit this to our repo. Initialize the local directory as a Git repository:
 
-```
+```bash
 $ git init
 ```
 
 Add the files in your new local repository. This stages them for the first commit:
 
-```
+```bash
 $ git add .
 ```
 
 Commit the files that you've staged in your local repository:
 
-```
+```bash
 $ git add .
 ```
 
 In Terminal,[add the URL for the remote repository](https://help.github.com/en/articles/adding-a-remote) where your local repository will be pushed:
 
-```
+```bash
 $ git remote add origin remote repository URL
 # Sets the new remote
 
@@ -79,9 +79,9 @@ $ git remote -v
 # Verifies the new remote URL
 ```
 
-[Push the changes](https://help.github.com/en/articles/pushing-commits-to-a-remote-repository)in your local repository to GitHub:
+[Push the changes](https://help.github.com/en/articles/pushing-commits-to-a-remote-repository) in your local repository to GitHub:
 
-```
+```bash
 $ git push -u origin master
 ```
 
