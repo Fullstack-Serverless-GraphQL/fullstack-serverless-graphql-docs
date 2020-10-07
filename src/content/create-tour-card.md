@@ -11,7 +11,7 @@ framework: vue
 
 In this post we will make a tour card that will allow us to display all our listings.
 
-Create a cards directory and create TourCard.vue file:
+Create a `cards` directory and create `TourCard.vue` file:
 
 ```javascript
 <template>
@@ -50,9 +50,25 @@ export default {
 
 ```
 
-🔇 Here we have a div that is styled accordingly to look like a card, which will accept props.
+🔇 Here we have a `div` that is styled accordingly to look like a card, which will accept props.
 
 🔇 It also uses Ant Design's `<Rate/>` component so we can display the rating of the listing.
+
+Next off we need to add Ant Design because we will use it's tabs component to create the checkout screen.
+
+```
+$ yarn add ant-design-vue
+```
+
+Then next head over to the `main.js` file to register it globally:
+
+```
+import { Tabs} from "ant-design-vue";
+import "ant-design-vue/dist/antd.css";
+
+Vue.use(Tabs);
+
+```
 
 Once you're done, it will look like this:
 

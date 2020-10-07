@@ -47,22 +47,6 @@ mutation MAKE_A_BOOKING(
 
 ```
 
-Next off we need to add Ant Design because we will use it's tabs component to create the checkout screen.
-
-```
-$ yarn add ant-design-vue
-```
-
-Then next head over to the `main.js` file to register it globally:
-
-```
-import { Tabs} from "ant-design-vue";
-import "ant-design-vue/dist/antd.css";
-
-Vue.use(Tabs);
-
-```
-
 Lastly, lets add a route for the Booking page in the `router.js` file:
 
 ```
