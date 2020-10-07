@@ -11,9 +11,9 @@ framework: vue
 
 In this post we will create a Navigation bar and a Header component for our landing page.
 
-Go head and create a navs folder and create a Nav.vue file with the following:
+Go head and create a `navs` folder and create a `Nav.vue` file with the following:
 
-```
+```javascript
 <template>
   <nav
     class="nav border-top flex items-center justify-between flex-wrap bg-transparent p-6 z-100"
@@ -40,9 +40,9 @@ export default {
 
 🌞 We have an HTML Nav bar that is is responsive and allows the user to redirect to the Home page of the site.
 
-Next up create a headers folder and create a file called LandingHeader.vue with the following contents:
+Next up create a `headers` folder and create a file called `LandingHeader.vue` with the following contents:
 
-```
+```javascript
 <template>
   <div class="image text-center bg-transparent " :style="urlProps">
     <h1 class="text-white font-display text-5xl pt-44 s:text-4xl">
@@ -79,7 +79,7 @@ export default {
 
 ```
 
-🌞In this div have a v-if statement that accepts text to be displayed
+🌞In this `div` we have a `v-if` statement that accepts text to be displayed if we need it.
 
 🌞 There is also a computed style prop that accepts an image url that will display a picture in the background based on the image URL.
 
