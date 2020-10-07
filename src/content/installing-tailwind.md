@@ -9,17 +9,17 @@ postnumber: 22
 framework: vue
 ---
 
-We will be using Tailwind for our styling in the App. we just have to run through some installation steps to make sure it is up an running.
+We will be using [Tailwind](https://tailwindcss.com) for our styling in the App. we just have to run through some installation steps to make sure it is up an running. Tailwind is a utility first framework to help you get your designs highly customised, it can be used in conjuction with UI libraries such as Chakra, Bulma etc if you wish.
 
 Lets go ahead and install the following:
 
-```
+```bash
 $ yarn add tailwindcss
 ```
 
-Then create a tailwind.config.js file in the root of your project and paste the following config in your file. This config will match the design system for the project that we are building fron. You can view it on Figma here.
+Then create a `tailwind.config.js` file in the root of your project and paste the following config in your file. This config will match the design system for the project that we are building from. You can view it on [Figma](https://www.figma.com/file/wfTuuiWP4TwRRsdcefLp4x/Lunar-Tour-App-v2?node-id=0%3A1) here.
 
-Next lets go ahead and make a postcss.config.js file in the root of the app:
+Next lets go ahead and make a `postcss.config.js` file in the root of the app:
 
 ```javascript
 module.exports = {
