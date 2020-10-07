@@ -59,11 +59,11 @@ const LandingHeader = ({ imgURL, text = "" }) => {
 export default LandingHeader
 ```
 
-🌞 This is a `div` with a custom style to allow the image to sit in the background of the component. Tailwind CSS has directive and plugins for this sort of thing, however I left this out and went the vanilla route. Do not be scared to code!
+🌞 This is a `div` with a custom style to allow the image to sit in the background of the component. Tailwind CSS has directives and plugins for this sort of thing, however I left this out and went the vanilla route. Do not be scared to code!
 
 🌞 Then we have Vanilla CSS styles for this component as you are unable to replicate this in TailwindCSS.
 
-🌞 Lastly, we have two props for the image URL and whatever text you want to put in the H1.
+🌞 Lastly, we have two props for the image URL and whatever text you want to put in the `H1`.
 
 Once you're done it should look like this:
 
