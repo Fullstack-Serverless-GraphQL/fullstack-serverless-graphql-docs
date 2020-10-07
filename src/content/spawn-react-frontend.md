@@ -11,13 +11,13 @@ chapter: Setting up React Frontend
 
 Usually to setup a React app you would use Create React App, unlike Vue it does not come with a CLI where you can configure lots of goodies with it. There are lots of boilerplates out in the wild that suit how their creators work and get things done.
 
-For this course, we will use the React Bleeding Edge Kit (TM) however you are most welcome to set up the project however you like and try and plugin different parts of the course where possible.
+For this course, we will use the [React Bleeding Edge Kit (TM)](https://github.com/AmoDinho/react-bleeding-edge-kit) however you are most welcome to set up the project however you like and try and plugin different parts of the course where possible.
 
 However, the React Bleeding Edge Kit comes with the following:
 
-\* Apollo Client setup
+\* [Apollo Client](https://www.apollographql.com/apollo-client) setup
 
-\* Reach Router and routing setup
+\* [Reach Router](https://reach.tech/router/) and routing setup
 
 \* Tailwind configured
 
@@ -33,25 +33,25 @@ After that we can now create the repo based on the template.
 
 Then we can now clone the repo to our local machine.
 
-```
+```bash
 $ git clone url-of-repo
 ```
 
 Then cd into the repo :
 
-```
+```bash
 $ cd lunar-tour-client
 ```
 
 Install the node modules:
 
-```
+```bash
 $ yarn install
 ```
 
 Then we can start the app and go to local host to view the app
 
-```
+```bash
 $ yarn start
 ```
 
