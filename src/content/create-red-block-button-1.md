@@ -67,7 +67,7 @@ BlueBlockButton.propTypes = propTypes
 export default BlueBlockButton
 ```
 
-🧁 Generally buttons have a spinner inside them to allow you to accept a signal that after you click on it that it is loading after making a call to an API or something. That is why we use StyledComponents and a basic CSS animation to get the icon to spin
+🧁 Generally buttons have a spinner inside them to allow you to accept a signal that after you click on it that it is loading after making a call to an API or something. That is why we use StyledComponents and a basic CSS animation to get the icon to spin.
 
 🧁 Then we have a couple of Props and events passed into the button.
 
