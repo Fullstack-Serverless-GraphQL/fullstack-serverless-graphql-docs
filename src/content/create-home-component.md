@@ -9,7 +9,7 @@ postnumber: 31
 framework: vue
 ---
 
-In this part we will create the following landing page based on this mockup \[add link to mockup]
+In this part we will create the following landing page.
 
 First create a `Home.vue` component in the `Views` directory. Then go into the `router.js` and add the following route.
 
@@ -107,7 +107,7 @@ export default {
 
 Next we need to create the query schema document. create a folder called `graphql` and create a filed called `getAllListings.gql` and paste the following:
 
-```
+```javascript
 query GetAllListings {
   getAllListings {
     listingId
