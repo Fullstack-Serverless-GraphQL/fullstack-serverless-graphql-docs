@@ -54,20 +54,20 @@ export default {
 
 🔇 It also uses Ant Design's `<Rate/>` component so we can display the rating of the listing.
 
-Next off we need to add Ant Design because we will use it's tabs component to create the checkout screen.
+Next off we need to add Ant Design because we will use it's tabs and rating components.
 
-```
+```bash
 $ yarn add ant-design-vue
 ```
 
 Then next head over to the `main.js` file to register it globally:
 
-```
-import { Tabs} from "ant-design-vue";
-import "ant-design-vue/dist/antd.css";
+```javascript
+import { Tabs, Rate } from "ant-design-vue"
+import "ant-design-vue/dist/antd.css"
 
-Vue.use(Tabs);
-
+Vue.use(Tabs)
+Vue.use(Rate)
 ```
 
 Once you're done, it will look like this:
