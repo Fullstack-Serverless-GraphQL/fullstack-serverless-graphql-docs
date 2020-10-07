@@ -9,9 +9,9 @@ postnumber: 25
 framework: vue
 ---
 
-In this chapter we will build out our components that we will be using through out the application. First lets go ahead and create a Primary button.
+In this chapter we will build out our button components that we will be using through out the application. First lets go ahead and create a Primary button.
 
-In the components folder create a folder called buttons. Then create a RedBlockButton.vue component and add the following:
+In the components folder create a folder called `buttons`. Then create a `RedBlockButton.vue` component and add the following:
 
 ```javascript
 <template>
@@ -68,7 +68,7 @@ export default {
 
 🧁In the template part we have a button with a handle click event.
 
-🧁 with a v-if statement that is triggered if the isLoading prop is set to true. It will show the loading the loading spinner.
+🧁 Then if the `v-if` statement is triggered the isLoading prop is set to true. It will show the loading spinner.
 
 🧁 We have a method that emits a click event.
 
