@@ -11,7 +11,7 @@ chapter: Get All Listings
 
 In this chapter we will create the landing page that will get all the listings.
 
-Open up the index.js file under the pages directory and add the following:
+Open up the `index.js` file under the `pages` directory and add the following:
 
 ```javascript
 import React from "react"
@@ -58,11 +58,11 @@ export default Index
 
 🥑 First off we are using the `useQuery` hook from the Apollo library to get all the listings.
 
-🥑 Then we have two if statements that will return some HTML for us if loading or error is true. This is nice because we do not have to do any fancy stuff to determine if the API is fetching data for us or the QUERY failed.
+🥑 Then we have two if statements that will return some HTML for us if `loading` or `error` is true. This is nice because we do not have to do any fancy stuff to determine if the API is fetching data for us or if the QUERY failed.
 
-🥑 In our return block, we have the <LandingHeader/> component with an `imgURL` and text props. While we loop of over the listings and pass through the data of each listing as props to our `<ListingCard/>` component.
+🥑 In our return block, we have the `<LandingHeader/>`component with an `imgURL` and text props. While we loop of over the listings and pass through the data of each listing as props to our `<ListingCard/>` component.
 
-Next up we need to create the schema document for the `GET_ALL_LISTINGS` query, so head over to the Queries.js file under the graphql directory and add the following:
+Next up we need to create the schema document for the `GET_ALL_LISTINGS` query, so head over to the `Queries.js` file under the `graphql` directory and add the following:
 
 ```javascript
 export const GET_ALL_LISTINGS = gql`
@@ -79,7 +79,7 @@ export const GET_ALL_LISTINGS = gql`
 `
 ```
 
-🥑 We are calling the getAllListings query that will give is the above fields to pass into the listing card. Note we are only telling the API to gives exactly the fields we want.
+🥑 We are calling the `getAllListings` query that will give is the above fields to pass into the listing card. Note we are only telling the API to gives exactly the fields we want.
 
 If all goes well, you should have this:
 
