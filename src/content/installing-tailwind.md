@@ -30,7 +30,7 @@ module.exports = {
 }
 ```
 
-Next up we need to configure our CSS file. In the assets folder create a folder called css and create tailwind.css file and copy the following:
+Next up we need to configure our CSS file. In the `assets` folder create a folder called `css` and create a `tailwind.css` file and copy the following:
 
 ```css
 @tailwind base;
@@ -41,17 +41,17 @@ Next up we need to configure our CSS file. In the assets folder create a folder 
 @import url("https://fonts.googleapis.com/css?family=Saira&display=swap");
 ```
 
-Lastly import the css file in the main.js file:
+Lastly import the css file in the `main.js` file:
 
 ```javascript
 import "./assets/css/tailwind.css"
 ```
 
-Create tailwind.config.js file and[ copy the contents of this link](https://raw.githubusercontent.com/AmoDinho/lunar-tour-v2/master/lunar-tour-client/tailwind.config.js) into the file.
+Create `tailwind.config.js` file and [copy the contents of this link](https://raw.githubusercontent.com/AmoDinho/lunar-tour-v2/master/lunar-tour-client/tailwind.config.js) into the file.
 
 Now lets test that it is working by adding styles into a component:
 
-```
+```javascript
 <template>
   <div id="app" class="bg-red">
     <div id="nav">
