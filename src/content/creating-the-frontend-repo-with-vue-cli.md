@@ -9,7 +9,7 @@ postnumber: 21
 framework: vue
 ---
 
-In this section we will start building out the frontend of the Lunar Tour app. First we will need to create the repo on Github.
+In this section we will start building out the frontend of the Lunar Tour app with VueJS. First we will need to create the repo on [Github](https://github.com).
 
 First go to Github and create new repo:
 
