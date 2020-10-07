@@ -9,9 +9,9 @@ framework: react
 chapter: Building reusable components
 ---
 
-In this chapter we will build out our components that we will be using through out the application. First lets go ahead and create a Secondary button.
+In this chapter we will build out our Secondary button.
 
-In the components folder create a folder called buttons. Then create a RedOutlineButton.js component and add the following:
+In the `buttons` folder, create a `RedOutlineButton.js` component and add the following:
 
 ```javascript
 import React from "react"
