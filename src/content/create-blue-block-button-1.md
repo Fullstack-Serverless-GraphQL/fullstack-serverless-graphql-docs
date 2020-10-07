@@ -9,15 +9,15 @@ framework: react
 chapter: Building reusable components
 ---
 
-In this chapter we will build out our components that we will be using through out the application. First lets go ahead and create a Secondary button Blue.
+In this chapter we will build out a Secondary button Blue.
 
-In the components folder create a folder called buttons. Then create a BlueBlockButton.js component and add the following:
+In the `buttons` folder, create a `BlueBlockButton.js` component and add the following:
 
-```
-import React from "react";
-import PropTypes from "prop-types";
-import styled, { keyframes } from "styled-components";
-import loading from "../../assets/loop.svg";
+```javascript
+import React from "react"
+import PropTypes from "prop-types"
+import styled, { keyframes } from "styled-components"
+import loading from "../../assets/loop.svg"
 
 const rotate = keyframes`
   from {
@@ -26,11 +26,11 @@ const rotate = keyframes`
   to {
 	  transform: rotate(360deg);
   }
-`;
+`
 const ImageStyles = styled.img`
   display: inline-block;
   animation: ${rotate} 2s infinite linear;
-`;
+`
 
 const BlueBlockButton = ({
   className = "",
@@ -52,8 +52,8 @@ const BlueBlockButton = ({
     >
       {isLoading ? <ImageStyles src={loading} alt="loading..." /> : children}
     </button>
-  );
-};
+  )
+}
 const propTypes = {
   className: PropTypes.string,
   onClick: PropTypes.func,
@@ -62,11 +62,9 @@ const propTypes = {
   large: PropTypes.bool,
   long: PropTypes.bool,
   isLoading: PropTypes.bool,
-};
-BlueBlockButton.propTypes = propTypes;
-export default BlueBlockButton;
-
-
+}
+BlueBlockButton.propTypes = propTypes
+export default BlueBlockButton
 ```
 
 Yet again we are doingg something simalr, only difference is that it is a different colour button.
