@@ -13,7 +13,7 @@ In this post we will create a couple of typography components that we will use t
 
 First create a folder in the components directory called `typography`. Then create a file called `HeadingOne.vue`and add the following:
 
-```
+```javascript
 <template>
   <p class="text-4xl text-black text-bold font-display">
     <slot> </slot>
@@ -33,11 +33,11 @@ export default {
 
 🛩️ We are creating a paragraph component with a slot inside it that will allow us to add additional content inside it.
 
-🛩️ Then we given it some styles.
+🛩️ Then we've given it some styles.
 
 Next up we are going to create similar files but we are just changing the font size. So in the same directory create a `HeadingTwo.vue` file with the following:
 
-```
+```javascript
 <template>
   <p class="text-2xl text-black text-bold font-display">
     <slot> </slot>
@@ -56,7 +56,7 @@ export default {
 
 Then create a `HeadingThree.vue` file with the following:
 
-```
+```javascript
 <template>
   <p class="text-xl text-black text-bold font-display">
     <slot> </slot>
@@ -76,7 +76,7 @@ export default {
 
 Next up create a `BodyOne.vue` file and add the following:
 
-```
+```javascript
 <template>
   <p class="text-sm font-display text-bold text-black">
     <slot> </slot>
@@ -92,27 +92,25 @@ export default {
 
 Now we need to create an `index.js` file that we can import all these from:
 
-```
-import Vue from "vue";
-import HeadingOne from "./HeadingOne";
-import HeadingTwo from "./HeadingTwo";
-import HeadingThree from "./HeadingThree";
-import BodyOne from "./BodyOne";
+```javascript
+import Vue from "vue"
+import HeadingOne from "./HeadingOne"
+import HeadingTwo from "./HeadingTwo"
+import HeadingThree from "./HeadingThree"
+import BodyOne from "./BodyOne"
 
 const Typography = {
   HeadingOne,
   HeadingTwo,
   HeadingThree,
   BodyOne,
-};
+}
 
-Object.keys(Typography).forEach((name) => {
-  Vue.component(name, Typography[name]);
-});
+Object.keys(Typography).forEach(name => {
+  Vue.component(name, Typography[name])
+})
 
-export default Typography;
-
-
+export default Typography
 ```
 
 So all we've done here is imported all those typography files, put them into an object and looped over each to instantate them as Vue components.
