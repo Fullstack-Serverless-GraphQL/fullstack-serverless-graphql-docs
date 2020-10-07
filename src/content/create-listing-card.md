@@ -57,6 +57,12 @@ export default ListingCard
 
 🎡 It takes props called `listingTitle`, `listingLocation`, `price`, `rating` and `coverPhoto`.
 
+Next off we need to add Ant Design because we will use it's tabs and rating components.
+
+```bash
+$ yarn add antd
+```
+
 Once you're done, it will look like this:
 
 ![tour-card](/uploads/tourcard.png)
