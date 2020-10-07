@@ -41,7 +41,7 @@ const SideChapterBox = ({
 
   //frontend posts
   const allCLIPosts = constants.filterByChapter(edges, "Vue cli")
-  const allTailwindPosts = constants.filterByChapter(edges, "Tailwind")
+  const allTailwindPosts = constants.filterByFramework(edges, "Tailwind", "vue")
   const allResuablePosts = constants.filterByFramework(
     edges,
     "Building reusable components",
