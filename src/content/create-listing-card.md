@@ -9,17 +9,16 @@ framework: react
 chapter: Building reusable components
 ---
 
-
-In this post we will make a tour card that will allow us to display all our listings. 
+In this post we will make a tour card that will allow us to display all our listings.
 
 Create a `cards` directory and create `ListingCard.js` file:
 
 ```javascript
-import React from "react";
-import { Rate } from "antd";
-import BodyOne from "../typography/BodyOne";
-import PropTypes from "prop-types";
-import "antd/dist/antd.css";
+import React from "react"
+import { Rate } from "antd"
+import BodyOne from "../typography/BodyOne"
+import PropTypes from "prop-types"
+import "antd/dist/antd.css"
 
 const ListingCard = ({
   listingTitle,
@@ -42,7 +41,7 @@ const ListingCard = ({
       </div>
     </div>
   </>
-);
+)
 
 ListingCard.propTypes = {
   listingTitle: PropTypes.string,
@@ -50,13 +49,13 @@ ListingCard.propTypes = {
   price: PropTypes.string,
   rating: PropTypes.number,
   coverPhoto: PropTypes.string,
-};
-export default ListingCard;
+}
+export default ListingCard
 ```
 
-🎡  We have a `div` that we have given a `border-radius` and `box-shadow` that has width and height set to auto.
+🎡 We have a `div` that we have given a `border-radius` and `box-shadow` that has width and height set to auto.
 
-🎡 it takes props called `listingTitle`, `listingLocation`, `price`, `rating` and `coverPhoto`
+🎡 It takes props called `listingTitle`, `listingLocation`, `price`, `rating` and `coverPhoto`.
 
 Once you're done, it will look like this:
 
