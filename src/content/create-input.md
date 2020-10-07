@@ -9,11 +9,11 @@ postnumber: 22
 framework: vue
 ---
 
-In this post we will create an Input component to handle all our inputs.
+In this post we will create an Input component to handle all our input related needs.
 
-Create an input directory and create an input.vue file with the following:
+Create an `input` directory and create an `input.vue` file with the following:
 
-```
+```javascript
 <template>
   <input
     class="
@@ -51,7 +51,8 @@ export default {
 
 ```
 
-🥤This input component accepts text and has a handleInput method
+🥤This input component accepts text and has a `handleInput` method.
+🥤 `this.$emit` helps us store the value of the component if we are calling it from a component higher up the tree.
 
 Once you're done it should look like this:
 
