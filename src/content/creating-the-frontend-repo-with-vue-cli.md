@@ -15,7 +15,7 @@ First go to Github and create new repo:
 
 ![](/uploads/github_step.png)
 
-Now that we have it created. We need to install the Vue CLI. It will allow us to scaffold the project. In your terminal run the following:
+Now that we have it created. We need to install the [Vue CLI](https://cli.vuejs.org/). It will allow us to scaffold the project. In your terminal run the following:
 
 ```
 $ yarn global add @vue/cli
