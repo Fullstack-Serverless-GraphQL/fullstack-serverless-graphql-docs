@@ -9,8 +9,6 @@ framework: react
 chapter: Building reusable components
 ---
 
-![remove button](/uploads/remove.png)
-
 In this chapter we will build out our components that we will be using through out the application. First lets go ahead and create a Remove button.
 
 In the components folder create a folder called `buttons`. Then create a `RemoveButton.js` component and add the following:
