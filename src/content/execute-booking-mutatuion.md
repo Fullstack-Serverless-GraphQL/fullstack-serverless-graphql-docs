@@ -247,4 +247,11 @@ export default ConfirmationTab
 
 🍷 All we have done here is refence the booking data in the right parts to show the user.
 
+For this to work in the root directory create an `.env` file add the following:
+
+```bash
+REACT_APP_API_ENDPOINT=your_api_endpoint
+REACT_APP_STRIPE_KEY=pk_test_stripe_key
+```
+
 Now we should be able to make bookings for listings! ☎️
