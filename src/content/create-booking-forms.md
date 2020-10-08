@@ -66,7 +66,11 @@ export default {
 
 ```
 
-Here we are simply adding the date of the trip, number of people joining and the email address of the customer.
+🪀 Here we are simply adding the date of the trip, number of people joining and the email address of the customer.
+
+🪀 We also have props passed into the component for users personal information.
+
+🪀 A watcher allows us run functions based on changes to certain data. With our watcher we are emiting an event so that the root component can store it for us.
 
 Next lets add the form to add many customers, create `Customers.vue` file with the following:
 
@@ -182,7 +186,9 @@ export default {
 
 ```
 
-Here we are making an array to allow the user to add multplie customers.
+🪀 Here we are making an array to allow the user to add multplie customers with our `addCustomer()` method. We also have a `removeCustomer()` method in case the user wants to remove that user from the array.
+
+🪀 The `name()` watcher emits the customer data to the root component.
 
 Next we will add the third form in third tab to execute the mutation, create a file called `CheckoutTab.vue`:
 
