@@ -254,6 +254,6 @@ export default Customers
 
 🌈 The inputs function renders customers over some `JSX` to produce a form that will allow the user to add data. There are `onChange` events that will allow the `customer` object to get updated.
 
-🌈 The remove button removes the selected `customer` form the Array
+🌈 The remove button removes the selected `customer` form the Array.
 
 🌈 Our final return block displays the inputs function and renders buttons that allow the user to move between forms.
