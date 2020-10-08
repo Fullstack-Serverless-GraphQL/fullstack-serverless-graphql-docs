@@ -13,9 +13,7 @@ export default function Template({ data, pageContext }) {
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
   const { previous, next } = pageContext
-  constants.track("App.Post.View", {
-    postName: frontmatter.title,
-  })
+  constants.track(`App.Post.View:${frontmatter.title}`)
   return (
     <Layout>
       <SEO
