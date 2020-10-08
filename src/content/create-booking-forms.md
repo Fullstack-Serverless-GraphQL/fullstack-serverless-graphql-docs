@@ -190,6 +190,8 @@ export default {
 
 🪀 The `name()` watcher emits the customer data to the root component.
 
+🪀 We have a `div` that loops over the `customers` array and assigns each property in the array to a `v-model` instance on the relevant component.
+
 Next we will add the third form in third tab to execute the mutation, create a file called `CheckoutTab.vue`:
 
 ```javascript
@@ -206,7 +208,7 @@ Next we will add the third form in third tab to execute the mutation, create a f
       class="stripe-card mt-20 w-full"
       id="card"
       :class="{ complete }"
-      stripe="pk_test_IQEA1vOcYdHCZWvmHTZkeTt3"
+      stripe="{{stripe}}"
       :options="stripeOptions"
     />
     <BodyOne v-if="errors"> {{ showErrorMessage }}</BodyOne>
@@ -240,6 +242,11 @@ export default {
     BodyOne,
     Card,
   },
+  data() {
+    return {
+      stripe: process.env.VUE_APP_STRIPE,
+    };
+  },
   props: {
     errors: Boolean,
     loading: Boolean,
@@ -270,11 +277,13 @@ export default {
 
 ```
 
-Here we are simply using the Stripe vue library to allow the user to enter their card. We are also conditionally rendering stuff which will come into play when we render the mutation.
+🪀 Here we are simply using the Stripe vue library to allow the user to enter their card. We are also conditionally rendering content if there is an error or the mutation is in a loading state.
+
+🪀
 
 Make sure you add the package:
 
-```
+```bash
 $ yarn add vue-stripe-elements-plus
 ```
 
