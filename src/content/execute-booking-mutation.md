@@ -11,9 +11,9 @@ framework: vue
 
 In this part we will finilize the mutation.
 
-So we will use the Apollo Mutation component to execute the mutation. Make sure your file looks like this:
+So we will use the Apollo Mutation component to execute the mutation. Go back into your `BookingIndex.vue` and make sure it looks like this:
 
-```
+```vue
 <template>
   <div>
     <!-- mutation --->
@@ -178,8 +178,8 @@ So we will use the Apollo Mutation component to execute the mutation. Make sure 
               <div class="flex flex-row mt-20">
                 <RedBlockButton
                   @click="
-                    pay();
-                    mutate();
+                    pay()
+                    mutate()
                   "
                   text="Pay"
                   class="mr-5"
@@ -223,15 +223,15 @@ So we will use the Apollo Mutation component to execute the mutation. Make sure 
 </template>
 
 <script>
-import HeadingOne from "../../components/typography/HeadingOne";
-import BodyOne from "../../components/typography/BodyOne";
-import DateInput from "../../components/inputs/DateInput";
-import Input from "../../components/inputs/Input";
-import RedBlockButton from "../../components/buttons/RedBlockButton";
-import RedOutlineButton from "../../components/buttons/RedOutlineButton";
-import RemoveButton from "../../components/buttons/RemoveButton";
-import BlueBlockButton from "../../components/buttons/BlueBlockButton";
-import { Card, createToken } from "vue-stripe-elements-plus";
+import HeadingOne from "../../components/typography/HeadingOne"
+import BodyOne from "../../components/typography/BodyOne"
+import DateInput from "../../components/inputs/DateInput"
+import Input from "../../components/inputs/Input"
+import RedBlockButton from "../../components/buttons/RedBlockButton"
+import RedOutlineButton from "../../components/buttons/RedOutlineButton"
+import RemoveButton from "../../components/buttons/RemoveButton"
+import BlueBlockButton from "../../components/buttons/BlueBlockButton"
+import { Card, createToken } from "vue-stripe-elements-plus"
 
 export default {
   name: "Index",
@@ -253,21 +253,21 @@ export default {
       number: "",
       date: "",
       customers: [],
-    };
+    }
   },
   methods: {
     onDone() {
-      this.activeKey = "4";
+      this.activeKey = "4"
     },
     next(k) {
-      this.activeKey = k.toString();
+      this.activeKey = k.toString()
     },
     addCustomer() {
       // const o = [...this.customers];
       this.customers.push({
         name: null,
         Surname: null,
-      });
+      })
 
       // this.customers.push({ o });
       // console.log(this.customers);
@@ -275,19 +275,19 @@ export default {
     },
 
     removeCustomer(i) {
-      this.customers.splice(i, 1);
+      this.customers.splice(i, 1)
     },
     submitForm() {
-      console.log(this.date);
+      console.log(this.date)
       alert(
         `${this.customers[0].customerName}, ${this.email}, ${this.number}, ${this.date}`
-      );
+      )
     },
     pay() {
-      createToken().then((data) => console.log(data.token));
+      createToken().then(data => console.log(data.token))
     },
   },
-};
+}
 </script>
 <style>
 .ant-tabs-bar.ant-tabs-top-bar {
@@ -305,15 +305,14 @@ export default {
   border-color: green;
 }
 </style>
-
 ```
 
-♻️ We pase in the schema document and the variables necessasry for the mutation. As well as execute an OnDone function which will allow the user to go to the next tab post mutation.
+♻️ We pass in the schema document and the variables necessasry for the mutation. As well as execute an `OnDone` function which will allow the user to go to the next tab post mutation.
 
-♻️ We have a slot that as the variables that are similar to the query ones
+♻️ We have a slot that as the variables that are similar to the query ones.
 
-♻️ In the third tab we have error states and loading states
+♻️ In the third tab we have error states and loading states.
 
-♻️ In the red button the pay and mutate functions will hit stripe and execute the mutation
+♻️ In the red button the pay and mutate functions will hit stripe and execute the mutation.
 
-Thats it! You have a working GraphQL FULLSTACK APP
+Thats it! You have a working GraphQL FULLSTACK APP. You should be able to make bookings for different listings now.
