@@ -279,9 +279,14 @@ export default {
 
 🪀 Here we are simply using the Stripe vue library to allow the user to enter their card. We are also conditionally rendering content if there is an error or the mutation is in a loading state.
 
-🪀
+Create a `.env` file in the root of the project and add your Stripe key:
 
-Make sure you add the package:
+```bash
+VUE_APP_STRIPE=pk_test_your_strip_key
+
+```
+
+Make sure you add to also add the Stripe package:
 
 ```bash
 $ yarn add vue-stripe-elements-plus
