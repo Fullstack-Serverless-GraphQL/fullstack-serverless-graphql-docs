@@ -246,3 +246,5 @@ export default ConfirmationTab
 ```
 
 🍷 All we have done here is refence the booking data in the right parts to show the user.
+
+Now we should be able to make bookings for listings! ☎️
