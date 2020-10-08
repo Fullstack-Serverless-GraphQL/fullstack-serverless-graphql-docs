@@ -34,7 +34,7 @@ cache.writeData({
 
 🍗 Next we use the `writeData` function to create our initial `formData` object that has a date, email and customer fields to store that data.
 
-🍗 . Very important is the `__typename` field the lets GraphQL know that the `formData` object is the type we will be querying and mutating
+🍗 Very important is the `__typename` field the lets GraphQL know that the `formData` object is the type we will be querying and mutating
 
 Next up in `src` make a file called `resolvers.js` and add the following:
 
@@ -106,4 +106,4 @@ export const UPDATE_FORM_DATA = gql`
 
 Here we are just creating a mutation to update the form data
 
-This is it for now, next up we will start with building out the forms
+This is it for now, next up we will start with building out the forms.
