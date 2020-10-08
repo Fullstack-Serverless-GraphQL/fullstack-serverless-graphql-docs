@@ -9,7 +9,7 @@ framework: react
 chapter: Make A Booking Mutation
 ---
 
-In this two part section we will create the booking booking forms as well us hook up our local resolvers to the forms.
+In this three part section we will create the booking booking forms as well us hook up our local resolvers to the forms.
 
 First up create a `booking` folder in the pages directory, and create an `index.js` with the following:
 
