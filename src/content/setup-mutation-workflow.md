@@ -36,7 +36,7 @@ mutation MAKE_A_BOOKING(
     customerEmail
     customers {
       name
-      Surname
+      surname
       country
       passportNumber
       physioScore
