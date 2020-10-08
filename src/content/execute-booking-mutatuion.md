@@ -55,7 +55,7 @@ import { useMutation, useQuery } from "@apollo/react-hooks"
 import { MAKE_A_BOOKING } from "../../graphql/Mutations"
 ```
 
-Next we need to call the `mutate` function to make the booking and store the booking data in state so that we can us it on the Confirmation Tab:
+Next we need to call the `mutate` function to make the booking and store the booking data in state so that we can use it on the Confirmation Tab:
 
 ```javascript
 const [mutate, { data: mutationData, loading }] = useMutation(MAKE_A_BOOKING)
