@@ -338,4 +338,8 @@ export default {
 
 ```
 
+📼 Here we are gracefully telling the user that they have successfully booked a trip by rendering an illustration.
+
+📼 There is also a link for them to view their reciept from Stripe.
+
 Next up we will finally execute the mutation.
