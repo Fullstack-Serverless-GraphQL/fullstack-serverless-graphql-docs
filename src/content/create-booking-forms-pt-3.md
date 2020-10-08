@@ -120,4 +120,4 @@ const ConfirmationTab = props => {
 export default ConfirmationTab
 ```
 
-🦚 In this last form wethank the user for booking the trip.
+🦚 In this last form we thank the user for booking the trip. While allowing them to view a reciept as their ticket from Stripe.
