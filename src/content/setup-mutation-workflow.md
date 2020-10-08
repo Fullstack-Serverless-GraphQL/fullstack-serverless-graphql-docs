@@ -49,15 +49,15 @@ mutation MAKE_A_BOOKING(
 
 Lastly, lets add a route for the Booking page in the `router.js` file:
 
-```
-import Index from "./pages/booking";
+```javascript
+import Index from "./pages/booking"
 
 const routes = [
-{
+  {
     path: "/booking/:id",
-    component: Index
-  }
+    component: Index,
+  },
 ]
 ```
 
-That should be enough for now, Next up we will set up the component.
+That should be enough for now, Next up we will set up the component to handle various tabs that will facilitate being able to make a booking.
