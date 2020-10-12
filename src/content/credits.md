@@ -38,6 +38,8 @@ This project was planned using Miro and Airtable.
 
 All stock photos are from NASA's flicker, while the images for the guides come from UIFaces. Illustrations are courtesy of Icons8.
 
+All names of people in this project are purely fictional and are not intended to represent anyone in reality.
+
 Design was learnt from Refactoring Design.
 
 Many thanks to folks over at Serverless Stack, your wokr literally made me into the beast I am today, without your contributions I would not be able to on the bleeding edge and deliver value.
