@@ -32,6 +32,12 @@ Nimbus chrome extension was used for screenshots
 
 Seed is the CI/CD provider for the API.
 
+This project was planned using Miro and Airtable.
+
+All stock photos are from NASA's flicker, while the images for the guides come from UIFaces. Illustrations are courtesy of Icons8.
+
+Design was learnt from Refactoring Design.
+
 Many thanks to Shailen for counsulting on early parts of the Vue content.
 
 Many thanks to Sitholuhkle for design feedback.
@@ -39,4 +45,7 @@ Many thanks to Sitholuhkle for design feedback.
 Many thanks to Brandon Dlamini on grammar checks and motivation.
 
 Huge thanks to Pimp My Book, which was my first tech job and allowed me learn what is in this course to teach.
+
+Many thanks to Rob Oswald + Bongani Sithole for helping grow as an engineer.
+
 Many thanks to the City of Cape Town and City of Johannesburg where parts of this project were worked on at.
