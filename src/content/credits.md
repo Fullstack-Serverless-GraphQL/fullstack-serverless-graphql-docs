@@ -34,7 +34,7 @@ Seed is the CI/CD provider for the API.
 
 Github is used for storing the code.
 
-This project was planned using Miro and Airtable.
+This project was planned using Miro and Airtable, while it was designed in Figma.
 
 All stock photos are from NASA's flicker, while the images for the guides come from UIFaces. Illustrations are courtesy of Icons8.
 
