@@ -32,6 +32,8 @@ Nimbus chrome extension was used for screenshots
 
 Seed is the CI/CD provider for the API.
 
+Github is used for storing the code.
+
 This project was planned using Miro and Airtable.
 
 All stock photos are from NASA's flicker, while the images for the guides come from UIFaces. Illustrations are courtesy of Icons8.
@@ -49,3 +51,7 @@ Huge thanks to Pimp My Book, which was my first tech job and allowed me learn wh
 Many thanks to Rob Oswald + Bongani Sithole for helping grow as an engineer.
 
 Many thanks to the City of Cape Town and City of Johannesburg where parts of this project were worked on at.
+
+Lots of love to my "parents": Mom, Dad, Sindy & Janine. Would not be here today without their scarifieces and love.
+
+Big shout out to God, the father of Jesus.
