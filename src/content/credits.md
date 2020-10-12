@@ -4,7 +4,7 @@ title: Credits
 tag: extras
 date: 2020-09-14T19:02:08.429Z
 part: extras
-postnumber: 55
+postnumber: 56
 chapter: Extras
 ---
 
@@ -40,6 +40,8 @@ All stock photos are from NASA's flicker, while the images for the guides come f
 
 Design was learnt from Refactoring Design.
 
+Many thanks to folks over at Serverless Stack, your wokr literally made me into the beast I am today, without your contributions I would not be able to on the bleeding edge and deliver value.
+
 Many thanks to Shailen for counsulting on early parts of the Vue content.
 
 Many thanks to Sitholuhkle for design feedback.
@@ -50,7 +52,7 @@ Huge thanks to Pimp My Book, which was my first tech job and allowed me learn wh
 
 Many thanks to Rob Oswald + Bongani Sithole for helping grow as an engineer.
 
-Many thanks to the City of Cape Town and City of Johannesburg where parts of this project were worked on at.
+Many thanks to the City of Cape Town and City of Johannesburg where parts of this project were worked on at. This project was worked on from February - November 2020.
 
 Lots of love to my "parents": Mom, Dad, Sindy & Janine. Would not be here today without their scarifieces and love.
 
