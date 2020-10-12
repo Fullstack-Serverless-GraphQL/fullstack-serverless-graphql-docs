@@ -22,4 +22,21 @@ All frontend apps are hosted exclusivly on Netlify.
 
 The Lunar Tour API is NodeJS project, on a Serverless architecture hosted on AWS.
 
+DynamoDB is a NoSQL datastore which was used for this project.
+
 Serverless Framework was used to provision infrastructure.
+
+VSCode was the IDE of choice to write all code.
+
+Nimbus chrome extension was used for screenshots
+
+Seed is the CI/CD provider for the API.
+
+Many thanks to Shailen for counsulting on early parts of the Vue content.
+
+Many thanks to Sitholuhkle for design feedback.
+
+Many thanks to Brandon Dlamini on grammar checks and motivation.
+
+Huge thanks to Pimp My Book, which was my first tech job and allowed me learn what is in this course to teach.
+Many thanks to the City of Cape Town and City of Johannesburg where parts of this project were worked on at.
