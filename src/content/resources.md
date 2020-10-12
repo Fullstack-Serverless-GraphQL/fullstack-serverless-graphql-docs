@@ -12,6 +12,12 @@ In this section I will provice a list of links to resources in the form of books
 
 # JavaScript
 
+https://github.com/goldbergyoni/javascript-testing-best-practices
+
+https://github.com/formium/tsdx
+
+https://github.com/AllThingsSmitty/must-watch-javascript
+
 # React
 
 https://github.com/enaqx/awesome-react
@@ -26,6 +32,30 @@ https://github.com/pmndrs/react-spring
 
 https://github.com/streamich/react-use
 
+https://github.com/react-hook-form/react-hook-form
+
+https://github.com/nfl/react-helmet
+
+https://github.com/tannerlinsley/react-query
+
+https://github.com/grab/front-end-guide
+
+https://github.com/testing-library/react-testing-library
+
+https://github.com/petehunt/react-howto
+
+https://github.com/vasanthk/react-bits
+
+https://github.com/krasimir/react-in-patterns
+
+https://github.com/downshift-js/downshift
+
+https://github.com/sudheerj/reactjs-interview-questions
+
+https://github.com/oldboyxx/jira_clone
+
+https://github.com/framer/motion
+
 # Vue
 
 # GraphQL
@@ -33,5 +63,7 @@ https://github.com/streamich/react-use
 # TailwindCSS
 
 # AWS
+
+https://github.com/aws-amplify/amplify-js
 
 # CI/CD
