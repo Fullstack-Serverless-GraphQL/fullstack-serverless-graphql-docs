@@ -122,6 +122,28 @@ https://github.com/DimiMikadze/create-social-network
 
 https://github.com/apollographql/apollo-link-rest
 
+https://github.com/MoonHighway/learning-graphql
+
+https://github.com/amazon-archives/aws-appsync-chat-starter-react
+
+https://github.com/dabit3/graphql-recipes
+
+https://github.com/amazon-archives/aws-serverless-appsync-loyalty
+
+https://github.com/christiannwamba/herm-workshop
+
+https://github.com/FrontendMasters/advanced-graphql
+
+https://github.com/dabit3/cdk-graphql-backend
+
+https://github.com/getsbydev/serverless-graphql-appsync-rds
+
+https://github.com/MoonHighway/snowtooth
+
+https://github.com/MoonHighway/graphql-ski-days
+
+https://github.com/MoonHighway/clam-graphql-api
+
 # TailwindCSS
 
 # AWS
