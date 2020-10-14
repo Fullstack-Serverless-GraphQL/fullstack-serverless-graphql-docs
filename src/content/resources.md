@@ -146,6 +146,30 @@ https://github.com/MoonHighway/clam-graphql-api
 
 # TailwindCSS
 
+https://github.com/mertJF/tailblocks
+
+https://github.com/tailwindlabs/headlessui
+
+https://github.com/vadimdemedes/tailwind-rn
+
+https://github.com/alfonsobries/vue-tailwind
+
+https://github.com/ChanceArthur/tailwindcss-dark-mode
+
+https://github.com/tailwindlabs/designing-with-tailwindcss
+
+https://github.com/oddstronaut/gatsby-starter-tailwind
+
+https://github.com/tailwindlabs/play.tailwindcss.com
+
+https://github.com/emortlock/tailwind-react-ui
+
+https://github.com/embermap/emberconf2020-tailwind-css-best-practices
+
+https://github.com/ky-is/vue-cli-plugin-tailwind
+
+https://github.com/simonswiss/vue-storybook-tailwind
+
 # AWS
 
 https://github.com/aws-amplify/amplify-js
