@@ -170,6 +170,12 @@ https://github.com/ky-is/vue-cli-plugin-tailwind
 
 https://github.com/simonswiss/vue-storybook-tailwind
 
+https://tailwindcomponents.com/
+
+https://www.tailwindtoolbox.com/
+
+Travesy Media Course on [TailwindCSS](https://www.youtube.com/watch?v=UBOj6rqRUME&ab_channel=TraversyMedia)
+
 # AWS
 
 https://github.com/aws-amplify/amplify-js
