@@ -196,4 +196,12 @@ https://github.com/aws-samples/aws-serverless-security-workshop
 
 https://github.com/allanchua101/serverless-ninja
 
+https://www.dynamodbguide.com/
+
+https://www.serverless.com/dynamodb
+
+https://www.youtube.com/watch?v=HaEPXoXVf2k&ab_channel=AmazonWebServices
+
+https://www.youtube.com/watch?v=qN5-v4NlKac&list=PLhr1KZpdzukdeX8mQ2qO73bg6UKQHYsHb&ab_channel=AmazonWebServices
+
 # CI/CD
