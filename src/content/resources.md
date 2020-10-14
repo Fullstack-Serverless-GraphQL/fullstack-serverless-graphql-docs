@@ -66,6 +66,28 @@ https://github.com/framer/motion
 
 # Vue
 
+https://vueschool.io/
+
+https://www.vuemastery.com/
+https://github.com/vuejs/awesome-vue
+https://github.com/gothinkster/vue-realworld-example-app
+
+https://github.com/sdras/intro-to-vue
+
+https://github.com/viljamis/vue-design-system
+
+https://github.com/sdras/page-transitions-travelapp
+
+https://github.com/sdras/sample-vue-shop
+
+https://github.com/lmiller1990/vue-testing-handbook
+
+https://github.com/testing-library/vue-testing-library
+
+https://github.com/Akryum/vue-summit-app
+
+https://github.com/NataliaTepluhina/vue-apollo-todo
+
 # GraphQL
 
 # TailwindCSS
