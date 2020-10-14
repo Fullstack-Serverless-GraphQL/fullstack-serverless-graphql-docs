@@ -18,6 +18,14 @@ https://github.com/formium/tsdx
 
 https://github.com/AllThingsSmitty/must-watch-javascript
 
+https://developer.mozilla.org/en-US/docs/Web/JavaScript
+
+https://exploringjs.com/
+
+https://javascript.info/
+
+https://flaviocopes.com/tags/js/
+
 # React
 
 https://github.com/enaqx/awesome-react
