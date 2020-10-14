@@ -88,7 +88,39 @@ https://github.com/Akryum/vue-summit-app
 
 https://github.com/NataliaTepluhina/vue-apollo-todo
 
+https://www.reddit.com/r/vuejs/
+
 # GraphQL
+
+https://www.howtographql.com/
+
+https://github.com/hasura/graphql-engine
+
+https://github.com/chentsulin/awesome-graphql
+
+https://github.com/reactioncommerce/reaction
+
+https://github.com/withspectrum/spectrum
+
+https://github.com/webiny/webiny-js
+
+https://github.com/APIs-guru/graphql-apis
+
+https://github.com/wesbos/Advanced-React
+
+https://github.com/serverless/serverless-graphql
+
+https://github.com/zino-app/graphql-flutter
+
+https://github.com/aws-samples/aws-serverless-airline-booking
+
+https://github.com/sogko/graphql-schema-language-cheat-sheet
+
+https://github.com/apollographql/fullstack-tutorial
+
+https://github.com/DimiMikadze/create-social-network
+
+https://github.com/apollographql/apollo-link-rest
 
 # TailwindCSS
 
