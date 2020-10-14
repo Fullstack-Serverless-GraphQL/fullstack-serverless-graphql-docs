@@ -180,4 +180,20 @@ Travesy Media Course on [TailwindCSS](https://www.youtube.com/watch?v=UBOj6rqRUM
 
 https://github.com/aws-amplify/amplify-js
 
+https://github.com/open-guides/og-aws
+
+https://github.com/donnemartin/awesome-aws
+
+https://github.com/serverless/examples
+
+https://github.com/AnomalyInnovations/serverless-stack-com
+
+https://github.com/aws-samples/aws-serverless-workshops
+
+https://github.com/clarkie/dynogels
+
+https://github.com/aws-samples/aws-serverless-security-workshop
+
+https://github.com/allanchua101/serverless-ninja
+
 # CI/CD
