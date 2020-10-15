@@ -26,6 +26,10 @@ In this section I will provice a list of links to resources in the form of books
 
 [Flavio Copes](https://flaviocopes.com/tags/js/)
 
+[JavaScript Weekly Newsletter](https://javascriptweekly.com/)
+
+[Node Weekly Newsletter](https://nodeweekly.com/)
+
 # React
 
 [Awesome React](https://github.com/enaqx/awesome-react)
@@ -66,6 +70,10 @@ In this section I will provice a list of links to resources in the form of books
 
 [Overreacted](https://overreacted.io/)
 
+[UI Dev Newsletter](https://ui.dev/newsletters/)
+
+[React Status Newsletter](https://react.statuscode.com/)
+
 # Vue
 
 https://vueschool.io/
@@ -96,6 +104,7 @@ https://www.reddit.com/r/vuejs/
 
 https://www.howtographql.com/
 
+[Fullstack GraphQL](https://www.newline.co/fullstack-graphql?utm_source=newline&utm_medium=email&utm_campaign=fsgql_20201013&utm_content=l5&inf_contact_key=083de48d03595ce8f4f3c0b3fe0f583509c74070ac2bf3cfa7869e3cfd4ff832)
 https://github.com/hasura/graphql-engine
 
 https://github.com/chentsulin/awesome-graphql
@@ -205,3 +214,5 @@ https://www.serverless.com/dynamodb
 https://www.youtube.com/watch?v=HaEPXoXVf2k&ab_channel=AmazonWebServices
 
 https://www.youtube.com/watch?v=qN5-v4NlKac&list=PLhr1KZpdzukdeX8mQ2qO73bg6UKQHYsHb&ab_channel=AmazonWebServices
+
+[Serverless Weekly Newsletter](https://serverless.email/)
