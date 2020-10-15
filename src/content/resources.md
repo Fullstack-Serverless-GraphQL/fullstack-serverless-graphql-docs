@@ -79,6 +79,7 @@ In this section I will provice a list of links to resources in the form of books
 # Vue
 
 [Vue School](https://vueschool.io/)
+
 [Vue Mastery](https://www.vuemastery.com/)
 
 [Awesome Vue](https://github.com/vuejs/awesome-vue)
@@ -95,13 +96,13 @@ In this section I will provice a list of links to resources in the form of books
 
 [Vue Testing Handbook](https://github.com/lmiller1990/vue-testing-handbook)
 
-https://github.com/testing-library/vue-testing-library
+[Vue Testing Library](https://github.com/testing-library/vue-testing-library)
 
-https://github.com/Akryum/vue-summit-app
+[Vue Summit App](https://github.com/Akryum/vue-summit-app)
 
-https://github.com/NataliaTepluhina/vue-apollo-todo
+[Vue Apollo Todo](https://github.com/NataliaTepluhina/vue-apollo-todo)
 
-https://www.reddit.com/r/vuejs/
+[VueJS Reddit](https://www.reddit.com/r/vuejs/)
 
 # GraphQL
 
