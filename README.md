@@ -18,6 +18,16 @@ After completing the course you would've made the Lunar Tour, which is an app th
 
 This project is meant to be a tool amongst many to be able to build bleeding edge applications. Everything mentioned in this course has been used on production workloads so this is something you can pick up today and implement the next day. Mastery of the content makes you employable or in a good place to launch your own startup!
 
+## Links to Demo Apps
+
+- [Lunar Tour API](https://github.com/Fullstack-Serverless-GraphQL/lunar-tour-api)
+- [Lunar Tour React](https://github.com/Fullstack-Serverless-GraphQL/lunar-tour-react)
+- [Lunar Tour Vue](https://github.com/Fullstack-Serverless-GraphQL/lunar-tour-frontend)
+
+## Where can you get help?
+
+Each post has a button where you can open a Github Issue and I will try to assist you as soon as possible.
+
 ## 🚀 Quick start for contributing
 
 1.  **Clone the repo.**
