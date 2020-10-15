@@ -92,6 +92,9 @@ const SideChapterBox = ({
     "Deploy Frontend",
     "react"
   )
+
+  const extras = constants.filterByChapter(edges, "Extras")
+
   const allChapters = [
     {
       chapterEdge: epilouges,
@@ -156,6 +159,10 @@ const SideChapterBox = ({
       chapterEdge: deployVue,
       chapterTitle: "15. Deploy Frontend",
     },
+    {
+      chapterEdge: extras,
+      chapterTitle: "16. Bonus",
+    },
   ]
 
   const reactFrontEndPosts = [
@@ -186,6 +193,10 @@ const SideChapterBox = ({
     {
       chapterEdge: deployReact,
       chapterTitle: "15. Deploy Frontend",
+    },
+    {
+      chapterEdge: extras,
+      chapterTitle: "16. Bonus",
     },
   ]
   return (
