@@ -62,6 +62,10 @@ In this section I will provice a list of links to resources in the form of books
 
 [Jira Clone](https://github.com/oldboyxx/jira_clone)
 
+[Kent C Dodds](https://kentcdodds.com/blog/)
+
+[Overreacted](https://overreacted.io/)
+
 # Vue
 
 https://vueschool.io/
