@@ -30,6 +30,8 @@ In this section I will provice a list of links to resources in the form of books
 
 [Node Weekly Newsletter](https://nodeweekly.com/)
 
+[JSK Daily](https://javascriptkicks.us9.list-manage.com/subscribe?u=4ba84fe3f6d629e746e48e5b7&id=7927f3011d)
+
 # React
 
 [Awesome React](https://github.com/enaqx/awesome-react)
@@ -76,21 +78,22 @@ In this section I will provice a list of links to resources in the form of books
 
 # Vue
 
-https://vueschool.io/
+[Vue School](https://vueschool.io/)
+[Vue Mastery](https://www.vuemastery.com/)
 
-https://www.vuemastery.com/
-https://github.com/vuejs/awesome-vue
-https://github.com/gothinkster/vue-realworld-example-app
+[Awesome Vue](https://github.com/vuejs/awesome-vue)
 
-https://github.com/sdras/intro-to-vue
+[Vue RealWorld Example App](https://github.com/gothinkster/vue-realworld-example-app)
 
-https://github.com/viljamis/vue-design-system
+[Intro to Vue by Sarah Drasner](https://github.com/sdras/intro-to-vue)
 
-https://github.com/sdras/page-transitions-travelapp
+[Vue Design System](https://github.com/viljamis/vue-design-system)
 
-https://github.com/sdras/sample-vue-shop
+[Travel App by Sarah Drasner](https://github.com/sdras/page-transitions-travelapp)
 
-https://github.com/lmiller1990/vue-testing-handbook
+[Sample Vue Shop by Sarah Drasner](https://github.com/sdras/sample-vue-shop)
+
+[Vue Testing Handbook](https://github.com/lmiller1990/vue-testing-handbook)
 
 https://github.com/testing-library/vue-testing-library
 
