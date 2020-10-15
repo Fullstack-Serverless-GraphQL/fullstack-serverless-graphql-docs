@@ -76,6 +76,8 @@ In this section I will provice a list of links to resources in the form of books
 
 [React Status Newsletter](https://react.statuscode.com/)
 
+[Advanced React](https://github.com/wesbos/Advanced-React)
+
 # Vue
 
 [Vue School](https://vueschool.io/)
@@ -106,48 +108,41 @@ In this section I will provice a list of links to resources in the form of books
 
 # GraphQL
 
-https://www.howtographql.com/
+[How to GraphQL](https://www.howtographql.com/)
 
 [Fullstack GraphQL](https://www.newline.co/fullstack-graphql?utm_source=newline&utm_medium=email&utm_campaign=fsgql_20201013&utm_content=l5&inf_contact_key=083de48d03595ce8f4f3c0b3fe0f583509c74070ac2bf3cfa7869e3cfd4ff832)
-https://github.com/hasura/graphql-engine
 
-https://github.com/chentsulin/awesome-graphql
+[Hasura](https://github.com/hasura/graphql-engine)
 
-https://github.com/reactioncommerce/reaction
+[Awesome GraphQL](https://github.com/chentsulin/awesome-graphql)
 
-https://github.com/withspectrum/spectrum
+[Reaction Commerce](https://github.com/reactioncommerce/reaction)
 
-https://github.com/webiny/webiny-js
+[Spectrum](https://github.com/withspectrum/spectrum)
 
-https://github.com/APIs-guru/graphql-apis
+[Webiny](https://github.com/webiny/webiny-js)
 
-https://github.com/wesbos/Advanced-React
+[List of GraphQL APIs](https://github.com/APIs-guru/graphql-apis)
 
-https://github.com/serverless/serverless-graphql
+[Serverless GraphQL](https://github.com/serverless/serverless-graphql)
 
-https://github.com/zino-app/graphql-flutter
+[GraphQL Flutter](https://github.com/zino-app/graphql-flutter)
 
-https://github.com/aws-samples/aws-serverless-airline-booking
+[Schema Cheat Sheet](https://github.com/sogko/graphql-schema-language-cheat-sheet)
 
-https://github.com/sogko/graphql-schema-language-cheat-sheet
+[Apollo Fullstack tut](https://github.com/apollographql/fullstack-tutorial)
 
-https://github.com/apollographql/fullstack-tutorial
+[Create Social Network](https://github.com/DimiMikadze/create-social-network)
 
-https://github.com/DimiMikadze/create-social-network
+[Apollo Link Rest](https://github.com/apollographql/apollo-link-rest)
 
-https://github.com/apollographql/apollo-link-rest
+[Learning GraphQL](https://github.com/MoonHighway/learning-graphql)
 
-https://github.com/MoonHighway/learning-graphql
+[GraphQL Recipes by Nader Dabit](https://github.com/dabit3/graphql-recipes)
 
-https://github.com/amazon-archives/aws-appsync-chat-starter-react
+[Herm Workshop by CodeBeast](https://github.com/christiannwamba/herm-workshop)
 
-https://github.com/dabit3/graphql-recipes
-
-https://github.com/amazon-archives/aws-serverless-appsync-loyalty
-
-https://github.com/christiannwamba/herm-workshop
-
-https://github.com/FrontendMasters/advanced-graphql
+[Advanced GraphQL by Frontend Masters](https://github.com/FrontendMasters/advanced-graphql)
 
 https://github.com/dabit3/cdk-graphql-backend
 
@@ -161,7 +156,7 @@ https://github.com/MoonHighway/clam-graphql-api
 
 # TailwindCSS
 
-https://github.com/mertJF/tailblocks
+[Tailblocks](https://github.com/mertJF/tailblocks)
 
 https://github.com/tailwindlabs/headlessui
 
@@ -193,9 +188,15 @@ Travesy Media Course on [TailwindCSS](https://www.youtube.com/watch?v=UBOj6rqRUM
 
 # AWS
 
+[AppSync Chat Starter](https://github.com/amazon-archives/aws-appsync-chat-starter-react)
+
+[AppSync Loyalty App](https://github.com/amazon-archives/aws-serverless-appsync-loyalty)
+
 https://github.com/aws-amplify/amplify-js
 
 https://github.com/open-guides/og-aws
+
+[Serverless Airline Booking App](https://github.com/aws-samples/aws-serverless-airline-booking)
 
 https://github.com/donnemartin/awesome-aws
 
