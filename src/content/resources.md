@@ -194,32 +194,32 @@ In this section I will provice a list of links to resources in the form of books
 
 [AppSync Serverless RDS App](https://github.com/getsbydev/serverless-graphql-appsync-rds)
 
-https://github.com/aws-amplify/amplify-js
+[Amplify](https://github.com/aws-amplify/amplify-js)
 
-https://github.com/open-guides/og-aws
+[Open Guide to AWS](https://github.com/open-guides/og-aws)
 
 [Serverless Airline Booking App](https://github.com/aws-samples/aws-serverless-airline-booking)
 
-https://github.com/donnemartin/awesome-aws
+[Awesome AWS](https://github.com/donnemartin/awesome-aws)
 
-https://github.com/serverless/examples
+[Serverless Examples](https://github.com/serverless/examples)
 
-https://github.com/AnomalyInnovations/serverless-stack-com
+[Serverless Stack](https://github.com/AnomalyInnovations/serverless-stack-com)
 
-https://github.com/aws-samples/aws-serverless-workshops
+[Serverless Workshops](https://github.com/aws-samples/aws-serverless-workshops)
 
-https://github.com/clarkie/dynogels
+[Dynogels - an ORM for DynamoDB](https://github.com/clarkie/dynogels)
 
-https://github.com/aws-samples/aws-serverless-security-workshop
+[AWS Serverless Security Workshop](https://github.com/aws-samples/aws-serverless-security-workshop)
 
-https://github.com/allanchua101/serverless-ninja
+[Serverless Ninja](https://github.com/allanchua101/serverless-ninja)
 
-https://www.dynamodbguide.com/
+[DynamoDB Guide](https://www.dynamodbguide.com/)
 
-https://www.serverless.com/dynamodb
+[Serverless' DynamoDB Explanation](https://www.serverless.com/dynamodb)
 
-https://www.youtube.com/watch?v=HaEPXoXVf2k&ab_channel=AmazonWebServices
+[AWS re:Invent 2018: Amazon DynamoDB Deep Dive: Advanced Design Patterns for DynamoDB (DAT401)](https://www.youtube.com/watch?v=HaEPXoXVf2k&ab_channel=AmazonWebServices)
 
-https://www.youtube.com/watch?v=qN5-v4NlKac&list=PLhr1KZpdzukdeX8mQ2qO73bg6UKQHYsHb&ab_channel=AmazonWebServices
+[This Is My Architecture](https://www.youtube.com/watch?v=qN5-v4NlKac&list=PLhr1KZpdzukdeX8mQ2qO73bg6UKQHYsHb&ab_channel=AmazonWebServices)
 
 [Serverless Weekly Newsletter](https://serverless.email/)
