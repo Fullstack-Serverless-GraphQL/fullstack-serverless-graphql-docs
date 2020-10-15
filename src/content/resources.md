@@ -53,15 +53,14 @@ In this section I will provice a list of links to resources in the form of books
 [React How To](https://github.com/petehunt/react-howto)
 
 [React Bits](https://github.com/vasanthk/react-bits)
-https://github.com/krasimir/react-in-patterns
 
-https://github.com/downshift-js/downshift
+[React In Patterns](https://github.com/krasimir/react-in-patterns)
 
-https://github.com/sudheerj/reactjs-interview-questions
+[Downshift](https://github.com/downshift-js/downshift)
 
-https://github.com/oldboyxx/jira_clone
+[ReactJS Interview Questions](https://github.com/sudheerj/reactjs-interview-questions)
 
-https://github.com/framer/motion
+[Jira Clone](https://github.com/oldboyxx/jira_clone)
 
 # Vue
 
