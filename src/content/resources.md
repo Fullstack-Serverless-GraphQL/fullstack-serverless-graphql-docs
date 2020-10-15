@@ -144,15 +144,11 @@ In this section I will provice a list of links to resources in the form of books
 
 [Advanced GraphQL by Frontend Masters](https://github.com/FrontendMasters/advanced-graphql)
 
-https://github.com/dabit3/cdk-graphql-backend
+[Snowtooth by Moon Highway](https://github.com/MoonHighway/snowtooth)
 
-https://github.com/getsbydev/serverless-graphql-appsync-rds
+[GraphQL Ski Days by Moon Highway](https://github.com/MoonHighway/graphql-ski-days)
 
-https://github.com/MoonHighway/snowtooth
-
-https://github.com/MoonHighway/graphql-ski-days
-
-https://github.com/MoonHighway/clam-graphql-api
+[Clam GraphQL API](https://github.com/MoonHighway/clam-graphql-api)
 
 # TailwindCSS
 
@@ -191,6 +187,10 @@ Travesy Media Course on [TailwindCSS](https://www.youtube.com/watch?v=UBOj6rqRUM
 [AppSync Chat Starter](https://github.com/amazon-archives/aws-appsync-chat-starter-react)
 
 [AppSync Loyalty App](https://github.com/amazon-archives/aws-serverless-appsync-loyalty)
+
+[AWS SDK GraphQL Backend](https://github.com/dabit3/cdk-graphql-backend)
+
+[AppSync Serverless RDS App](https://github.com/getsbydev/serverless-graphql-appsync-rds)
 
 https://github.com/aws-amplify/amplify-js
 
