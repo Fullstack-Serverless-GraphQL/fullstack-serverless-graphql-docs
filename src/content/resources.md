@@ -12,9 +12,9 @@ In this section I will provice a list of links to resources in the form of books
 
 # JavaScript
 
-https://github.com/goldbergyoni/javascript-testing-best-practices
+[JS Testing Best Practices](https://github.com/goldbergyoni/javascript-testing-best-practices)
 
-https://github.com/formium/tsdx
+[TSDX - A lib to help scaffold Node Projects in TypeScript](https://github.com/formium/tsdx)
 
 https://github.com/AllThingsSmitty/must-watch-javascript
 
@@ -203,5 +203,3 @@ https://www.serverless.com/dynamodb
 https://www.youtube.com/watch?v=HaEPXoXVf2k&ab_channel=AmazonWebServices
 
 https://www.youtube.com/watch?v=qN5-v4NlKac&list=PLhr1KZpdzukdeX8mQ2qO73bg6UKQHYsHb&ab_channel=AmazonWebServices
-
-# CI/CD
