@@ -28,32 +28,31 @@ In this section I will provice a list of links to resources in the form of books
 
 # React
 
-https://github.com/enaqx/awesome-react
+[Awesome React](https://github.com/enaqx/awesome-react)
 
-https://github.com/brillout/awesome-react-components
+[Awesome React Components](https://github.com/brillout/awesome-react-components)
 
-https://github.com/markerikson/react-redux-links
+[React Redux Links](https://github.com/markerikson/react-redux-links)
 
-https://github.com/verekia/js-stack-from-scratch
+[JS Stack from Scratch](https://github.com/verekia/js-stack-from-scratch)
 
-https://github.com/pmndrs/react-spring
+[React Spring](https://github.com/pmndrs/react-spring)
 
-https://github.com/streamich/react-use
+[React Use](https://github.com/streamich/react-use)
 
-https://github.com/react-hook-form/react-hook-form
+[React Hook Form](https://github.com/react-hook-form/react-hook-form)
 
-https://github.com/nfl/react-helmet
+[React Helmet](https://github.com/nfl/react-helmet)
 
-https://github.com/tannerlinsley/react-query
+[React Query](https://github.com/tannerlinsley/react-query)
 
-https://github.com/grab/front-end-guide
+[Grab's Front-end Guide](https://github.com/grab/front-end-guide)
 
-https://github.com/testing-library/react-testing-library
+[React Testing Library](https://github.com/testing-library/react-testing-library)
 
-https://github.com/petehunt/react-howto
+[React How To](https://github.com/petehunt/react-howto)
 
-https://github.com/vasanthk/react-bits
-
+[React Bits](https://github.com/vasanthk/react-bits)
 https://github.com/krasimir/react-in-patterns
 
 https://github.com/downshift-js/downshift
