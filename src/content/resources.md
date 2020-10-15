@@ -154,33 +154,35 @@ In this section I will provice a list of links to resources in the form of books
 
 [Tailblocks](https://github.com/mertJF/tailblocks)
 
-https://github.com/tailwindlabs/headlessui
+[Headless UI by Tailwind Labs](https://github.com/tailwindlabs/headlessui)
 
-https://github.com/vadimdemedes/tailwind-rn
+[Tailwind in React Native](https://github.com/vadimdemedes/tailwind-rn)
 
-https://github.com/alfonsobries/vue-tailwind
+[Vue Tailwind](https://github.com/alfonsobries/vue-tailwind)
 
-https://github.com/ChanceArthur/tailwindcss-dark-mode
+[Tailwind Dark Mode](https://github.com/ChanceArthur/tailwindcss-dark-mode)
 
-https://github.com/tailwindlabs/designing-with-tailwindcss
+[Designing with Tailwind by Tailwind Labs](https://github.com/tailwindlabs/designing-with-tailwindcss)
 
-https://github.com/oddstronaut/gatsby-starter-tailwind
+[Refactoring UI by Adam Wathan & Steve Schoger](https://refactoringui.com/)
 
-https://github.com/tailwindlabs/play.tailwindcss.com
+[Gatsby Tailwind Starter](https://github.com/oddstronaut/gatsby-starter-tailwind)
 
-https://github.com/emortlock/tailwind-react-ui
+[Tailwind Play](https://github.com/tailwindlabs/play.tailwindcss.com)
 
-https://github.com/embermap/emberconf2020-tailwind-css-best-practices
+[Tailwind React UI](https://github.com/emortlock/tailwind-react-ui)
 
-https://github.com/ky-is/vue-cli-plugin-tailwind
+[Tailwind Best Practises](https://github.com/embermap/emberconf2020-tailwind-css-best-practices)
 
-https://github.com/simonswiss/vue-storybook-tailwind
+[Vue CLI Tailwind Plugin](https://github.com/ky-is/vue-cli-plugin-tailwind)
 
-https://tailwindcomponents.com/
+[Vue Storybook Tailwind](https://github.com/simonswiss/vue-storybook-tailwind)
 
-https://www.tailwindtoolbox.com/
+[Tailwind Components](https://tailwindcomponents.com/)
 
-Travesy Media Course on [TailwindCSS](https://www.youtube.com/watch?v=UBOj6rqRUME&ab_channel=TraversyMedia)
+[Tailwind Toolbox](https://www.tailwindtoolbox.com/)
+
+[Travesy Media Course on TailwindCSS](https://www.youtube.com/watch?v=UBOj6rqRUME&ab_channel=TraversyMedia)
 
 # AWS
 
