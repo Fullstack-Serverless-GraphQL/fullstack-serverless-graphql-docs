@@ -8,6 +8,10 @@
   <b>Learn how to build Fullstack GraphQL Apps with Serverless, React and Vue</b>
 </p>
 
+<p align="center">
+<img src="https://img.shields.io/github/license/Fullstack-Serverless-GraphQL/fullstack-serverless-graphql-docs" />
+</p>
+
 ## 🚀 Quick start
 
 1.  **Clone the repo.**
