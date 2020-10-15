@@ -16,6 +16,8 @@
 
 After completing the course you would've made the Lunar Tour, which is an app that allows customers to book vactions to moon.
 
+This project is meant to be a tool amongst many to be able to build bleeding edge applications. Everything mentioned in this course has been used on production workloads so this is something you can pick up today and implement the next day. Mastery of the content makes you employable or in a good place to launch your own startup!
+
 ## 🚀 Quick start for contributing
 
 1.  **Clone the repo.**
