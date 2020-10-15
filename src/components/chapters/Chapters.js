@@ -94,6 +94,8 @@ const Chapters = ({
     "Deploy Frontend",
     "react"
   )
+
+  const extras = constants.filterByChapter(edges, "Extras")
   const allChapters = [
     {
       chapterEdge: epilouges,
@@ -158,6 +160,10 @@ const Chapters = ({
       chapterEdge: deployVue,
       chapterTitle: "15. Deploy Frontend",
     },
+    {
+      chapterEdge: extras,
+      chapterTitle: "16. Bonus",
+    },
   ]
 
   const reactFrontEndPosts = [
@@ -188,6 +194,10 @@ const Chapters = ({
     {
       chapterEdge: deployReact,
       chapterTitle: "15. Deploy Frontend",
+    },
+    {
+      chapterEdge: extras,
+      chapterTitle: "16. Bonus",
     },
   ]
   return (
