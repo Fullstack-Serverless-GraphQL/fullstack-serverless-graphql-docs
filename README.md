@@ -1,6 +1,12 @@
-# Fullstack Serverless GraphQL Docs
+<p align="center">
+  <a href="https://serverless-stack.com/">
+    <img alt="fsgql" src="https://github.com/Fullstack-Serverless-GraphQL/fullstack-serverless-graphql-docs/raw/master/src/images/logo_transparent.png" width="377" />
+  </a>
+</p>
 
-This repo is the docs site for the Fullstack Serverless GraphQL course written in Gatsby hooked up to Netlify CMS.
+<p align="center">
+  <b>Learn how to build Fullstack GraphQL Apps with Serverless, React and Vue</b>
+</p>
 
 ## 🚀 Quick start
 
