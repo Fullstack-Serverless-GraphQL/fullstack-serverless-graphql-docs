@@ -16,15 +16,15 @@ In this section I will provice a list of links to resources in the form of books
 
 [TSDX - A lib to help scaffold Node Projects in TypeScript](https://github.com/formium/tsdx)
 
-https://github.com/AllThingsSmitty/must-watch-javascript
+[A List of JS Talks](https://github.com/AllThingsSmitty/must-watch-javascript)
 
-https://developer.mozilla.org/en-US/docs/Web/JavaScript
+[MDN - JavaScript Home Page](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
-https://exploringjs.com/
+[Exploring JS: JavaScript books for programmers](https://exploringjs.com/)
 
-https://javascript.info/
+[JavaScript Info](https://javascript.info/)
 
-https://flaviocopes.com/tags/js/
+[Flavio Copes](https://flaviocopes.com/tags/js/)
 
 # React
 
