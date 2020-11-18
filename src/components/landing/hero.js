@@ -3,7 +3,7 @@ import HeadingOne from "../typography/HeadingOne"
 import BodyOne from "../typography/BodyOne"
 import RedBlockButton from "../buttons/RedBlockButton"
 import RedOutlineButton from "../buttons/RedOutlineButton"
-import HeroImage from "../../images/hero_image.svg"
+import HeroImage from "../../images/astro.svg"
 import constants from "../../constants"
 const Hero = () => (
   <>
