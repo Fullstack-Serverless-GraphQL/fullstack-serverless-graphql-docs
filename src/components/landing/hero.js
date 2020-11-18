@@ -23,10 +23,10 @@ const Hero = () => (
           a design system using Apollo. Everything you learn here will not be a
           waste of time, it is 100% reproducible for production use cases.{" "}
         </BodyOne>
-        <RedBlockButton className="">Learn now!</RedBlockButton>
+        <RedBlockButton className="mr-5">Learn now!</RedBlockButton>
 
         <RedOutlineButton
-          className="s:mt-5 lg:ml-5"
+          className="s:mt-5 lg:ml-5 "
           onClick={() => constants.track("App.RedirctToDemo")}
         >
           <a
