@@ -9,7 +9,7 @@ const Partners = () => {
         To make a bleeding edge appilcation you need amazing providers to make
         it imaginable and practical
       </HeadingThree>
-      <div className="grid grid-cols-4 gap-1">
+      <div className="grid lg:grid-cols-4 gap-1 sm:grid-cols-1">
         {constants.partners.map((p, i) => (
           <a
             target="_blank"
