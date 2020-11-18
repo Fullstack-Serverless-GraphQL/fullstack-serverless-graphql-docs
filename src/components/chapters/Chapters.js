@@ -207,7 +207,7 @@ const Chapters = ({
         {/* chAPTERS GRID */}
         <HeadingThree className="text-center">Backend</HeadingThree>
 
-        <div className="grid grid-cols-2">
+        <div className="grid lg:grid-cols-2 sm:grid-cols-1">
           {/* <ChapterBox edges={epilouges} text="Epilouge" />
           <ChapterBox edges={backendPosts} text="Setting Up infrastructure" />
           <ChapterBox edges={librariesPosts} text="Adding libraries" />
@@ -238,7 +238,7 @@ const Chapters = ({
             Vue posts
           </FrameworkButton>
         </div>
-        <div className="grid grid-cols-2">
+        <div className="grid lg:grid-cols-2 sm:grid-cols-1">
           {framework === "vue" ? (
             <>
               {" "}
