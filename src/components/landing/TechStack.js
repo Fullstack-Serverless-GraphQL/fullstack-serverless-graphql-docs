@@ -10,7 +10,7 @@ const TechStack = () => (
       <HeadingThree className="text-blue text-center mb-5">
         Front end
       </HeadingThree>
-      <div className="grid grid-cols-3 gap-5">
+      <div className="grid grid-cols-3 gap-5 ml-10">
         {constants.techStack.map(t => (
           <StackCard url={t.logo} linkURL={t.url} Title={t.technology} />
         ))}
@@ -19,7 +19,7 @@ const TechStack = () => (
       <HeadingThree className="text-blue text-center mb-5 mt-5">
         Back end
       </HeadingThree>
-      <div className="grid grid-cols-3 gap-5">
+      <div className="grid grid-cols-3 gap-5 ml-10">
         {constants.backendTechStack.map(t => (
           <StackCard url={t.logo} linkURL={t.url} Title={t.technology} />
         ))}
