@@ -9,10 +9,11 @@ const Hero = () => (
   <>
     <div className="flex lg:flex-row s:flex-col text-left">
       <div className="p-10 mr-10">
+        <img src={HeroImage} alt="hero " className="lg:hidden mb-10 " />
+
         <HeadingOne className="mb-10 ">
           Build a fullstack serverless GraphQL App!
         </HeadingOne>
-        <img src={HeroImage} alt="hero " className="lg:hidden mb-10 " />
 
         <BodyOne className="mb-10">
           The way APIs are built and the tools that are used to consume them
