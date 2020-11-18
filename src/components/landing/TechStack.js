@@ -8,7 +8,7 @@ const TechStack = () => (
     <div>
       <HeadingTwo className="text-center"> Tech stack</HeadingTwo>
       <HeadingThree className="text-blue text-center mb-5">
-        Front end
+        Frontend
       </HeadingThree>
       <div className="grid grid-cols-3 gap-5 ml-10">
         {constants.techStack.map(t => (
@@ -16,8 +16,8 @@ const TechStack = () => (
         ))}
       </div>
 
-      <HeadingThree className="text-blue text-center mb-5 mt-5">
-        Back end
+      <HeadingThree className="text-green-darker text-center mb-5 mt-5">
+        Backend
       </HeadingThree>
       <div className="grid grid-cols-3 gap-5 ml-10">
         {constants.backendTechStack.map(t => (
