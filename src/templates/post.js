@@ -20,7 +20,7 @@ export default function Template({ data, pageContext }) {
         title={frontmatter.title}
         url={`https://fullstack-serverless-graphql.netlify.app/${frontmatter.path}`}
       />
-      <div className="flex justify-center x:flex-col">
+      <div className="flex justify-center x:flex-col p-3">
         <div className="blog-post">
           <HeadingOne>{frontmatter.title}</HeadingOne>
           <HeadingThree>{frontmatter.date}</HeadingThree>
