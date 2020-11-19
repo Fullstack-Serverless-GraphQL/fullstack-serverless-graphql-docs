@@ -35,7 +35,7 @@ export default function Template({ data, pageContext }) {
 
       <div className="mt-10">
         <ul className="flex justify-between">
-          <li>
+          <li className="">
             {next && (
               <Link to={next.node.frontmatter.path}>
                 <span className="flex flex-row">
@@ -48,7 +48,7 @@ export default function Template({ data, pageContext }) {
             Open an issue
           </GithubButton>
 
-          <li className="ml-20">
+          <li className="">
             {previous && (
               <Link to={previous.node.frontmatter.path}>
                 <span className="flex flex-row">
