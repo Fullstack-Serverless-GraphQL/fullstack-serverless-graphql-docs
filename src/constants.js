@@ -69,6 +69,11 @@ const techStack = [
     url: "https://vue-apollo.netlify.com/",
   },
   {
+    logo: ApolloLogo,
+    technology: "Apollo Client",
+    url: "https://www.apollographql.com/docs/react/",
+  },
+  {
     logo: TailwindLogo,
     technology: "Tailwind CSS",
     url: "https://tailwindcss.com/",
