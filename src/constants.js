@@ -92,11 +92,6 @@ const backendTechStack = [
     url: "https://www.apollographql.com/docs/apollo-server/",
   },
   {
-    logo: Cognitologo,
-    technology: "AWS Cognito",
-    url: "https://aws.amazon.com/cognito/",
-  },
-  {
     logo: LambdaLogo,
     technology: "AWS Lambda",
     url: "https://aws.amazon.com/lambda",
@@ -111,11 +106,7 @@ const backendTechStack = [
     technology: "Stripe",
     url: "https://stripe.com/",
   },
-  {
-    logo: PostmarkLogo,
-    technology: "Postmark",
-    url: "https://postmarkapp.com/",
-  },
+
   {
     logo: SeedLogo,
     technology: "Seed",
