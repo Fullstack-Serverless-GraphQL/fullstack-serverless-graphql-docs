@@ -1,4 +1,5 @@
 import React from "react"
+import { navigate } from "@reach/router"
 import HeadingOne from "../typography/HeadingOne"
 import BodyOne from "../typography/BodyOne"
 import RedBlockButton from "../buttons/RedBlockButton"
@@ -23,7 +24,12 @@ const Hero = () => (
           a design system using Apollo. Everything you learn here will not be a
           waste of time, it is 100% reproducible for production use cases.{" "}
         </BodyOne>
-        <RedBlockButton className="mr-5">Learn now!</RedBlockButton>
+        <RedBlockButton
+          className="mr-5"
+          onClick={() => navigate(`/introduction`)}
+        >
+          Learn now!
+        </RedBlockButton>
 
         <RedOutlineButton
           className="s:mt-5 lg:ml-5 "
