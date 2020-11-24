@@ -3,7 +3,7 @@ import mixpanel from "mixpanel-browser"
 import VueLogo from "./images/vue.svg"
 import ApolloLogo from "./images/apollo.svg"
 import AntLogo from "./images/ant.svg"
-import Cognitologo from "./images/aws-cognito.svg"
+import GraphQLLogo from "./images/graphql.svg"
 import DynamoLogo from "./images/aws-dynamodb.svg"
 import LambdaLogo from "./images/aws-lambda.svg"
 import PostmarkLogo from "./images/postmark.jpeg"
@@ -106,7 +106,7 @@ const backendTechStack = [
     technology: "Stripe",
     url: "https://stripe.com/",
   },
-
+  { logo: GraphQLLogo, technology: "GraphQL", url: "https://graphql.org" },
   {
     logo: SeedLogo,
     technology: "Seed",
