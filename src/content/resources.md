@@ -150,6 +150,8 @@ In this section I will provice a list of links to resources in the form of books
 
 [Clam GraphQL API](https://github.com/MoonHighway/clam-graphql-api)
 
+[Apollo Cache Management Talk by Laura Beatris](https://github.com/LauraBeatris/apollo-cache-management-talks)
+
 # TailwindCSS
 
 [Tailblocks](https://github.com/mertJF/tailblocks)
