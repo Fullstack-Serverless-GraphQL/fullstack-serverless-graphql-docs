@@ -5,11 +5,9 @@ import StackCard from "../cards/StackCard"
 import constants from "../../constants"
 const TechStack = () => (
   <>
-    <div>
-      <HeadingTwo className="text-center"> Tech stack</HeadingTwo>
-      <HeadingThree className="text-blue text-center mb-5">
-        Frontend
-      </HeadingThree>
+    <div className="mt-12">
+      <HeadingTwo className="text-left"> Tech stack</HeadingTwo>
+      <HeadingThree className="text-blue text-left mb-5">Frontend</HeadingThree>
       <div className="grid grid-cols-3 gap-5 ml-10">
         {constants.techStack.map(t => (
           <StackCard url={t.logo} linkURL={t.url} Title={t.technology} />
