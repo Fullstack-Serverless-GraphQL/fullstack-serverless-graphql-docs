@@ -17,12 +17,11 @@ const Hero = () => (
         </HeadingOne>
 
         <BodyOne className="mb-10 text-xl font-medium">
-          The way APIs are built and the tools that are used to consume them
-          have have changed drastically over the years. This free resource is
-          your chance to learn how to build a GraphQL API in a serverless
-          environment on AWS Lambda and consume it on a Vue.JS frontend based on
-          a design system using Apollo. Everything you learn here will not be a
-          waste of time, it is 100% reproducible for production use cases.{" "}
+          This course like resource will you teach how to use GraphQL with AWS
+          Lambda and DynamoDB with JavaScript on the backend. While you can
+          choose your own adventure on the frontend side of things with Vue or
+          React. Both tracks will cover use of their respective Apollo Client
+          libraries, while using Stripe for payments.
         </BodyOne>
         <RedBlockButton className="mr-5">
           <Link to={`/introduction`}>Learn now!</Link>
