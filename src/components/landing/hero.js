@@ -26,7 +26,7 @@ const Hero = () => (
         </BodyOne>
         <RedBlockButton
           className="mr-5"
-          onClick={() => navigate(`/introduction`)}
+          // onClick={() => navigate(`/introduction`)}
         >
           Learn now!
         </RedBlockButton>
