@@ -12,11 +12,11 @@ const Hero = () => (
       <div className="p-10 mr-10">
         <img src={HeroImage} alt="hero " className="lg:hidden mb-10 " />
 
-        <HeadingOne className="mb-10 ">
-          Build a fullstack serverless GraphQL App!
+        <HeadingOne className="mb-10 text-3xl font-extrabold">
+          Build a fullstack app that books vacations to the moon
         </HeadingOne>
 
-        <BodyOne className="mb-10">
+        <BodyOne className="mb-10 text-xl font-medium">
           The way APIs are built and the tools that are used to consume them
           have have changed drastically over the years. This free resource is
           your chance to learn how to build a GraphQL API in a serverless
