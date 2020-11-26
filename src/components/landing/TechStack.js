@@ -12,8 +12,10 @@ const TechStack = () => (
         Frontend
       </HeadingThree>
       <BodyOne className="text-black  text-xl text-left mb-5 font-bold">
-        Using the Serverless Framework, we will be able to create GraphQL Lambda
-        powered by Apollo Server.
+        On the frontend, you can create the Lunar Tour in either Vue or React.
+        On the Vue side you uncover how to persist state in multiple components.
+        While in the React course, you can learn how to use Apollo's Local Cache
+        as an alternative for Rdux.
       </BodyOne>
       <div className="grid grid-cols-3 gap-5 ml-10">
         {constants.techStack.map(t => (
@@ -24,6 +26,10 @@ const TechStack = () => (
       <HeadingThree className="text-green-darker text-center mb-5 mt-5">
         Backend
       </HeadingThree>
+      <BodyOne className="text-black  text-xl text-left mb-5 font-bold">
+        Using the Serverless Framework, you will be able to create a GraphQL
+        Lambda powered by Apollo Server.
+      </BodyOne>
       <div className="grid grid-cols-3 gap-5 ml-10">
         {constants.backendTechStack.map(t => (
           <StackCard url={t.logo} linkURL={t.url} Title={t.technology} />
