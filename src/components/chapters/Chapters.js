@@ -202,10 +202,12 @@ const Chapters = ({
   ]
   return (
     <>
-      <div className="mt-10 text-center">
-        <HeadingTwo className="text-center">Chapters</HeadingTwo>
+      <div className="mt-10 text-left">
+        <HeadingTwo className="text-center font-bold">Chapters</HeadingTwo>
         {/* chAPTERS GRID */}
-        <HeadingThree className="text-center">Backend</HeadingThree>
+        <HeadingThree className="text-center text-green font-bold">
+          Backend
+        </HeadingThree>
 
         <div className="grid lg:grid-cols-2 sm:grid-cols-1">
           {/* <ChapterBox edges={epilouges} text="Epilouge" />
@@ -220,7 +222,9 @@ const Chapters = ({
             <ChapterBox edges={i.chapterEdge} text={i.chapterTitle} />
           ))}
         </div>
-        <HeadingThree className="text-center">Frontend</HeadingThree>
+        <HeadingThree className="text-center text-blue font-bold">
+          Frontend
+        </HeadingThree>
 
         <div className="flex justify-around">
           <FrameworkButton

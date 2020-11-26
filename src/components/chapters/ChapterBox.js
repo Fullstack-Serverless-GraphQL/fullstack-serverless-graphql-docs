@@ -4,7 +4,7 @@ import HeadingThree from "../typography/HeadingThree"
 import BodyOne from "../typography/BodyOne"
 import PropTypes from "prop-types"
 
-const ChapterBox = ({ text, edges, collapse }) => {
+const ChapterBox = ({ text, edges, collapse, color }) => {
   const [open, setOpen] = useState(false)
 
   const openChapters = () => {
@@ -38,7 +38,7 @@ const ChapterBox = ({ text, edges, collapse }) => {
           </>
         ) : (
           <>
-            <HeadingThree className="">{text}</HeadingThree>
+            <HeadingThree className={color}>{text}</HeadingThree>
 
             {edges.map(edge => (
               <BodyOne className="text-blue-dark m-3" key={edge.node.id}>
