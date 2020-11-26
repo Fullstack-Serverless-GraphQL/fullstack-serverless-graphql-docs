@@ -203,9 +203,9 @@ const Chapters = ({
   return (
     <>
       <div className="mt-10 text-left">
-        <HeadingTwo className="text-center font-bold">Chapters</HeadingTwo>
+        <HeadingTwo className="text-left font-bold">Chapters</HeadingTwo>
         {/* chAPTERS GRID */}
-        <HeadingThree className="text-center text-green font-bold">
+        <HeadingThree className="text-left text-green font-bold">
           Backend
         </HeadingThree>
 
@@ -222,13 +222,13 @@ const Chapters = ({
             <ChapterBox edges={i.chapterEdge} text={i.chapterTitle} />
           ))}
         </div>
-        <HeadingThree className="text-center text-blue font-bold">
+        <HeadingThree className="text-left text-blue font-bold">
           Frontend
         </HeadingThree>
 
-        <div className="flex justify-around">
+        <div className="flex justify-start mt-5">
           <FrameworkButton
-            className="bg-blue-lightest text-blue-darkest px-4 py-2 rounded"
+            className="bg-blue-lightest text-blue-darkest px-4 py-2 rounded mr-5"
             onClick={() => toggleFramework("react")}
             img={ReactIcon}
           >
