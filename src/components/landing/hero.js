@@ -9,7 +9,7 @@ import constants from "../../constants"
 const Hero = () => (
   <>
     <div className="flex lg:flex-row s:flex-col text-left">
-      <div className="p-10 mr-10">
+      <div className="">
         <img src={HeroImage} alt="hero " className="lg:hidden mb-10 " />
         <div>
           <img
@@ -18,7 +18,7 @@ const Hero = () => (
             className="s:hidden lg:block mt-20 w-1/5"
           />
         </div>
-        <HeadingOne className="mb-10 text-3xl font-extrabold ">
+        <HeadingOne className="mb-10  lg:text-3xl font-extrabold ">
           Build a fullstack app that books vacations to the moon
         </HeadingOne>
 
