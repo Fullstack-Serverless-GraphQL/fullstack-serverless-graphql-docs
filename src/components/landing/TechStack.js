@@ -23,7 +23,7 @@ const TechStack = () => (
         ))}
       </div>
 
-      <HeadingThree className="text-green-darker text-xl text-left mb-5 font-bold mt-5">
+      <HeadingThree className="text-green-darker text-xl text-left mb-5 font-bold mt-20">
         Backend
       </HeadingThree>
       <BodyOne className="text-black  text-xl text-left mb-5 font-medium">
