@@ -11,14 +11,14 @@ const Hero = () => (
   <>
     <div className="flex lg:flex-row s:flex-col text-left">
       <div className="">
-        <div>
+        {/* <div>
           <img
             src={HeroImage}
             alt="hero"
             className="s:hidden lg:block mt-20 w-1/5"
           />
-        </div>
-        <HeadingOne className="mb-10  lg:text-3xl font-extrabold ">
+        </div> */}
+        <HeadingOne className="mb-10  ext-5xl font-extrabold ">
           Build a fullstack app that books vacations to the moon
         </HeadingOne>
 
