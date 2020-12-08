@@ -11,17 +11,6 @@ const Hero = () => (
   <>
     <div className="flex lg:flex-row s:flex-col text-left">
       <div className="">
-        <div
-          style={{
-            position: `relative`,
-            background: `url(${About})`,
-            backgroundSize: `cover`,
-            backgroundRepeat: `no-repeat`,
-            backgroundPosition: `center center`,
-            backgroundAttachment: `fixed`,
-            clipPath: `polygon(0 0, 100% 0, 100% 100%, 0 calc(20% - 5vw))`,
-          }}
-        />
         <div>
           <img
             src={HeroImage}
