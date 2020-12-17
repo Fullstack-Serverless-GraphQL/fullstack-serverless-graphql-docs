@@ -36,15 +36,16 @@ const partners = [
     use: "CI/CD provider",
     url: "https://seed.run/",
   },
-  {
-    logo: airtable,
-    use: "Product management",
-    url: "https://airtable.com/",
-  },
+
   {
     logo: figma,
     use: "Prototyping",
     url: "https://www.figma.com/",
+  },
+  {
+    logo: airtable,
+    use: "Product management",
+    url: "https://airtable.com/",
   },
   {
     logo: netlify,
