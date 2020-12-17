@@ -15,7 +15,7 @@ const Partners = () => {
             target="_blank"
             rel="noopener noreferrer"
             href={p.url}
-            className="flex flex-col text-center"
+            className="flex flex-col text-center "
             key={i}
           >
             <img src={p.logo} alt="partners" />
