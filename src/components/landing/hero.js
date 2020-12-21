@@ -4,9 +4,7 @@ import HeadingOne from "../typography/HeadingOne"
 import BodyOne from "../typography/BodyOne"
 import RedBlockButton from "../buttons/RedBlockButton"
 import RedOutlineButton from "../buttons/RedOutlineButton"
-import HeroImage from "../../images/astro.svg"
 import constants from "../../constants"
-import About from "../../assets/about.jpg"
 const Hero = () => (
   <>
     <div className="flex lg:flex-row s:flex-col text-left">
