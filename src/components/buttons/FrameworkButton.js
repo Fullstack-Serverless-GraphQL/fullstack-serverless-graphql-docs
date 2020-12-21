@@ -4,7 +4,7 @@ import React from "react"
 const FrameworkButton = ({ children, className, img, onClick }) => (
   <button className={`${className} cursor-pointer `} onClick={onClick}>
     {children}
-    <img src={img} alt="framework" className="w-6 ml-5 inline-block" />
+    <img src={img} alt="framework" className="w-6 ml-5 mr-4 inline-block" />
   </button>
 )
 
@@ -16,6 +16,6 @@ FrameworkButton.propTypes = {
 }
 
 FrameworkButton.defaultProps = {
-  className: `font-display rounded-px text-right py-1 px-16`,
+  className: `font-display rounded-px text-center `,
 }
 export default FrameworkButton
