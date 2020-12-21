@@ -23,8 +23,23 @@ const Hero = () => (
         <BodyOne className="mb-10 text-xl font-medium">
           This course like resource will you teach how to use GraphQL with AWS
           Lambda and DynamoDB with JavaScript on the backend. While you can
-          choose your own adventure on the frontend side of things with Vue or
-          React. Both tracks will cover use of their respective Apollo Client
+          choose your own adventure on the frontend side of things with{" "}
+          <a
+            target="_blank"
+            rel="noopener noreferrer"
+            href="https://lunar-tour-vue.netlify.app/"
+          >
+            Vue
+          </a>{" "}
+          or
+          <a
+            href="lunar-tour-react.netlify.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            React
+          </a>
+          . Both tracks will cover use of their respective Apollo Client
           libraries, while using Stripe for payments.
         </BodyOne>
         <RedBlockButton className="mr-5">
