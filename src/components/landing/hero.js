@@ -25,14 +25,16 @@ const Hero = () => (
           Lambda and DynamoDB with JavaScript on the backend. While you can
           choose your own adventure on the frontend side of things with{" "}
           <a
+            className="underline text-green-dark"
             target="_blank"
             rel="noopener noreferrer"
             href="https://lunar-tour-vue.netlify.app/"
           >
             Vue
           </a>{" "}
-          or
+          or{" "}
           <a
+            className="underline text-blue-dark"
             href="lunar-tour-react.netlify.app/"
             target="_blank"
             rel="noopener noreferrer"
