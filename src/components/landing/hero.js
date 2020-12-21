@@ -58,7 +58,7 @@ const Hero = () => (
             rel="noopener noreferrer"
             href="https://lunar-tour.netlify.com/"
           >
-            View Demo
+            What you'll build
           </a>
         </RedOutlineButton>
       </div>
