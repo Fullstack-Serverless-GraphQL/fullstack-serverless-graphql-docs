@@ -1,6 +1,6 @@
 <p align="center">
   <a href="https://serverless-stack.com/">
-    <img alt="fsgql" src="https://github.com/Fullstack-Serverless-GraphQL/fullstack-serverless-graphql-docs/raw/master/src/images/logo_transparent.png" width="377" />
+    <img alt="fsgql" src="https://github.com/Fullstack-Serverless-GraphQL/fullstack-serverless-graphql-docs/raw/master/src/images/fsgql_logo.png" width="377" />
   </a>
 </p>
 
