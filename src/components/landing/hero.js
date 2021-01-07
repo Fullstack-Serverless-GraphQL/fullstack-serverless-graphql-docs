@@ -56,7 +56,7 @@ const Hero = () => (
             className="flex flex-row"
             target="_blank"
             rel="noopener noreferrer"
-            href="https://lunar-tour.netlify.com/"
+            href="https://lunar-tour-vue.netlify.app/"
           >
             What you'll build
           </a>
