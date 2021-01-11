@@ -6,9 +6,9 @@ import ChapterBox from "./ChapterBox"
 import FrameworkButton from "../buttons/FrameworkButton"
 import VueIcon from "../../images/vue.svg"
 import ReactIcon from "../../images/react-icon.svg"
-
 import { FrameworkContext } from "../../frameworkContext"
 import HeadingThree from "../typography/HeadingThree"
+
 const Chapters = ({
   data: {
     allMarkdownRemark: { edges },

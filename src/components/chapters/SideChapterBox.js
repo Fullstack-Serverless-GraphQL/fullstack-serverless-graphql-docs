@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React, { useState, useContext } from "react"
 import { StaticQuery, graphql } from "gatsby"
 import HeadingTwo from "../typography/HeadingTwo"
 import HeadingThree from "../typography/HeadingThree"
@@ -16,7 +16,9 @@ const SideChapterBox = ({
   },
 }) => {
   //get contenxt for the frameworks
-  const [framework, toggleFramework] = useState(FrameworkContext)
+  const { framework, toggleFramework } = useContext(FrameworkContext)
+
+  console.log("SideChapterBox", FrameworkContext.Consumer)
   //filtering of chapters
   const epilouges = constants.filterByPart(edges, "Epilouge")
   const backendPosts = constants.filterByPart(edges, "setting up backend")
