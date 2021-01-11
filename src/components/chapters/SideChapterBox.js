@@ -7,6 +7,7 @@ import ChapterBox from "./ChapterBox"
 import FrameworkButton from "../buttons/FrameworkButton"
 import VueIcon from "../../images/vue.svg"
 import ReactIcon from "../../images/react-icon.svg"
+import { FrameworkContext } from "../../frameworkContext"
 
 const SideChapterBox = ({
   collapse,
@@ -15,7 +16,7 @@ const SideChapterBox = ({
   },
 }) => {
   //get contenxt for the frameworks
-  const [framework, toggleFramework] = useState("vue")
+  const [framework, toggleFramework] = useState(FrameworkContext)
   //filtering of chapters
   const epilouges = constants.filterByPart(edges, "Epilouge")
   const backendPosts = constants.filterByPart(edges, "setting up backend")
