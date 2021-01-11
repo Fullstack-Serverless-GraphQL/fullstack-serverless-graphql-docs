@@ -4,7 +4,7 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Hero from "../components/landing/hero"
 import Chapters from "../components/chapters/Chapters"
-import { FrameworkContext } from "../frameworkContext"
+import FrameworkProvider from "../frameworkProvider"
 import Partners from "../components/partners"
 import constants from "../constants"
 const IndexPage = () => {
@@ -12,7 +12,7 @@ const IndexPage = () => {
 
   console.log("ff-1", framework)
   return (
-    <FrameworkContext.Provider value={{ framework, toggleFramework }}>
+    <FrameworkProvider>
       <Layout>
         <SEO title="Home" />
         <Hero />
@@ -20,7 +20,7 @@ const IndexPage = () => {
         <Chapters />
         <Partners />
       </Layout>
-    </FrameworkContext.Provider>
+    </FrameworkProvider>
   )
 }
 
