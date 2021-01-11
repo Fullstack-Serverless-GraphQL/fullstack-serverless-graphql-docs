@@ -1,4 +1,4 @@
-import React, { useState, useContext } from "react"
+import React, { useState } from "react"
 import { StaticQuery, graphql } from "gatsby"
 import HeadingTwo from "../typography/HeadingTwo"
 import HeadingThree from "../typography/HeadingThree"
@@ -7,8 +7,8 @@ import ChapterBox from "./ChapterBox"
 import FrameworkButton from "../buttons/FrameworkButton"
 import VueIcon from "../../images/vue.svg"
 import ReactIcon from "../../images/react-icon.svg"
+import FrameworkProvider from "../../frameworkProvider"
 import { FrameworkContext } from "../../frameworkContext"
-
 const SideChapterBox = ({
   collapse,
   data: {
@@ -18,7 +18,6 @@ const SideChapterBox = ({
   //get contenxt for the frameworks
   const [framework, toggleFramework] = useState(FrameworkContext)
 
-  console.log("SideChapterBox", framework)
   //filtering of chapters
   const epilouges = constants.filterByPart(edges, "Epilouge")
   const backendPosts = constants.filterByPart(edges, "setting up backend")
@@ -203,7 +202,7 @@ const SideChapterBox = ({
     },
   ]
   return (
-    <>
+    <FrameworkProvider>
       <div className="mt-10 ml-5 p-3">
         <HeadingTwo className="text-left">Chapters</HeadingTwo>
         {/* chAPTERS GRID */}
@@ -272,7 +271,7 @@ const SideChapterBox = ({
           )}
         </div>
       </div>
-    </>
+    </FrameworkProvider>
   )
 }
 
