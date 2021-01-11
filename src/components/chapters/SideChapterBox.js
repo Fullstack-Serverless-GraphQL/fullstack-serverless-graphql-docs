@@ -16,9 +16,9 @@ const SideChapterBox = ({
   },
 }) => {
   //get contenxt for the frameworks
-  const { framework, toggleFramework } = useContext(FrameworkContext)
+  const [framework, toggleFramework] = useState(FrameworkContext)
 
-  console.log("SideChapterBox", FrameworkContext.Consumer)
+  console.log("SideChapterBox", framework)
   //filtering of chapters
   const epilouges = constants.filterByPart(edges, "Epilouge")
   const backendPosts = constants.filterByPart(edges, "setting up backend")
