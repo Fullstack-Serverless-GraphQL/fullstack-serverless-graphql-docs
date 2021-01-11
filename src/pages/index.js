@@ -8,12 +8,6 @@ import { FrameworkContext } from "../frameworkContext"
 import Partners from "../components/partners"
 import constants from "../constants"
 const IndexPage = () => {
-  const [framework, setFramework] = useState("vue")
-
-  const toggleFramework = selectedFramework => {
-    setFramework(selectedFramework)
-  }
-
   constants.track("App.LandingPage.View")
 
   console.log("ff-1", framework)

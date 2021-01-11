@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useContext } from "react"
 import { graphql, Link } from "gatsby"
 import Layout from "../components/layout"
 import HeadingOne from "../components/typography/HeadingOne"
@@ -9,11 +9,16 @@ import SideChapterBox from "../components/chapters/SideChapterBox"
 import GithubButton from "../components/buttons/GithubButtton"
 import SEO from "../components/seo"
 import constants from "../constants"
+import { FrameworkContext } from "../frameworkContext"
 export default function Template({ data, pageContext }) {
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
   const { previous, next } = pageContext
   constants.track(`App.Post.View:${frontmatter.title}`)
+  const framwork = useContext(FrameworkContext)
+
+  console.log("FrameworkContext", framwork)
+
   return (
     <Layout>
       <SEO
