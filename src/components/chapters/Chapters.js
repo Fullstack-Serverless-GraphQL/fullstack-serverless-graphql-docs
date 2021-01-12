@@ -226,16 +226,16 @@ const Chapters = ({
           Frontend
         </HeadingThree>
 
-        <div className="flex justify-start mt-5">
+        <div className="flex md:justify-start s-max:flex-col mt-5">
           <FrameworkButton
-            className="bg-blue-lightest text-blue-darkest p-2 rounded mr-5"
+            className="bg-blue-lightest text-blue-darkest p-2 rounded md:mr-5"
             onClick={() => toggleFramework("react")}
             img={ReactIcon}
           >
             React posts
           </FrameworkButton>
           <FrameworkButton
-            className="bg-green-lightest text-green-darker p-2 s:mt-2 rounded focus:border-green-darker focus:border"
+            className="bg-green-lightest text-green-darker p-2 s-max:mt-2 rounded focus:border-green-darker focus:border"
             onClick={() => toggleFramework("vue")}
             img={VueIcon}
           >
