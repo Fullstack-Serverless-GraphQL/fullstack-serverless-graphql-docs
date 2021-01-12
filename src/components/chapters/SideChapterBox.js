@@ -203,7 +203,7 @@ const SideChapterBox = ({
   ]
   return (
     <FrameworkProvider>
-      <div className="mt-10 ml-5 p-3">
+      <div className="mt-10  p-3">
         <HeadingTwo className="text-left">Chapters</HeadingTwo>
         {/* chAPTERS GRID */}
         <HeadingThree className="text-left text-green-dark">
@@ -231,14 +231,14 @@ const SideChapterBox = ({
 
         <div className="flex flex-col ">
           <FrameworkButton
-            className="bg-blue-lightest text-blue-darkest p-2 rounded mb-3 max-w-xxs"
+            className="bg-blue-lightest text-blue-darkest s-max:p-2 rounded mb-3 max-w-xxs"
             onClick={() => toggleFramework("react")}
             img={ReactIcon}
           >
             React posts
           </FrameworkButton>
           <FrameworkButton
-            className="bg-green-lightest text-green-darker p-2 rounded focus:border-green-darker focus:border max-w-xxs"
+            className="bg-green-lightest text-green-darker s-max:p-2 rounded focus:border-green-darker focus:border max-w-xxs"
             onClick={() => toggleFramework("vue")}
             img={VueIcon}
           >
