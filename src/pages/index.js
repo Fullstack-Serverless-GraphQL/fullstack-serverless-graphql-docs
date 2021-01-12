@@ -10,7 +10,6 @@ import constants from "../constants"
 const IndexPage = () => {
   constants.track("App.LandingPage.View")
 
-  console.log("ff-1", framework)
   return (
     <FrameworkProvider>
       <Layout>
