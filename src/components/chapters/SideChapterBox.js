@@ -231,14 +231,14 @@ const SideChapterBox = ({
 
         <div className="flex flex-col ">
           <FrameworkButton
-            className="bg-blue-lightest text-blue-darkest px-4 py-2 rounded mb-3 max-w-xxs"
+            className="bg-blue-lightest text-blue-darkest p-2 rounded mb-3 max-w-xxs"
             onClick={() => toggleFramework("react")}
             img={ReactIcon}
           >
             React posts
           </FrameworkButton>
           <FrameworkButton
-            className="bg-green-lightest text-green-darker px-4 py-2 rounded focus:border-green-darker focus:border max-w-xxs"
+            className="bg-green-lightest text-green-darker p-2 rounded focus:border-green-darker focus:border max-w-xxs"
             onClick={() => toggleFramework("vue")}
             img={VueIcon}
           >
