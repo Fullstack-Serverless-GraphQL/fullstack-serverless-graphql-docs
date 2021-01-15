@@ -12,7 +12,7 @@
 <img src="https://img.shields.io/github/license/Fullstack-Serverless-GraphQL/fullstack-serverless-graphql-docs" />
 </p>
 
-[Fullstack Serverless GraphQL](https://fullstack-serverless-graphql.netlify.app/) is a course that will teach ypu how to build a Serverless GraphQL backend on AWS Lambda, while allowing you to choose your own adventure for building out the frontend in either Vue or React.
+[Fullstack Serverless GraphQL](https://fullstack-serverless-graphql.netlify.app/) is a course that will teach you how to build a Serverless GraphQL backend on AWS Lambda, while allowing you to choose your own adventure for building out the frontend in either Vue or React.
 
 After completing the course you would've made the Lunar Tour, which is an app that allows customers to book vactions to moon.
 
