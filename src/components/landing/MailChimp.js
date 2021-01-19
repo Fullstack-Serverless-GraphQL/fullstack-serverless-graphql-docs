@@ -8,6 +8,7 @@ const MailChimp = () => {
   const [email, setEmail] = useState("")
   const [isLoading, setIsLoading] = useState(false)
   const [subscribed, setSubscribed] = useState(false)
+  const [message, setMessage] = useState("")
   const addEmail = async () => {
     try {
       setIsLoading(true)
@@ -15,6 +16,7 @@ const MailChimp = () => {
       console.log("rrr", result)
       setIsLoading(false)
       setSubscribed(true)
+      setMessage(result.message)
     } catch (e) {
       setIsLoading(false)
 
@@ -26,7 +28,7 @@ const MailChimp = () => {
       <form>
         <div className="grid grid-cols-1 w-1/3">
           {subscribed ? (
-            <p>Well done</p>
+            <p>{message.message}</p>
           ) : (
             <>
               <HeadingThree>
