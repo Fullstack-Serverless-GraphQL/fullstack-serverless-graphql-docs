@@ -1,9 +1,26 @@
-import React from "react"
+import React, { useState } from "react"
 import BodyOne from "../typography/BodyOne"
 import RedBlockButton from "../buttons/RedBlockButton"
 import HeadingThree from "../typography/HeadingThree"
+import addToMailchimp from "gatsby-plugin-mailchimp"
 
 const MailChimp = () => {
+  const [email, setEmail] = useState("")
+  const [isLoading, setIsLoading] = useState(false)
+  const [subscribed, setSubscribed] = useState(false)
+  const addEmail = async () => {
+    try {
+      setIsLoading(true)
+      const result = await addToMailchimp(email)
+      console.log("rrr", result)
+      setIsLoading(false)
+      setSubscribed(true)
+    } catch (e) {
+      setIsLoading(false)
+
+      alert(e.message)
+    }
+  }
   return (
     <div>
       <form>
