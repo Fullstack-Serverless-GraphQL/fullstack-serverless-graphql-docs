@@ -15,7 +15,7 @@ const MailChimp = () => {
           <input
             type="email"
             placeholder="mazibuko@telsa.com"
-            className="p-1"
+            className="p-2 mb-3"
           />
           <RedBlockButton>Yes, I'm keen</RedBlockButton>
         </div>
