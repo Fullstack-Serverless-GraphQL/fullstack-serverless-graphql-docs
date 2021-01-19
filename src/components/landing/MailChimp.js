@@ -34,6 +34,7 @@ const MailChimp = () => {
                 are published.
               </HeadingThree>
               <input
+                onChange={e => setEmail(e.currentTarget.value)}
                 type="email"
                 placeholder="mazibuko@telsa.com"
                 className="p-2 mb-3"
