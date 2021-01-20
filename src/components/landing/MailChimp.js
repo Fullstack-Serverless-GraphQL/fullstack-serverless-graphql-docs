@@ -17,10 +17,11 @@ const MailChimp = () => {
       setIsLoading(false)
       setSubscribed(true)
       setMessage(result.message)
+      alert(result.message)
     } catch (e) {
       setIsLoading(false)
 
-      alert(e.message)
+      console.log(e.message)
     }
   }
   return (
