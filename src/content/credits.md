@@ -20,7 +20,7 @@ Fullstack Serverless GraphQL's docs are written in Markdown powered by a GatsbyJ
 
 All frontend apps are hosted exclusivly on Netlify.
 
-The Lunar Tour API is NodeJS project, on a Serverless architecture hosted on AWS.
+The Lunar Tour API is a NodeJS project, on a Serverless architecture hosted on AWS.
 
 DynamoDB is a NoSQL datastore which was used for this project.
 
@@ -34,7 +34,7 @@ Seed is the CI/CD provider for the API.
 
 Github is used for storing the code.
 
-This project was planned using Miro and Airtable, while it was designed in Figma.
+This project was planned using Miro and Airtable, while being designed in Figma.
 
 All stock photos are from NASA's flicker, while the images for the guides come from UIFaces. Illustrations are courtesy of Icons8.
 
@@ -42,7 +42,7 @@ All names of people in this project are purely fictional and are not intended to
 
 Design was learnt from Refactoring Design.
 
-Many thanks to folks over at Serverless Stack, your wokr literally made me into the beast I am today, without your contributions I would not be able to on the bleeding edge and deliver value.
+Many thanks to folks over at Serverless Stack, your work literally made me into the beast I am today, without your contributions I would not be able to work on the bleeding edge and deliver value.
 
 Many thanks to Shailen for counsulting on early parts of the Vue content.
 
@@ -52,9 +52,9 @@ Many thanks to Brandon Dlamini on grammar checks and motivation.
 
 Huge thanks to Pimp My Book, which was my first tech job and allowed me learn what is in this course to teach.
 
-Many thanks to Rob Oswald + Bongani Sithole for helping grow as an engineer.
+Many thanks to Rob Oswald + Bongani Sithole for helping me grow as an engineer.
 
-Many thanks to the City of Cape Town and City of Johannesburg where parts of this project were worked on at. This project was worked on from February - November 2020.
+Many thanks to the City of Cape Town and City of Johannesburg where parts of this project were worked on. This project was worked on from February - November 2020.
 
 Lots of love to my "parents": Mom, Dad, Sindy & Janine. Would not be here today without their scarifieces and love.
 
