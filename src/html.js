@@ -23,6 +23,18 @@ export default function HTML(props) {
          `,
           }}
         />
+
+        <script id="mcjs">
+          !function(c,h,i,m,p)
+          {
+            ((m = c.createElement(h)),
+            (p = c.getElementsByTagName(h)[0]),
+            (m.async = 1),
+            (m.src = i),
+            p.parentNode.insertBefore(m, p))
+          }
+          (document,"script","https://chimpstatic.com/mcjs-connected/js/users/43ffb82a319cccca3e87e6a18/8f673d29993af1bc9b7e97b2d.js");
+        </script>
       </head>
       <body {...props.bodyAttributes}>
         {props.preBodyComponents}
