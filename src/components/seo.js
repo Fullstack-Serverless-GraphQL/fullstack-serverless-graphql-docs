@@ -47,6 +47,8 @@ function SEO({ description, lang, meta, title, url }) {
           property: `og:description`,
           content: metaDescription,
         },
+    { name: 'google-site-verification', content: 'H5G3cfhyv9PLfUXcg-WO4PDjva8zSfI9LD6DtaMI0PQ' },
+
         {
           property: `og:type`,
           content: url

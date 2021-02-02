@@ -78,7 +78,7 @@ Now we need to reference it in our `serverless.yml`:
 ```YAML
 resources:
   - ${file(resources/listing-db.yml)}
-  - ${file(resources/bookingDB.yml)}
+  - ${file(resources/booking-db.yml)}
 ```
 
 In the same file we need to create those tables in the custom section of the file:
