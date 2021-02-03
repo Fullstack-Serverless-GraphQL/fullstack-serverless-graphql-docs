@@ -35,7 +35,7 @@ const Hero = () => (
           or{" "}
           <a
             className="underline text-blue-dark"
-            href="lunar-tour-react.netlify.app/"
+            href="https://lunar-tour-react.netlify.app/"
             target="_blank"
             rel="noopener noreferrer"
           >
