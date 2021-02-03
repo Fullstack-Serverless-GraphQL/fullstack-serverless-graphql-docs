@@ -18,7 +18,7 @@ const Partners = () => {
             className="flex flex-col text-center "
             key={i}
           >
-            <img src={p.logo} alt="partners" />
+            <img src={p.logo} alt="partners" className="w-48" />
             <BodyOne className="text-blue-dark mt-4">{p.use}</BodyOne>
           </a>
         ))}
