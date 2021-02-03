@@ -15,10 +15,10 @@ const Partners = () => {
             target="_blank"
             rel="noopener noreferrer"
             href={p.url}
-            className="flex flex-col text-center "
+            className="flex flex-col"
             key={i}
           >
-            <img src={p.logo} alt="partners" className="w-48" />
+            <img src={p.logo} alt="partners" className="w-24" />
             <BodyOne className="text-blue-dark mt-4">{p.use}</BodyOne>
           </a>
         ))}
