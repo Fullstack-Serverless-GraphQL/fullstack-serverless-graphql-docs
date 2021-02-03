@@ -17,7 +17,7 @@ const TechStack = () => (
         While in the React course, you can learn how to use Apollo's Local Cache
         as an alternative for Rdux.
       </BodyOne>
-      <div className="grid grid-cols-3 gap-5 ml-10">
+      <div className="grid grid-cols-3 gap-5 ">
         {constants.techStack.map(t => (
           <StackCard url={t.logo} linkURL={t.url} Title={t.technology} />
         ))}
@@ -30,7 +30,7 @@ const TechStack = () => (
         Using the Serverless Framework, you will be able to create a GraphQL
         Lambda powered by Apollo Server.
       </BodyOne>
-      <div className="grid grid-cols-3 gap-5 ml-10">
+      <div className="grid grid-cols-3 gap-5">
         {constants.backendTechStack.map(t => (
           <StackCard url={t.logo} linkURL={t.url} Title={t.technology} />
         ))}
