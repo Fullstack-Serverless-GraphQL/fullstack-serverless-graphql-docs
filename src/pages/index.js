@@ -1,4 +1,4 @@
-import React, { useState } from "react"
+import React from "react"
 import TeckStack from "../components/landing/TechStack"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
